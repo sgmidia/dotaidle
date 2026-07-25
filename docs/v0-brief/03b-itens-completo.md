@@ -76,7 +76,7 @@ Lista de todos os itens reais de Dota 2 disponíveis, para uso como pool de nome
 - **Hood of Defiance**: barreira mágica ativável
 - **Infused Raindrops**: bloqueia dano mágico com cargas (componente)
 - **Linken's Sphere**: bloqueia magias direcionadas periodicamente
-- **Lotus Orb": ecoa magias direcionadas de volta ao lançador
+- **Lotus Orb**: ecoa magias direcionadas de volta ao lançador
 - **Martyr's Plate**: redireciona dano mágico de aliados para si
 - **Mekansm**: cura em área + aura de regeneração
 - **Mirror Shield**: reflete magias direcionadas
@@ -358,7 +358,6 @@ Lista de todos os itens reais de Dota 2 disponíveis, para uso como pool de nome
 - **Swift Blink**: teleporte curto + velocidade e agilidade bônus após uso
 - **Overwhelming Blink**: teleporte curto + dano e lentidão em área ao redor
 - **Dragon Lance**: bônus de agilidade/força e alcance de ataque (artefato)
-- **Lotus Orb**: ecoa magias direcionadas de volta ao lançador
 - **Crippling Crossbow**: ataque que causa dano e lentidão forte decrescente
 - **Outworld Staff**: torna-se invulnerável e intangível por curto período
 - **The Leveller**: dano bônus contra estruturas
@@ -388,7 +387,6 @@ Lista de todos os itens reais de Dota 2 disponíveis, para uso como pool de nome
 - **Third Eye**: visão verdadeira com cargas (neutro)
 - **Thick**: vida, mana e armadura (encantamento)
 - **Tiara of Selemene**: bônus de regeneração de mana (componente)
-- **Tier 1-5 Token**: fichas de progressão de itens neutros (drop por tier)
 - **Timeless**: duração de debuff e amplificação de magia (encantamento)
 - **Timeless Relic**: duração de debuff e amplificação de magia (neutro)
 - **Titan Sliver**: dano base e resistência a status (neutro)

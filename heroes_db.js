@@ -1,0 +1,5214 @@
+// Dota 2 Heroes Database
+const HEROES_DATA = {
+  "abaddon": {
+    "id": "abaddon",
+    "name": "Abaddon",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/abaddon.png",
+    "baseDamage": 35,
+    "baseHp": 600,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Support, Carry, Durable",
+    "skills": [
+      {
+        "name": "Mist Coil",
+        "desc": "Abaddon releases a coil of deathly mist that can damage an enemy unit or heal a friendly unit at ...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Aphotic Shield",
+        "desc": "Summons dark energies around an ally unit, dispelling them and creating an all damage barrier tha...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Curse of Avernus",
+        "desc": "Abaddon strikes an enemy, affecting them by a chilling curse, slowing them, causing them to take ...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "alchemist": {
+    "id": "alchemist",
+    "name": "Alchemist",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/alchemist.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Support, Durable, Disabler, Initiator, Nuker",
+    "skills": [
+      {
+        "name": "Acid Spray",
+        "desc": "Sprays high-pressure acid across a target area. Enemy units who step across the contaminated terr...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Unstable Concoction",
+        "desc": "Alchemist brews up an unstable concoction that he can throw at an enemy hero, to stun and deal da...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Corrosive Weaponry",
+        "desc": "Alchemist coats his weapons and empowers his spells with an acid that applies a stacking slow and...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "ancient_apparition": {
+    "id": "ancient_apparition",
+    "name": "Ancient Apparition",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/ancient_apparition.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Disabler, Nuker",
+    "skills": [
+      {
+        "name": "Cold Feet",
+        "desc": "Places a curse on an enemy, dealing damage over time. If the enemy unit doesn't move outside of t...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Ice Vortex",
+        "desc": "Creates a vortex of icy energy that slows, deals damage, and increases magic damage done to enemi...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Chilling Touch",
+        "desc": "Enhances Ancient Apparition's attack with increased range and a burst of magical damage and slow.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "anti_mage": {
+    "id": "anti_mage",
+    "name": "Anti-Mage",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/anti_mage.png",
+    "baseDamage": 36,
+    "baseHp": 570,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Escape, Nuker",
+    "skills": [
+      {
+        "name": "Mana Break",
+        "desc": "Burns an opponent's mana on each attack and deals damage equal to a percentage of the mana burnt.",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      },
+      {
+        "name": "Blink",
+        "desc": "Short distance teleportation that allows Anti-Mage to move in and out of combat.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Counterspell",
+        "desc": "Passively grants magic resistance. Counterspell may be activated to create an anti-magic shell ar...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "arc_warden": {
+    "id": "arc_warden",
+    "name": "Arc Warden",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/arc_warden.png",
+    "baseDamage": 31,
+    "baseHp": 550,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Carry, Escape, Nuker",
+    "skills": [
+      {
+        "name": "Flux",
+        "desc": "Infuses a lone enemy unit with swirling, volatile energy, dealing damage over time and slowing th...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Magnetic Field",
+        "desc": "Arc Warden generates a circular distortion field of magnetic energy. The Magnetic Field grants bo...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Spark Wraith",
+        "desc": "Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes ...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "axe": {
+    "id": "axe",
+    "name": "Axe",
+    "type": "strength",
+    "emoji": "🪓",
+    "image": "assets/heroes/axe.png",
+    "arenaImage": "assets/heroes/Axe_CombatArena.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Support",
+    "skills": [
+      {
+        "name": "Skill 1",
+        "desc": "Ability details pending.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Skill 2",
+        "desc": "Ability details pending.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Skill 3",
+        "desc": "Ability details pending.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "bane": {
+    "id": "bane",
+    "name": "Bane",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/bane.png",
+    "baseDamage": 31,
+    "baseHp": 550,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Support, Disabler, Nuker, Durable",
+    "skills": [
+      {
+        "name": "Enfeeble",
+        "desc": "Deals damage every second and lowers the enemy's total attack damage and cast range.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Brain Sap",
+        "desc": "Feasts on the vital energies of an enemy unit, healing Bane and dealing damage.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Nightmare",
+        "desc": "Puts the target enemy or friendly Hero to sleep. Sleeping units walk in Bane's chosen direction a...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "batrider": {
+    "id": "batrider",
+    "name": "Batrider",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/batrider.png",
+    "baseDamage": 31,
+    "baseHp": 550,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Initiator, Disabler, Escape",
+    "skills": [
+      {
+        "name": "Sticky Napalm",
+        "desc": "Drenches an area in sticky oil, amplifying damage from Batrider's attacks and abilities and slowi...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Flamebreak",
+        "desc": "Hurls an explosive cocktail that explodes when it reaches the target location, knocking back, slo...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Firefly",
+        "desc": "Batrider takes to the skies, moving increasingly fast and laying down a trail of flames from the ...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 100
+  },
+  "beastmaster": {
+    "id": "beastmaster",
+    "name": "Beastmaster",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/beastmaster.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Support",
+    "skills": [
+      {
+        "name": "Skill 1",
+        "desc": "Ability details pending.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Skill 2",
+        "desc": "Ability details pending.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Skill 3",
+        "desc": "Ability details pending.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "bloodseeker": {
+    "id": "bloodseeker",
+    "name": "Bloodseeker",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/bloodseeker.png",
+    "baseDamage": 36,
+    "baseHp": 570,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Disabler, Nuker, Initiator",
+    "skills": [
+      {
+        "name": "Bloodrage",
+        "desc": "Drives Bloodseeker into a bloodthirsty rage which causes him to attack faster and deal more spell...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Blood Rite",
+        "desc": "Bloodseeker baptizes an area in sacred blood. After 2.9 seconds the ritual completes, causing any...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Thirst",
+        "desc": "Bloodseeker is invigorated by the wounds of his enemies, gaining bonus movement speed when an ene...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "bounty_hunter": {
+    "id": "bounty_hunter",
+    "name": "Bounty Hunter",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/bounty_hunter.png",
+    "baseDamage": 36,
+    "baseHp": 570,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Escape, Nuker",
+    "skills": [
+      {
+        "name": "Shuriken Toss",
+        "desc": "Hurls a deadly shuriken at an enemy unit, dealing damage and slowing the target's movement speed....",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Jinada",
+        "desc": "Bounty Hunter plans his next hit, dealing bonus damage and stealing some unreliable gold.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Shadow Walk",
+        "desc": "Bounty Hunter becomes invisible and gains bonus movement speed and the ability to move through ot...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "brewmaster": {
+    "id": "brewmaster",
+    "name": "Brewmaster",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/brewmaster.png",
+    "baseDamage": 35,
+    "baseHp": 600,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Carry, Initiator, Durable, Disabler, Nuker",
+    "skills": [
+      {
+        "name": "Thunder Clap",
+        "desc": "Slams the ground, dealing damage and slowing the movement speed and attack rate of nearby enemy u...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Cinder Brew",
+        "desc": "Rolls a barrel of ale at enemies that damages enemies along its path and spills out at the target...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Drunken Brawler",
+        "desc": "Brewmaster can switch stances based on the elements he controls. Whenever Brewmaster casts an abi...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "bristleback": {
+    "id": "bristleback",
+    "name": "Bristleback",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/bristleback.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Durable, Initiator, Nuker",
+    "skills": [
+      {
+        "name": "Viscous Nasal Goo",
+        "desc": "Covers a target in snot, causing it to have reduced armor and movement speed for 5 seconds. Multi...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Quill Spray",
+        "desc": "Sprays enemy units with quills dealing damage in an area of effect around Bristleback. Deals bonu...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Bristleback",
+        "desc": "Bristleback takes less damage if hit on the sides or rear. If Bristleback takes enough damage fro...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "broodmother": {
+    "id": "broodmother",
+    "name": "Broodmother",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/broodmother.png",
+    "baseDamage": 36,
+    "baseHp": 570,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Pusher, Escape, Nuker",
+    "skills": [
+      {
+        "name": "Insatiable Hunger",
+        "desc": "A violent lust for vital fluids increases Broodmother's attack damage and gives her and her Spide...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Spin Web",
+        "desc": "Spins a large web that grants Broodmother a passive movement speed increase and increases her Tur...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Incapacitating Bite",
+        "desc": "Broodmother's venom cripples enemy units, causing her attacks to slow and giving the affected uni...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "centaur_warrunner": {
+    "id": "centaur_warrunner",
+    "name": "Centaur Warrunner",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/centaur_warrunner.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Durable, Initiator, Disabler, Nuker, Escape",
+    "skills": [
+      {
+        "name": "Hoof Stomp",
+        "desc": "After a brief windup, Centaur Warrunner slams the ground, stunning and damaging nearby enemy unit...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Double Edge",
+        "desc": "Centaur strikes a mighty blow at melee range, damaging both himself and a small area around the t...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Retaliate",
+        "desc": "Centaur counters all attacks, dealing damage back to the attacker. Returns a fixed amount plus a ...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "chaos_knight": {
+    "id": "chaos_knight",
+    "name": "Chaos Knight",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/chaos_knight.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Disabler, Durable, Pusher, Initiator",
+    "skills": [
+      {
+        "name": "Chaos Bolt",
+        "desc": "Throws a mysterious bolt of energy at the target unit. It stuns for a random duration and deals r...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Reality Rift",
+        "desc": "Teleports Chaos Knight, any illusions he has, and the target unit to a point along the line betwe...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Chaos Strike",
+        "desc": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying streng...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "chen": {
+    "id": "chen",
+    "name": "Chen",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/chen.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Pusher",
+    "skills": [
+      {
+        "name": "Penitence",
+        "desc": "Damages enemy unit, forces it to move slower and lets allies attack it more quickly.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Holy Persuasion",
+        "desc": "Chen takes control of an enemy or neutral creep and receives a percentage of its bounty. Its maxi...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Divine Favor",
+        "desc": "Passively provides an aura that grants increased health regeneration. Can be cast on allies to pr...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "clinkz": {
+    "id": "clinkz",
+    "name": "Clinkz",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/clinkz.png",
+    "baseDamage": 32,
+    "baseHp": 520,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Escape, Pusher",
+    "skills": [
+      {
+        "name": "Strafe",
+        "desc": "Clinkz gains attack speed and has bonus attack range. Any current Skeleton Archers within a 1200 ...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Searing Arrows",
+        "desc": "Imbues Clinkz's arrows with fire for extra damage. Skeleton Archers will fire Searing Arrows at t...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Death Pact",
+        "desc": "Clinkz consumes the target enemy creep or friendly Skeleton Archer, healing and gaining max healt...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 100
+  },
+  "clockwerk": {
+    "id": "clockwerk",
+    "name": "Clockwerk",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/clockwerk.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Initiator, Disabler, Durable, Nuker",
+    "skills": [
+      {
+        "name": "Battery Assault",
+        "desc": "Discharges high-powered shrapnel at random nearby enemy units, dealing minor magical damage and m...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Power Cogs",
+        "desc": "Forms a ring of energized cogs around Clockwerk, trapping any units that are near. Enemies outsid...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Rocket Flare",
+        "desc": "Fires a global range flare that explodes over a given area. Upon impact, enemies in the area take...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "crystal_maiden": {
+    "id": "crystal_maiden",
+    "name": "Crystal Maiden",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/crystal_maiden.png",
+    "arenaImage": "assets/heroes/CM_CombatArena.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Disabler, Nuker",
+    "skills": [
+      {
+        "name": "Crystal Nova",
+        "desc": "A burst of damaging frost slows enemy movement in the targeted area.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Frostbite",
+        "desc": "Encases an enemy unit in ice, prohibiting movement and attack, while dealing damage over time. De...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Arcane Aura",
+        "desc": "Gives mana regeneration to all friendly units on the map. Allies within a 1200 radius of Crystal ...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 0
+  },
+  "dark_seer": {
+    "id": "dark_seer",
+    "name": "Dark Seer",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/dark_seer.png",
+    "baseDamage": 32,
+    "baseHp": 550,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Initiator, Escape, Disabler",
+    "skills": [
+      {
+        "name": "Vacuum",
+        "desc": "Dark Seer creates a vacuum over the target area that sucks in enemy units, disrupting them and de...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Ion Shell",
+        "desc": "Surrounds the target unit with a bristling shield that damages enemy units in an area around it.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Surge",
+        "desc": "Charges a target friendly unit with power, giving it a brief burst of phased movement speed. Allo...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 100
+  },
+  "dark_willow": {
+    "id": "dark_willow",
+    "name": "Dark Willow",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/dark_willow.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Nuker, Disabler, Escape",
+    "skills": [
+      {
+        "name": "Bramble Maze",
+        "desc": "Dark Willow creates a 500 AoE maze of 8 brambles that grow in the target area after 0.3 seconds. ...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Shadow Realm",
+        "desc": "Dark Willow recedes into the shadows, becoming untargetable. Her next attack has 600 bonus attack...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Cursed Crown",
+        "desc": "Dark Willow casts an ancient fae curse on the target. After a delay, the target and nearby enemie...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "dawnbreaker": {
+    "id": "dawnbreaker",
+    "name": "Dawnbreaker",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/dawnbreaker.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Durable",
+    "skills": [
+      {
+        "name": "Starbreaker",
+        "desc": "Dawnbreaker whirls her hammer around 3 times, damaging enemies with her attack plus bonus damage....",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Celestial Hammer",
+        "desc": "Dawnbreaker hurls her weapon at a target, damaging enemies struck along the way. The hammer pause...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Luminosity",
+        "desc": "* **Converge (Ativa)**: Dawnbreaker recalls her hammer, pulling them together so they meet in the...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 100
+  },
+  "dazzle": {
+    "id": "dazzle",
+    "name": "Dazzle",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/dazzle.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Support",
+    "skills": [
+      {
+        "name": "Skill 1",
+        "desc": "Ability details pending.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Skill 2",
+        "desc": "Ability details pending.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Skill 3",
+        "desc": "Ability details pending.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "death_prophet": {
+    "id": "death_prophet",
+    "name": "Death Prophet",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/death_prophet.png",
+    "baseDamage": 31,
+    "baseHp": 550,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Carry, Pusher, Nuker, Disabler",
+    "skills": [
+      {
+        "name": "Crypt Swarm",
+        "desc": "Sends a swarm of winged beasts to savage enemy units in front of Death Prophet.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Silence",
+        "desc": "Fires a projectile that prevents enemy units in a target area from casting spells.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Spirit Siphon",
+        "desc": "Creates a spirit link between Death Prophet and an enemy unit, draining health from the enemy.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "disruptor": {
+    "id": "disruptor",
+    "name": "Disruptor",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/disruptor.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Disabler, Nuker, Initiator",
+    "skills": [
+      {
+        "name": "Thunder Strike",
+        "desc": "Repeatedly strikes the targeted unit with lightning. Each strike damages nearby enemy units in a ...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Glimpse",
+        "desc": "Teleports the target hero back to where it was 4 seconds ago. Instantly kills illusions. Deals da...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Kinetic Field",
+        "desc": "After a short formation time, creates a circular barrier of kinetic energy that enemies can't pass.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "doom": {
+    "id": "doom",
+    "name": "Doom",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/doom.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Disabler, Initiator, Durable, Nuker",
+    "skills": [
+      {
+        "name": "Devour",
+        "desc": "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed. If alt-cas...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Scorched Earth",
+        "desc": "Carpets the nearby earth in flames which damage enemies, while also granting Doom increased movem...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Infernal Blade",
+        "desc": "Doom swings his burning sword, igniting the enemy. Stuns for 0.66 seconds and applies a 4 second ...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "dragon_knight": {
+    "id": "dragon_knight",
+    "name": "Dragon Knight",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/dragon_knight.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Pusher, Durable, Disabler, Initiator, Nuker",
+    "skills": [
+      {
+        "name": "Breathe Fire",
+        "desc": "Unleashes a breath of fire in front of Dragon Knight that burns enemies and reduces the damage th...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Dragon Tail",
+        "desc": "Dragon Knight smites an enemy unit with his shield, stunning and damaging it and units close to it.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Wyrm's Wrath",
+        "desc": "The life blood of the Dragon improves Dragon Knight's abilities and items to have increased AoE a...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "drow_ranger": {
+    "id": "drow_ranger",
+    "name": "Drow Ranger",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/drow_ranger.png",
+    "arenaImage": "assets/heroes/DR_CombatArena.png",
+    "baseDamage": 32,
+    "baseHp": 520,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Disabler, Pusher",
+    "skills": [
+      {
+        "name": "Frost Arrows",
+        "desc": "Adds a freezing effect to Drow's attacks, slowing enemy movement and dealing bonus damage. Slow l...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Gust",
+        "desc": "Releases a wave that silences and knocks back and reveals invisible enemy units. Knockback distan...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Multishot",
+        "desc": "CHANNELED - Drow releases a flurry of arrows in continuous salvos, hitting enemies for extra dama...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 0
+  },
+  "earth_spirit": {
+    "id": "earth_spirit",
+    "name": "Earth Spirit",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/earth_spirit.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Nuker, Escape, Disabler, Initiator, Durable",
+    "skills": [
+      {
+        "name": "Boulder Smash",
+        "desc": "Earth Spirit smashes the target enemy or ally, sending them in the direction he is facing. If Ear...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Rolling Boulder",
+        "desc": "Earth Spirit gathers himself into a boulder and, after a 0.6s delay, rolls toward the target loca...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Geomagnetic Grip",
+        "desc": "Earth Spirit pulls the target Stone Remnant or Allied Unit. Enemies struck by the gripped target ...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "earthshaker": {
+    "id": "earthshaker",
+    "name": "Earthshaker",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/earthshaker.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Support, Initiator, Disabler, Nuker",
+    "skills": [
+      {
+        "name": "Fissure",
+        "desc": "Slams the ground with a mighty totem, creating an impassable ridge of stone while stunning and da...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Enchant Totem",
+        "desc": "Empowers Earthshaker's totem, causing it to deal extra damage and have 100 bonus attack range on ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Aftershock",
+        "desc": "Causes the earth to shake underfoot, adding additional damage and stuns to nearby enemy units whe...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "elder_titan": {
+    "id": "elder_titan",
+    "name": "Elder Titan",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/elder_titan.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Initiator, Disabler, Nuker, Durable",
+    "skills": [
+      {
+        "name": "Echo Stomp",
+        "desc": "CHANNELED - Elder Titan and his Astral Spirit both stomp the ground, damaging and knocking nearby...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Astral Spirit",
+        "desc": "Elder Titan sends forth his Astral Spirit, damaging any units it passes through. When the spirit ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Natural Order",
+        "desc": "Reduces all elements to their basic levels, removing base armor and magic damage resistance from ...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "ember_spirit": {
+    "id": "ember_spirit",
+    "name": "Ember Spirit",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/ember_spirit.png",
+    "baseDamage": 36,
+    "baseHp": 570,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Escape, Nuker, Disabler, Initiator",
+    "skills": [
+      {
+        "name": "Searing Chains",
+        "desc": "Ember Spirit unleashes fiery bolas that wrap around nearby enemies, anchoring them in place and d...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Sleight of Fist",
+        "desc": "Ember Spirit dashes around with blazing speed, attacking all enemies in the targeted area of effe...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Flame Guard",
+        "desc": "Ember Spirit surrounds himself with a ring of fire that consumes incoming magic damage, absorbing...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "enchantress": {
+    "id": "enchantress",
+    "name": "Enchantress",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/enchantress.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Pusher, Durable, Disabler",
+    "skills": [
+      {
+        "name": "Impetus",
+        "desc": "Places an enchantment on each attack while activated, causing it to deal additional damage based ...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Enchant",
+        "desc": "Enchantress charms an enemy. If the enemy is a hero, they are dispelled and slowed for 3.5s, and ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Nature's Attendants",
+        "desc": "A cloud of wisps heals Enchantress and any friendly units nearby.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "enigma": {
+    "id": "enigma",
+    "name": "Enigma",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/enigma.png",
+    "baseDamage": 31,
+    "baseHp": 550,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Disabler, Initiator, Pusher",
+    "skills": [
+      {
+        "name": "Malefice",
+        "desc": "Focuses Enigma's power on a target, causing it to take damage and become repeatedly stunned for m...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Demonic Summoning",
+        "desc": "Summons three fragments of Enigma himself at the cost of health. The eidolons health is increased...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Midnight Pulse",
+        "desc": "Steeps an area in dark resonance, dealing 5 + a percentage of the enemies current HP as damage.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 100
+  },
+  "faceless_void": {
+    "id": "faceless_void",
+    "name": "Faceless Void",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/faceless_void.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Support",
+    "skills": [
+      {
+        "name": "Skill 1",
+        "desc": "Ability details pending.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Skill 2",
+        "desc": "Ability details pending.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Skill 3",
+        "desc": "Ability details pending.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "grimstroke": {
+    "id": "grimstroke",
+    "name": "Grimstroke",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/grimstroke.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Nuker, Disabler, Escape",
+    "skills": [
+      {
+        "name": "Stroke of Fate",
+        "desc": "Grimstroke paints a curved path of ink with his brush, damaging and slowing enemies. The damage i...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Phantom's Embrace",
+        "desc": "Summons a phantom that moves quickly towards the target, latching to it when she arrives. Once la...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Ink Swell",
+        "desc": "Grimstroke shrouds an allied unit in ink, increasing its movement speed. Enemies in range of the ...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "gyrocopter": {
+    "id": "gyrocopter",
+    "name": "Gyrocopter",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/gyrocopter.png",
+    "baseDamage": 32,
+    "baseHp": 520,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Nuker, Disabler",
+    "skills": [
+      {
+        "name": "Rocket Barrage",
+        "desc": "Launches a salvo of rockets at nearby enemy units in a radius around the Gyrocopter. Lasts 3 seco...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Homing Missile",
+        "desc": "Fires a homing missile to seek the targeted enemy unit. The missile gains speed over time, dealin...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Flak Cannon",
+        "desc": "Gyrocopter's attacks hit all enemy units in an area around it for a limited number of attacks. On...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "hoodwink": {
+    "id": "hoodwink",
+    "name": "Hoodwink",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/hoodwink.png",
+    "baseDamage": 32,
+    "baseHp": 520,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Support, Nuker, Escape, Disabler",
+    "skills": [
+      {
+        "name": "Acorn Shot",
+        "desc": "Fires Hoodwink's attack with an acorn at the target unit. The acorn bounces to nearby targets, sl...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Bushwhack",
+        "desc": "Tosses a net trap that stuns enemies if they are near a tree in the area. Affected enemies take d...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Scurry",
+        "desc": "Hoodwink gains bonus movement speed, phased movement, and tree-walking for a brief time. While ac...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "huskar": {
+    "id": "huskar",
+    "name": "Huskar",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/huskar.png",
+    "baseDamage": 34,
+    "baseHp": 600,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Durable, Initiator",
+    "skills": [
+      {
+        "name": "Inner Fire",
+        "desc": "In a fiery rage, knocks all nearby enemies away from you to a fixed distance, dealing damage and ...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Burning Spear",
+        "desc": "Huskar sets his spears aflame, dealing damage over time with his regular attack. Multiple attacks...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Berserker's Blood",
+        "desc": "Huskar's injuries feed his power, giving increased attack speed, magic resistance and health rege...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "invoker": {
+    "id": "invoker",
+    "name": "Invoker",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/invoker.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Support",
+    "skills": [
+      {
+        "name": "Skill 1",
+        "desc": "Ability details pending.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Skill 2",
+        "desc": "Ability details pending.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Skill 3",
+        "desc": "Ability details pending.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "io": {
+    "id": "io",
+    "name": "Io",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/io.png",
+    "baseDamage": 31,
+    "baseHp": 550,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Support, Escape, Nuker",
+    "skills": [
+      {
+        "name": "Tether",
+        "desc": "Tethers Io to an allied unit, granting bonus movement speed to both. When Io restores health or m...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Spirits",
+        "desc": "Summon five particle spirits that dance in a circle around Io. If a particle collides with an ene...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Overcharge",
+        "desc": "Io gains attack speed, spell amplification, and health regeneration based on max health. If Io is...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "jakiro": {
+    "id": "jakiro",
+    "name": "Jakiro",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/jakiro.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Nuker, Pusher, Disabler",
+    "skills": [
+      {
+        "name": "Dual Breath",
+        "desc": "An icy blast followed by a wave of fire launches out in a path in front of Jakiro. The ice slows ...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Ice Path",
+        "desc": "Creates a path of ice that stuns and damages enemies that touch it.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Liquid Fire",
+        "desc": "Jakiro burns his enemies in an area of effect with fire added to his attack, while slowing their ...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "juggernaut": {
+    "id": "juggernaut",
+    "name": "Juggernaut",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/juggernaut.png",
+    "baseDamage": 36,
+    "baseHp": 570,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Pusher, Escape",
+    "skills": [
+      {
+        "name": "Blade Fury",
+        "desc": "Causes a bladestorm of destructive force around Juggernaut, rendering him debuff immune with 80% ...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Healing Ward",
+        "desc": "Summons a Healing Ward which heals all nearby allied units, based on their max health. The Healin...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Blade Dance",
+        "desc": "Gives Juggernaut a chance to deal critical damage with Blade Fury and on each attack.",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 100
+  },
+  "keeper_of_the_light": {
+    "id": "keeper_of_the_light",
+    "name": "Keeper of the Light",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/keeper_of_the_light.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Nuker, Disabler",
+    "skills": [
+      {
+        "name": "Illuminate",
+        "desc": "CHANNELED - Channels light energy, building power the longer it's channeled. Once released, a wav...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Blinding Light",
+        "desc": "A blinding light flashes over the targeted area, knocking back units to the edge of the area and ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Chakra Magic",
+        "desc": "Restores mana to the target unit and reduces cooldowns of all basic abilities currently on cooldo...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "kez": {
+    "id": "kez",
+    "name": "Kez",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/kez.png",
+    "baseDamage": 36,
+    "baseHp": 570,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Escape, Disabler",
+    "skills": [
+      {
+        "name": "Echo Slash",
+        "desc": "Kez slashes forward in a 800 distance line with his Katana, attacking enemies in an area and appl...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Grappling Claw",
+        "desc": "Kez swings on a grappling hook towards the target unit or tree. When the grappling hook collides ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Kazurai Katana",
+        "desc": "Katana attacks and abilities apply a stacking damage over time to enemies that deals a percentage...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 100
+  },
+  "kunkka": {
+    "id": "kunkka",
+    "name": "Kunkka",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/kunkka.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Support, Disabler, Initiator, Durable, Nuker",
+    "skills": [
+      {
+        "name": "Torrent",
+        "desc": "Summons a rising torrent that, after a short delay, hurls enemy units into the sky, stunning, dea...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Tidebringer",
+        "desc": "Kunkka's legendary sword grants increased damage and cleaves a large area of effect in front of h...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "X Marks the Spot",
+        "desc": "Targets a friendly or enemy Hero, marks their position with an X, and returns them to it after se...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "largo": {
+    "id": "largo",
+    "name": "Largo",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/largo.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Durable, Disabler, Support",
+    "skills": [
+      {
+        "name": "Catchy Lick",
+        "desc": "Largo licks the targeted unit with his tongue, pulling it back a short distance, applying a basic...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Frogstomp",
+        "desc": "Largo tosses froglings to an area. They stomp the ground every 1 second, dealing damage and minis...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Croak of Genius",
+        "desc": "Largo strums a tune to a friendly hero. The hero's items and abilities have reduced mana cost and...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "legion_commander": {
+    "id": "legion_commander",
+    "name": "Legion Commander",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/legion_commander.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Disabler, Initiator, Durable, Nuker",
+    "skills": [
+      {
+        "name": "Overwhelming Odds",
+        "desc": "Turns the foes' numbers against them, dealing a 100% impact slow for 0.3s and damage to all enemi...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Press The Attack",
+        "desc": "Removes debuffs and disables from the target friendly unit, and grants bonus movement speed and h...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Moment of Courage",
+        "desc": "When attacked a number of times, Legion Commander will counter-attack her target with bonus lifes...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "leshrac": {
+    "id": "leshrac",
+    "name": "Leshrac",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/leshrac.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Carry, Support, Nuker, Pusher, Disabler",
+    "skills": [
+      {
+        "name": "Split Earth",
+        "desc": "Splits the earth under enemies. Deals damage and stuns for a short duration.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Diabolic Edict",
+        "desc": "Saturates the area around Leshrac with magical explosions that deal pure damage to enemy units an...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Lightning Storm",
+        "desc": "Summons a lightning storm that blasts the target enemy unit, then strikes any nearby enemy units....",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "lich": {
+    "id": "lich",
+    "name": "Lich",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/lich.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Nuker",
+    "skills": [
+      {
+        "name": "Frost Blast",
+        "desc": "Blasts the target enemy unit with damaging frost, dealing area damage and slowing movement and at...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Frost Shield",
+        "desc": "Applies a magical frost shield around the target, reducing damage from attacks against it. While ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Sinister Gaze",
+        "desc": "CHANNELED - Hypnotizes an enemy unit, causing it to move towards a point between the two of you a...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "lifestealer": {
+    "id": "lifestealer",
+    "name": "Lifestealer",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/lifestealer.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Durable, Escape, Disabler",
+    "skills": [
+      {
+        "name": "Rage",
+        "desc": "Launch into a maddened rage, becoming Debuff Immune, increasing magic resistance and gaining move...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Open Wounds",
+        "desc": "Lifestealer rends an enemy unit, slowing the victim's movement speed and allowing all allies to r...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Feast",
+        "desc": "Lifestealer's attacks deal damage and provide heal for a percentage of his target's max health. H...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 100
+  },
+  "lina": {
+    "id": "lina",
+    "name": "Lina",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/lina.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Carry, Nuker, Disabler",
+    "skills": [
+      {
+        "name": "Dragon Slave",
+        "desc": "Lina channels the breath of a dragon, sending out a wave of fire that scorches every enemy in its...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Light Strike Array",
+        "desc": "Summons a column of flames that damages and stuns enemies.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Fiery Soul",
+        "desc": "Grants bonus attack and movement speed each time Lina hits an enemy with a spell. Stacks with its...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "lion": {
+    "id": "lion",
+    "name": "Lion",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/lion.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Disabler, Nuker, Initiator",
+    "skills": [
+      {
+        "name": "Earth Spike",
+        "desc": "Rock spikes burst from the earth along a straight path. Enemy units are hurled into the air, then...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Hex",
+        "desc": "Transforms an enemy unit into a harmless beast, with all special abilities disabled.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Mana Drain",
+        "desc": "CHANNELED - Channels magical energy, taking mana and slowing enemies over time. If the enemy has ...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "lone_druid": {
+    "id": "lone_druid",
+    "name": "Lone Druid",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/lone_druid.png",
+    "baseDamage": 32,
+    "baseHp": 520,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Pusher, Durable",
+    "skills": [
+      {
+        "name": "Entangle",
+        "desc": "Allows Lone Druid to Entangle enemies once they gain 5 stacks. Entangled enemies are rooted and t...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Spirit Link",
+        "desc": "Links Lone Druid and the Spirit Bear, increasing their movement speed as well as sharing a percen...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      },
+      {
+        "name": "Savage Roar",
+        "desc": "Lone Druid and the Spirit Bear roar fiercely causing nearby enemies to flee towards their base in...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 100
+  },
+  "luna": {
+    "id": "luna",
+    "name": "Luna",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/luna.png",
+    "baseDamage": 32,
+    "baseHp": 520,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Nuker, Pusher",
+    "skills": [
+      {
+        "name": "Lucent Beam",
+        "desc": "Calls a beam of lunar energy down upon an enemy, damaging and briefly stunning them.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Lunar Orbit",
+        "desc": "Creates 4 glaives that rotate 225 radius around Luna. Any enemy unit that collides with a glaive ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Moon Glaives",
+        "desc": "Empowers Luna's glaives, causing her attacks to bounce between enemy units. Deals less damage wit...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "lycan": {
+    "id": "lycan",
+    "name": "Lycan",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/lycan.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Pusher, Durable, Escape",
+    "skills": [
+      {
+        "name": "Summon Wolves",
+        "desc": "Summons 2 wolves to aid Lycan in battle. At level 3, wolves gain Permanent Invisibility, and at l...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Howl",
+        "desc": "Strikes fear into enemies, reducing armor and attack damage of all enemies within 2000 range of L...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Feral Impulse",
+        "desc": "Increases the HP regeneration and damage of Lycan and all units under his control.",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 100
+  },
+  "magnus": {
+    "id": "magnus",
+    "name": "Magnus",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/magnus.png",
+    "baseDamage": 35,
+    "baseHp": 600,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Initiator, Disabler, Nuker, Escape",
+    "skills": [
+      {
+        "name": "Shockwave",
+        "desc": "Magnus sends out a wave of force, damaging enemy units in a line, pulling them towards him, and s...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Empower",
+        "desc": "When cast on an ally, grants them bonus damage and cleave on attack. Empower is always on Magnus ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Skewer",
+        "desc": "Magnus rushes forward, goring enemy units on his massive tusk. Heroes hit on the way will be drag...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "marci": {
+    "id": "marci",
+    "name": "Marci",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/marci.png",
+    "baseDamage": 35,
+    "baseHp": 600,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Support, Carry, Initiator, Disabler, Escape",
+    "skills": [
+      {
+        "name": "Dispose",
+        "desc": "Marci grabs an allied or enemy target and throws it effortlessly behind her, damaging and slowing...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Rebound",
+        "desc": "Marci bounds to the targeted allied unit, choosing a direction and distance she will spring away ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Bodyguard",
+        "desc": "Passively grants Marci lifesteal and bonus attack damage. When cast on an ally, she provides them...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "mars": {
+    "id": "mars",
+    "name": "Mars",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/mars.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Initiator, Disabler, Durable",
+    "skills": [
+      {
+        "name": "Spear of Mars",
+        "desc": "Mars throws his legendary Spear with deadly precision, damaging each enemy unit it strikes. The f...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "God's Rebuke",
+        "desc": "Mars smashes enemies in front of him with his shield, knocking them back and damaging them with a...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Bulwark",
+        "desc": "Mars wields his massive shield to block a portion of each physical attack when hit from the front...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "medusa": {
+    "id": "medusa",
+    "name": "Medusa",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/medusa.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Support",
+    "skills": [
+      {
+        "name": "Skill 1",
+        "desc": "Ability details pending.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Skill 2",
+        "desc": "Ability details pending.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Skill 3",
+        "desc": "Ability details pending.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "meepo": {
+    "id": "meepo",
+    "name": "Meepo",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/meepo.png",
+    "baseDamage": 36,
+    "baseHp": 570,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Escape, Nuker, Disabler, Initiator, Pusher",
+    "skills": [
+      {
+        "name": "Earthbind",
+        "desc": "Tosses a net at the target point, rooting down all enemy units in an area around it.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Poof",
+        "desc": "Drawing mystical energies from the earth, a Meepo can teleport to another Meepo or itself after c...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Ransack",
+        "desc": "Steals health from the enemy with each strike and heals all other Meepos for that amount. Reduced...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "mirana": {
+    "id": "mirana",
+    "name": "Mirana",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/mirana.png",
+    "baseDamage": 32,
+    "baseHp": 520,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Support, Escape, Nuker, Disabler",
+    "skills": [
+      {
+        "name": "Starstorm",
+        "desc": "Calls down a wave of meteors to damage nearby enemy units. The closest enemy unit to Mirana in a ...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Sacred Arrow",
+        "desc": "Fires a long-range arrow with deadly precision, which stuns and damages the first enemy unit it s...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Leap",
+        "desc": "Mirana leaps forward into battle, empowering herself with a ferocious roar that grants bonus atta...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "monkey_king": {
+    "id": "monkey_king",
+    "name": "Monkey King",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/monkey_king.png",
+    "baseDamage": 36,
+    "baseHp": 570,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Escape, Disabler, Initiator",
+    "skills": [
+      {
+        "name": "Boundless Strike",
+        "desc": "Monkey King enlarges his staff and slams it against the ground, stunning enemies in a line and da...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Tree Dance",
+        "desc": "Monkey King jumps to a tree and perches atop it. While perched, he gains the Primal Spring abilit...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Primal Spring",
+        "desc": "CHANNELED - Monkey King springs out from his tree perch, damaging and slowing enemies in the area...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "morphling": {
+    "id": "morphling",
+    "name": "Morphling",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/morphling.png",
+    "baseDamage": 32,
+    "baseHp": 520,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Escape, Durable, Nuker, Disabler",
+    "skills": [
+      {
+        "name": "Waveform",
+        "desc": "Morphling dissolves into liquid and surges forward, damaging enemy units in his path. Morphling i...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Adaptive Strike",
+        "desc": "Launches a surge of water toward an enemy unit, stunning them, knocking them back, and dealing ba...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Ebb and Flow",
+        "desc": "Morphling receives bonus cast range and slow resistance based on his current Strength, and attack...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "muerta": {
+    "id": "muerta",
+    "name": "Muerta",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/muerta.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Carry, Nuker, Disabler",
+    "skills": [
+      {
+        "name": "Dead Shot",
+        "desc": "* **The Calling (Ativa)**:",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Gunslinger",
+        "desc": "* **Spectral Slug (Ativa)**:",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Pierce the Veil",
+        "desc": "* **Supernatural (Ativa)**:",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "naga_siren": {
+    "id": "naga_siren",
+    "name": "Naga Siren",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/naga_siren.png",
+    "baseDamage": 36,
+    "baseHp": 570,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Support, Pusher, Disabler, Initiator, Escape",
+    "skills": [
+      {
+        "name": "Mirror Image",
+        "desc": "Creates multiple images of Naga Siren under her control. DISPEL TYPE: Basic Dispel",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Ensnare",
+        "desc": "Interrupts the target and traps them in place, preventing movement or blinking. Can target units ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Rip Tide",
+        "desc": "Naga Siren and her illusions deal bonus damage to enemies and reduce their armor for 4 seconds ev...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "natures_prophet": {
+    "id": "natures_prophet",
+    "name": "Nature's Prophet",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/natures_prophet.png",
+    "baseDamage": 31,
+    "baseHp": 550,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Carry, Pusher, Escape, Nuker",
+    "skills": [
+      {
+        "name": "Sprout",
+        "desc": "Sprouts a ring of trees around a unit, damaging and trapping it in place and providing vision in ...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Teleportation",
+        "desc": "Teleports to any point on the map. Gains a barrier after arriving to its destination.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Nature's Call",
+        "desc": "Converts an area of trees into Treants under the command of Nature's Prophet.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "necrophos": {
+    "id": "necrophos",
+    "name": "Necrophos",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/necrophos.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Carry, Nuker, Durable, Disabler",
+    "skills": [
+      {
+        "name": "Death Pulse",
+        "desc": "Necrophos releases a wave of death around him, dealing damage to enemy units and healing allied u...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Ghost Shroud",
+        "desc": "Necrophos slips into the realm that separates the living from the dead. Unable to attack or be at...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Heartstopper Aura",
+        "desc": "Necrophos stills the hearts of his opponents, causing nearby enemy units to lose a percentage of ...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "night_stalker": {
+    "id": "night_stalker",
+    "name": "Night Stalker",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/night_stalker.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Initiator, Durable, Disabler, Nuker",
+    "skills": [
+      {
+        "name": "Void",
+        "desc": "Creates a damaging void that slows an enemy unit and deals damage. At night, Void also mini-stuns...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Crippling Fear",
+        "desc": "Night Stalker horrifies all nearby enemies, causing them to become silenced and take damage over ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Midnight Feast",
+        "desc": "* **Hunter in the Night (Ativa)**: Night Stalker is in his element at night, attacking and moving...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "nyx_assassin": {
+    "id": "nyx_assassin",
+    "name": "Nyx Assassin",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/nyx_assassin.png",
+    "baseDamage": 35,
+    "baseHp": 600,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Disabler, Nuker, Initiator, Escape",
+    "skills": [
+      {
+        "name": "Impale",
+        "desc": "Rock spikes burst from the earth along a straight path. Enemy units take damage, then are hurled ...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Mind Flare",
+        "desc": "Deals damage equal to a percentage of the target's Max Mana and burns part of it away. Deals addi...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Spiked Carapace",
+        "desc": "When activated while above ground, Spiked Carapace reflects and negates damage dealt to Nyx Assas...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "ogre_magi": {
+    "id": "ogre_magi",
+    "name": "Ogre Magi",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/ogre_magi.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Support, Nuker, Disabler, Durable, Initiator",
+    "skills": [
+      {
+        "name": "Fireblast",
+        "desc": "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Ignite",
+        "desc": "Drenches the target and another random unit in volatile chemicals, causing it to burst into flame...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Bloodlust",
+        "desc": "Incites a frenzy in a friendly unit, increasing its movement speed and attack speed. Gives bonus ...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "omniknight": {
+    "id": "omniknight",
+    "name": "Omniknight",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/omniknight.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Support, Durable, Nuker",
+    "skills": [
+      {
+        "name": "Purification",
+        "desc": "Instantly heals a friendly unit and damages all nearby enemy units.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Repel",
+        "desc": "Grants Debuff Immunity with 60% magic resistance, as well as bonus HP Regen.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Hammer of Purity",
+        "desc": "Omniknight imbues his hammer with holy power, causing his attack to have increased range, deal pu...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "oracle": {
+    "id": "oracle",
+    "name": "Oracle",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/oracle.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Nuker, Disabler, Escape",
+    "skills": [
+      {
+        "name": "Fortune's End",
+        "desc": "CHANNELED - Gathers Oracle's power into a bolt of scouring energy that, when released, damages, r...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Fate's Edict",
+        "desc": "Oracle enraptures a target, disarming them and granting them 100% magic damage resistance.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Purifying Flames",
+        "desc": "Burns away impurities, dealing heavy magic damage to the target before causing them to regenerate...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "outworld_devourer": {
+    "id": "outworld_devourer",
+    "name": "Outworld Devourer",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/outworld_devourer.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Carry, Nuker, Disabler",
+    "skills": [
+      {
+        "name": "Arcane Orb",
+        "desc": "Adds extra pure damage to Outworld Destroyer's attacks, based on his remaining mana pool.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Astral Imprisonment",
+        "desc": "Steals a percentage of the target's max mana and places them into an astral prison. The hidden un...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Objurgation",
+        "desc": "Increases Outworld Destroyer's maximum mana. When cast, protects Outworld Destroyer with an all d...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "pangolier": {
+    "id": "pangolier",
+    "name": "Pangolier",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/pangolier.png",
+    "baseDamage": 35,
+    "baseHp": 600,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Carry, Nuker, Disabler, Durable, Escape, Initiator",
+    "skills": [
+      {
+        "name": "Swashbuckle",
+        "desc": "Pangolier dashes along the target line, then slashes and briefly slows all enemies in the drawn d...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Shield Crash",
+        "desc": "Pangolier jumps in the air and slams back to the ground in front of his current position damaging...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Lucky Shot",
+        "desc": "Pangolier rolls the dice and lets fate decide the outcome for his enemies. Grants a chance to dra...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "phantom_assassin": {
+    "id": "phantom_assassin",
+    "name": "Phantom Assassin",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/phantom_assassin.png",
+    "baseDamage": 36,
+    "baseHp": 570,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Escape",
+    "skills": [
+      {
+        "name": "Stifling Dagger",
+        "desc": "Throws a dagger slowing the enemy unit's movement speed, dealing 65+30% of Phantom Assassin's att...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Phantom Strike",
+        "desc": "Teleports to a unit, friendly or enemy, and grants bonus attack speed while attacking if it's an ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Blur",
+        "desc": "Phantom Assassin blurs her body, disjointing incoming projectiles, increasing her movement speed,...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 100
+  },
+  "phantom_lancer": {
+    "id": "phantom_lancer",
+    "name": "Phantom Lancer",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/phantom_lancer.png",
+    "baseDamage": 36,
+    "baseHp": 570,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Escape, Pusher, Nuker",
+    "skills": [
+      {
+        "name": "Spirit Lance",
+        "desc": "Sends a magical spirit lance to a target enemy unit that damages and slows, while summoning an il...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Doppelganger",
+        "desc": "Phantom Lancer briefly vanishes from the battlefield. After 1 second, Phantom Lancer and any of h...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Phantom Rush",
+        "desc": "When targeting an enemy for an attack, Phantom Lancer quickly charges into range, gaining increas...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "phoenix": {
+    "id": "phoenix",
+    "name": "Phoenix",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/phoenix.png",
+    "baseDamage": 34,
+    "baseHp": 600,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Support, Nuker, Initiator, Escape, Disabler",
+    "skills": [
+      {
+        "name": "Icarus Dive",
+        "desc": "Phoenix dives forward in an arc with a fixed distance in the targeted direction, dealing damage o...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Fire Spirits",
+        "desc": "Summons 4 fire spirits that circle around Phoenix. Each spirit can be launched independently at a...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Sun Ray",
+        "desc": "Phoenix expels a beam of light at the cost of its own health. The beam damages enemies and heals ...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "primal_beast": {
+    "id": "primal_beast",
+    "name": "Primal Beast",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/primal_beast.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Initiator, Durable, Disabler",
+    "skills": [
+      {
+        "name": "Onslaught",
+        "desc": "Primal Beast charges up and then runs in the chosen direction, knocking back enemies and allies a...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Trample",
+        "desc": "Primal Beast stomps over everything. For every 140 units traveled, all enemies around the Beast r...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Uproar",
+        "desc": "The Beast's temper causes every instance of 50 hero damage or more to grant a stack of Uproar. Wh...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 100
+  },
+  "puck": {
+    "id": "puck",
+    "name": "Puck",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/puck.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Initiator, Disabler, Escape, Nuker",
+    "skills": [
+      {
+        "name": "Illusory Orb",
+        "desc": "Vector Targeted. Puck launches a magic orb that travels along the path, damaging enemy units alon...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Waning Rift",
+        "desc": "Puck teleports to the target location and releases a burst of faerie dust that deals damage and s...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Phase Shift",
+        "desc": "CHANNELED - Puck briefly shifts into another dimension where it is immune from harm.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "pudge": {
+    "id": "pudge",
+    "name": "Pudge",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/pudge.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Disabler, Initiator, Durable, Nuker",
+    "skills": [
+      {
+        "name": "Meat Hook",
+        "desc": "Launches a bloody hook toward a unit or location. The hook will snag the first unit it encounters...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Rot",
+        "desc": "A toxic cloud that deals intense damage and slows movement--harming not only enemy units but Pudg...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Meat Shield",
+        "desc": "Pudge covers himself with a layer of flesh that blocks damage of any type taken from any source.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "pugna": {
+    "id": "pugna",
+    "name": "Pugna",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/pugna.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Nuker, Pusher",
+    "skills": [
+      {
+        "name": "Nether Blast",
+        "desc": "An exploding pulse deals damage to enemies and structures in the area. Deals 65% damage to struct...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Decrepify",
+        "desc": "A powerful banishing spell that slows a unit and renders it unable to attack or be attacked. Heal...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Nether Ward",
+        "desc": "Pugna places a Nether Ward at the target location. The ward will fire at any enemy hero who casts...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "queen_of_pain": {
+    "id": "queen_of_pain",
+    "name": "Queen of Pain",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/queen_of_pain.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Carry, Nuker, Escape",
+    "skills": [
+      {
+        "name": "Shadow Strike",
+        "desc": "Hurls a poisoned dagger which deals large initial damage, and then deals damage over time. The po...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Blink",
+        "desc": "Short distance teleportation that allows Queen of Pain to move in and out of combat.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Scream Of Pain",
+        "desc": "The Queen of Pain lets loose a piercing scream around her, damaging nearby enemies. 25% of the da...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "razor": {
+    "id": "razor",
+    "name": "Razor",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/razor.png",
+    "baseDamage": 32,
+    "baseHp": 520,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Durable, Nuker, Pusher",
+    "skills": [
+      {
+        "name": "Plasma Field",
+        "desc": "Releases a wave of energetic plasma that grows in power as it expands, but also zaps on contracti...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Static Link",
+        "desc": "Creates a charged link between Razor and an enemy Hero, stealing damage from the target and givin...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Storm Surge",
+        "desc": "There's a chance when attacked, and always when targeted with a spell, to release a forked lightn...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "riki": {
+    "id": "riki",
+    "name": "Riki",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/riki.png",
+    "baseDamage": 36,
+    "baseHp": 570,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Escape, Disabler",
+    "skills": [
+      {
+        "name": "Smoke Screen",
+        "desc": "Throws down a smoke bomb, silencing enemies and causing them to miss attacks.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Blink Strike",
+        "desc": "Teleports behind the target unit, momentarily slowing them by 100% and attacking them with bonus ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Tricks of the Trade",
+        "desc": "CHANNELED - Riki phases out of the world and periodically strikes 2 random enemy units from behin...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 100
+  },
+  "ring_master": {
+    "id": "ring_master",
+    "name": "Ring Master",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/ring_master.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Nuker, Escape, Disabler",
+    "skills": [
+      {
+        "name": "Tame the Beasts",
+        "desc": "CHANNELED - Ringmaster twirls his whip for up to 1 second then cracks it. Whipped enemies are dam...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Escape Act",
+        "desc": "Ringmaster packs himself or an allied hero into a mobile, extradimensional box. Boxed units gain ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Impalement Arts",
+        "desc": "Ringmaster throws one of his daggers to a precise point of his choosing. If he strikes an enemy, ...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "rubick": {
+    "id": "rubick",
+    "name": "Rubick",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/rubick.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Support",
+    "skills": [
+      {
+        "name": "Skill 1",
+        "desc": "Ability details pending.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Skill 2",
+        "desc": "Ability details pending.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Skill 3",
+        "desc": "Ability details pending.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "sand_king": {
+    "id": "sand_king",
+    "name": "Sand King",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/sand_king.png",
+    "baseDamage": 35,
+    "baseHp": 600,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Initiator, Disabler, Support, Nuker, Escape",
+    "skills": [
+      {
+        "name": "Burrowstrike",
+        "desc": "Sand King burrows into the ground and tunnels forward, damaging and stunning enemy units above hi...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Sand Storm",
+        "desc": "Sand King creates a fearsome sandstorm that damages enemy units and grants Sand King Invisibility...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Stinger",
+        "desc": "Sand King strikes an area, performing an attack on all enemies in the area of effect, dealing ext...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "shadow_demon": {
+    "id": "shadow_demon",
+    "name": "Shadow Demon",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/shadow_demon.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Disabler, Initiator, Nuker",
+    "skills": [
+      {
+        "name": "Disruption",
+        "desc": "Banishes the targeted unit from the battlefield for a short duration. Upon returning, two illusio...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Disseminate",
+        "desc": "Whenever the target takes damage, all enemies, including the target itself if it is an enemy, wit...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Shadow Poison",
+        "desc": "Deals damage in a line, and afflicts enemy units with a poison effect. The poison deals 1/2/4/8/1...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "shadow_fiend": {
+    "id": "shadow_fiend",
+    "name": "Shadow Fiend",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/shadow_fiend.png",
+    "baseDamage": 32,
+    "baseHp": 520,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Nuker",
+    "skills": [
+      {
+        "name": "Shadowraze",
+        "desc": "Shadow Fiend razes the ground directly in front of him, dealing damage to enemy units in the area...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Shadowraze",
+        "desc": "Shadow Fiend razes the ground a short distance away from him, dealing damage to enemy units in th...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Shadowraze",
+        "desc": "Shadow Fiend razes the ground a longer distance away from him, dealing damage to enemy units in t...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "shadow_shaman": {
+    "id": "shadow_shaman",
+    "name": "Shadow Shaman",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/shadow_shaman.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Pusher, Disabler, Nuker, Initiator",
+    "skills": [
+      {
+        "name": "Ether Shock",
+        "desc": "Creates a cone of ethereal energy that strikes multiple enemy units.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Hex",
+        "desc": "Transforms an enemy unit into a harmless creature, disabling their attacks and abilities.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Shackles",
+        "desc": "CHANNELED - Magically binds an enemy unit so that it cannot move or attack, absorbing their life ...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "silencer": {
+    "id": "silencer",
+    "name": "Silencer",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/silencer.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Carry, Support, Disabler, Initiator, Nuker",
+    "skills": [
+      {
+        "name": "Arcane Curse",
+        "desc": "Curses the target area, dealing damage and causing enemies to take damage over time and slowing t...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Glaives of Wisdom",
+        "desc": "Silencer enchants his glaives with his wisdom, stealing his target's Intelligence with each hit a...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Last Word",
+        "desc": "Enchants a target, providing vision of them and causing them to be damaged and silenced if they c...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "skywrath_mage": {
+    "id": "skywrath_mage",
+    "name": "Skywrath Mage",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/skywrath_mage.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Nuker, Disabler",
+    "skills": [
+      {
+        "name": "Arcane Bolt",
+        "desc": "Skywrath Mage launches a slow-moving bolt of arcane magic, dealing damage to an enemy unit based ...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Concussive Shot",
+        "desc": "Skywrath Mage sets off a long range shot that hits the closest hero within a long range. Upon imp...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Ancient Seal",
+        "desc": "Skywrath Mage seals the targeted unit with an ancient rune, silencing it and causing it to take a...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "slardar": {
+    "id": "slardar",
+    "name": "Slardar",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/slardar.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Durable, Initiator, Disabler, Escape",
+    "skills": [
+      {
+        "name": "Guardian Sprint",
+        "desc": "Slardar slithers ahead, moving significantly faster and passing through units. Slardar has 100% s...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Slithereen Crush",
+        "desc": "Slams the ground, leaving a puddle of water, and stunning and damaging nearby enemy units. After ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Bash of the Deep",
+        "desc": "After 3 attacks, your next attack will bash the target.",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "slark": {
+    "id": "slark",
+    "name": "Slark",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/slark.png",
+    "baseDamage": 36,
+    "baseHp": 570,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Escape, Disabler, Nuker",
+    "skills": [
+      {
+        "name": "Dark Pact",
+        "desc": "After a short delay, Slark sacrifices some of his life blood, purging most negative debuffs and d...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Pounce",
+        "desc": "Slark leaps forward, leashing and applying Essence Shift stacks to the first hero he connects. Th...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Saltwater Shiv",
+        "desc": "Slark slices the target with his salty shiv, stealing a portion of the target's movement speed, H...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "snapfire": {
+    "id": "snapfire",
+    "name": "Snapfire",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/snapfire.png",
+    "baseDamage": 31,
+    "baseHp": 550,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Support, Nuker, Disabler, Escape",
+    "skills": [
+      {
+        "name": "Scatterblast",
+        "desc": "Snapfire unloads with a wide blast that damages and slows enemies in a cone. Damage is increased ...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Firesnap Cookie",
+        "desc": "Snapfire feeds a potent cookie to Mortimer or an ally, causing them to hop a short distance. The ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Lil' Shredder",
+        "desc": "Snapfire heats up her mounted turret to rapidly fire 5 attacks dealing fixed damage plus a percen...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "sniper": {
+    "id": "sniper",
+    "name": "Sniper",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/sniper.png",
+    "baseDamage": 32,
+    "baseHp": 520,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Nuker",
+    "skills": [
+      {
+        "name": "Shrapnel",
+        "desc": "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets....",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Headshot",
+        "desc": "Sniper increases his accuracy, giving him a chance to deal 20 extra damage and knock back his ene...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      },
+      {
+        "name": "Take Aim",
+        "desc": "Passively increases Sniper's attack range by 160. On cast, Sniper gains increased vision, Headsho...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "spectre": {
+    "id": "spectre",
+    "name": "Spectre",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/spectre.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Support",
+    "skills": [
+      {
+        "name": "Skill 1",
+        "desc": "Ability details pending.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Skill 2",
+        "desc": "Ability details pending.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Skill 3",
+        "desc": "Ability details pending.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "spirit_breaker": {
+    "id": "spirit_breaker",
+    "name": "Spirit Breaker",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/spirit_breaker.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Initiator, Disabler, Durable, Escape",
+    "skills": [
+      {
+        "name": "Charge of Darkness",
+        "desc": "Spirit Breaker fixes his sight on an enemy unit and starts charging through all objects, starting...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Bulldoze",
+        "desc": "Spirit Breaker gains movement speed and status resistance to ram through enemies. Can be used whi...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Greater Bash",
+        "desc": "Gives a chance to stun and knockback an enemy unit on an attack. Deals a percentage of movement s...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "storm_spirit": {
+    "id": "storm_spirit",
+    "name": "Storm Spirit",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/storm_spirit.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Support",
+    "skills": [
+      {
+        "name": "Skill 1",
+        "desc": "Ability details pending.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Skill 2",
+        "desc": "Ability details pending.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Skill 3",
+        "desc": "Ability details pending.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "sven": {
+    "id": "sven",
+    "name": "Sven",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/sven.png",
+    "arenaImage": "assets/heroes/Sven_CombatArena.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Disabler, Initiator, Durable, Nuker",
+    "skills": [
+      {
+        "name": "Storm Hammer",
+        "desc": "Sven unleashes his magical gauntlet that deals damage and stuns enemy units in a small area aroun...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Great Cleave",
+        "desc": "Sven strikes with great force, cleaving all nearby enemy units with his attack.",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      },
+      {
+        "name": "Warcry",
+        "desc": "Sven's Warcry heartens his allied heroes for battle, increasing their armor and movement speed. L...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 0
+  },
+  "techies": {
+    "id": "techies",
+    "name": "Techies",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/techies.png",
+    "baseDamage": 31,
+    "baseHp": 550,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Nuker, Disabler",
+    "skills": [
+      {
+        "name": "Sticky Bomb",
+        "desc": "Lobs a Sticky Bomb towards the target area. If it lands next to an enemy hero, the bomb will stic...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Reactive Tazer",
+        "desc": "Techies trigger an electric charge on the target ally, giving them bonus movement speed for a sho...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Blast Off!",
+        "desc": "Techies hurtle themselves into the enemy's midst, detonating charges upon impact which deal massi...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "templar_assassin": {
+    "id": "templar_assassin",
+    "name": "Templar Assassin",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/templar_assassin.png",
+    "baseDamage": 32,
+    "baseHp": 520,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Escape",
+    "skills": [
+      {
+        "name": "Refraction",
+        "desc": "Templar Assassin becomes highly elusive, gaining a small barrier and bonus to her damage. The dam...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Meld",
+        "desc": "Templar Assassin conceals herself, becoming invisible as long as she remains still. If Meld's inv...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Psi Blades",
+        "desc": "Templar Assassin's psi blades slice through the attacked unit, splitting and damaging enemy units...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 100
+  },
+  "terrorblade": {
+    "id": "terrorblade",
+    "name": "Terrorblade",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/terrorblade.png",
+    "baseDamage": 36,
+    "baseHp": 570,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Pusher, Nuker",
+    "skills": [
+      {
+        "name": "Reflection",
+        "desc": "Terrorblade brings forth an invulnerable dark reflection of all enemy heroes in a target area. Af...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Conjure Image",
+        "desc": "Creates an illusion of Terrorblade that deals damage.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Metamorphosis",
+        "desc": "Terrorblade transforms into a powerful demon with a ranged attack. Any of Terrorblade's illusions...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "tidehunter": {
+    "id": "tidehunter",
+    "name": "Tidehunter",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/tidehunter.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Support",
+    "skills": [
+      {
+        "name": "Skill 1",
+        "desc": "Ability details pending.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Skill 2",
+        "desc": "Ability details pending.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Skill 3",
+        "desc": "Ability details pending.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "timbersaw": {
+    "id": "timbersaw",
+    "name": "Timbersaw",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/timbersaw.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Nuker, Durable, Escape",
+    "skills": [
+      {
+        "name": "Whirling Death",
+        "desc": "Timbersaw whirls extremely sharp edges, damaging enemies and destroying trees around him in an ar...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Timber Chain",
+        "desc": "Timbersaw fires a chain that embeds itself in the first tree it hits, pulling him towards it. Any...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Reactive Armor",
+        "desc": "Each time Timbersaw is attacked, he gains increased health regen and armor. Hero attacks are coun...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "tinker": {
+    "id": "tinker",
+    "name": "Tinker",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/tinker.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Carry, Nuker, Pusher",
+    "skills": [
+      {
+        "name": "Laser",
+        "desc": "Fires an intense energy beam, damaging and blinding the target. Blinded targets miss all physical...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "March of the Machines",
+        "desc": "Enlists an army of robotic minions to destroy enemy units in an area around Tinker.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Deploy Turrets",
+        "desc": "* **Warp Flare (Ativa)**: Throws a flare towards an enemy, dealing damage, teleporting them away,...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "tiny": {
+    "id": "tiny",
+    "name": "Tiny",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/tiny.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Nuker, Pusher, Initiator, Durable, Disabler",
+    "skills": [
+      {
+        "name": "Avalanche",
+        "desc": "Bombards an area with rocks, continously doing small intervals of damage and stun to enemy units.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Toss",
+        "desc": "Grabs the nearest unit in a 300 radius around Tiny, ally or enemy, and launches it at the target ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Tree Grab",
+        "desc": "Grabs a tree and causes Tiny to have bonus range, damage, and a splashing attack for a limited nu...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "treant_protector": {
+    "id": "treant_protector",
+    "name": "Treant Protector",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/treant_protector.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Support, Initiator, Durable, Disabler, Escape",
+    "skills": [
+      {
+        "name": "Nature's Grasp",
+        "desc": "Creates vines towards the target location. Vines slow down and deal damage to enemies that walk t...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Leech Seed",
+        "desc": "Treant's attack plants a life-sapping seed in an enemy unit. That unit takes additional magic dam...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Living Armor",
+        "desc": "Infuses the target hero or structure with a protective coating which heals the target and blocks ...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "troll_warlord": {
+    "id": "troll_warlord",
+    "name": "Troll Warlord",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/troll_warlord.png",
+    "baseDamage": 32,
+    "baseHp": 520,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Pusher, Disabler, Durable",
+    "skills": [
+      {
+        "name": "Battle Stance",
+        "desc": "Troll Warlord swaps from using ranged to melee attacks. While melee, Troll Warlord's base attack ...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Whirling Axes (Ranged)",
+        "desc": "Troll hurls a fistful of five axes in a cone shape over 950 range, slowing and damaging enemy uni...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Whirling Axes (Melee)",
+        "desc": "Troll hurls two axes around him in a close range area of effect, damaging enemy units and causing...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 100
+  },
+  "tusk": {
+    "id": "tusk",
+    "name": "Tusk",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/tusk.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Initiator, Disabler, Nuker",
+    "skills": [
+      {
+        "name": "Ice Shards",
+        "desc": "Tusk compresses shards of ice into a ball of frozen energy that damages all enemies it comes in c...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Snowball",
+        "desc": "Tusk begins rolling into a snowball. Allies within a 325 radius can also be added to the snowball...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Tag Team",
+        "desc": "Activate to temporarily apply a negative debuff aura around you, causing enemies that are attacke...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "underlord": {
+    "id": "underlord",
+    "name": "Underlord",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/underlord.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Support, Nuker, Disabler, Durable, Escape",
+    "skills": [
+      {
+        "name": "Firestorm",
+        "desc": "Calls down waves of fire that damage enemy units in the target area, burning for additional damag...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Pit of Malice",
+        "desc": "A deadly pit is conjured at the target location; any unit that enters will be damaged and rooted....",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Atrophy Aura",
+        "desc": "Nearby enemy units are weakened, losing a portion of their base damage. If an enemy dies while un...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "undying": {
+    "id": "undying",
+    "name": "Undying",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/undying.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Support, Durable, Disabler, Nuker",
+    "skills": [
+      {
+        "name": "Decay",
+        "desc": "Undying steals strength from all enemy heroes in an area, dealing base damage as he claims the en...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Soul Rip",
+        "desc": "Undying rips health away from all nearby units and uses it to heal an ally, or damage an enemy. S...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Tombstone",
+        "desc": "Summons a tombstone at the target point. Zombies will frequently spawn next to every enemy unit i...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "ursa": {
+    "id": "ursa",
+    "name": "Ursa",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/ursa.png",
+    "baseDamage": 36,
+    "baseHp": 570,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Durable, Disabler",
+    "skills": [
+      {
+        "name": "Earthshock",
+        "desc": "Ursa leaps forward 250 units and slams the earth, causing a powerful shock to damage and slow all...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Overpower",
+        "desc": "Using his skill in combat, Ursa gains increased attack speed and slow resistance for a number of ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Fury Swipes",
+        "desc": "Ursa's claws dig deeper wounds in the enemy, causing consecutive attacks to the same enemy to dea...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 100
+  },
+  "vengeful_spirit": {
+    "id": "vengeful_spirit",
+    "name": "Vengeful Spirit",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/vengeful_spirit.png",
+    "baseDamage": 32,
+    "baseHp": 520,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Support, Initiator, Disabler, Nuker, Escape",
+    "skills": [
+      {
+        "name": "Magic Missile",
+        "desc": "Fires a magic missile at an enemy unit, stunning and dealing damage.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Wave of Terror",
+        "desc": "Vengeful Spirit lets loose a wicked cry, weakening the total attack damage and armor of enemies, ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Vengeance Aura",
+        "desc": "Vengeful Spirit's presence increases the damage of nearby friendly heroes. Vengeful Spirit hersel...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "venomancer": {
+    "id": "venomancer",
+    "name": "Venomancer",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/venomancer.png",
+    "baseDamage": 31,
+    "baseHp": 550,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Support, Nuker, Initiator, Pusher, Disabler",
+    "skills": [
+      {
+        "name": "Venomous Gale",
+        "desc": "Launches a ball of venom in a line, poisoning enemy units so that they take both initial damage a...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Snakebite",
+        "desc": "Venomancer summons a Spawn of Aktok to sink its fangs into a target, dealing magic damage and app...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Plague Ward",
+        "desc": "Summons a plague ward to attack enemy units and structures. The ward is immune to magic. Wards ga...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "viper": {
+    "id": "viper",
+    "name": "Viper",
+    "type": "agility",
+    "emoji": "🏹",
+    "image": "assets/heroes/viper.png",
+    "baseDamage": 32,
+    "baseHp": 520,
+    "baseMana": 180,
+    "baseStr": 18,
+    "baseAgi": 24,
+    "baseInt": 15,
+    "strGrowth": 2.0,
+    "agiGrowth": 3.2,
+    "intGrowth": 1.4,
+    "role": "Carry, Durable, Initiator, Disabler",
+    "skills": [
+      {
+        "name": "Poison Attack",
+        "desc": "Intensifies Viper's venom, adding an effect to his normal attack that applies a stacking movement...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Nethertoxin",
+        "desc": "Viper releases a Nethertoxin at the targeted area. Units in that area take an increasing damage o...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Corrosive Skin",
+        "desc": "Viper exudes an infectious toxin that damages and slows the attack speed of any enemy that damage...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "visage": {
+    "id": "visage",
+    "name": "Visage",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/visage.png",
+    "baseDamage": 31,
+    "baseHp": 550,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Support, Nuker, Durable, Disabler, Pusher",
+    "skills": [
+      {
+        "name": "Grave Chill",
+        "desc": "Visage drains the movement and attack speed of the targeted unit, gaining the drained speed for i...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Soul Assumption",
+        "desc": "Visage gathers charges of soul essence each time nearby heroes take more than 100 damage. When th...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Gravekeeper's Cloak",
+        "desc": "Visage generates a layered barrier that protects him from damage. If he receives damage from a pl...",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "void_spirit": {
+    "id": "void_spirit",
+    "name": "Void Spirit",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/void_spirit.png",
+    "baseDamage": 35,
+    "baseHp": 600,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Carry, Escape, Nuker, Disabler",
+    "skills": [
+      {
+        "name": "Aether Remnant",
+        "desc": "Void Spirit dispatches a remnant to the target location. The remnant stands watch over the region...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Dissimilate",
+        "desc": "Void Spirit temporarily fades into the aether, creating a number of portals through which he can ...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Resonant Pulse",
+        "desc": "Void Spirit wraps himself in a protective shield that absorbs physical damage and emits a single ...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  },
+  "warlock": {
+    "id": "warlock",
+    "name": "Warlock",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/warlock.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Initiator, Disabler",
+    "skills": [
+      {
+        "name": "Fatal Bonds",
+        "desc": "Binds several visible enemy units together, causing a percentage of the damage dealt to one of th...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Shadow Word",
+        "desc": "Warlock whispers an incantation, casting a spell on a unit that makes it deal damage to nearby en...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Upheaval",
+        "desc": "CHANNELED - A powerful slowing and damaging current that grows stronger as it's channeled. Lasts ...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "weaver": {
+    "id": "weaver",
+    "name": "Weaver",
+    "type": "agility",
+    "emoji": "🕷️",
+    "image": "assets/heroes/weaver.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Support",
+    "skills": [
+      {
+        "name": "Skill 1",
+        "desc": "Ability details pending.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Skill 2",
+        "desc": "Ability details pending.",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Skill 3",
+        "desc": "Ability details pending.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "windranger": {
+    "id": "windranger",
+    "name": "Windranger",
+    "type": "universal",
+    "emoji": "🌀",
+    "image": "assets/heroes/windranger.png",
+    "baseDamage": 31,
+    "baseHp": 550,
+    "baseMana": 200,
+    "baseStr": 20,
+    "baseAgi": 20,
+    "baseInt": 20,
+    "strGrowth": 2.4,
+    "agiGrowth": 2.4,
+    "intGrowth": 2.4,
+    "role": "Carry, Support, Disabler, Escape, Nuker",
+    "skills": [
+      {
+        "name": "Shackleshot",
+        "desc": "Shackles the target to an enemy unit or tree in a line directly behind it. If no unit or tree is ...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Powershot",
+        "desc": "CHANNELED - Windranger charges her bow for up to 1 second for a single powerful shot, which deals...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Windrun",
+        "desc": "Increases movement speed and adds evasion from all physical attacks.",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "winter_wyvern": {
+    "id": "winter_wyvern",
+    "name": "Winter Wyvern",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/winter_wyvern.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Disabler, Nuker",
+    "skills": [
+      {
+        "name": "Arctic Burn",
+        "desc": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to e...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Splinter Blast",
+        "desc": "Launches a ball of brittle ice toward a unit. The ice shatters on impact, leaving the primary tar...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Cold Embrace",
+        "desc": "Encases an ally in an icy cocoon, freezing them solid while healing a base amount as well as a pe...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "witch_doctor": {
+    "id": "witch_doctor",
+    "name": "Witch Doctor",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/witch_doctor.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Support, Nuker, Disabler",
+    "skills": [
+      {
+        "name": "Paralyzing Cask",
+        "desc": "Launches a cask of paralyzing powder that ricochets between enemy units, stunning and damaging th...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Voodoo Restoration",
+        "desc": "Witch Doctor focuses his magic to heal nearby allied units, costing Witch Doctor mana every secon...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Maledict",
+        "desc": "Curses all enemy Heroes and player-controlled units in a small area, causing them to take a set a...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 80
+  },
+  "wraith_king": {
+    "id": "wraith_king",
+    "name": "Wraith King",
+    "type": "strength",
+    "emoji": "⚔️",
+    "image": "assets/heroes/wraith_king.png",
+    "baseDamage": 38,
+    "baseHp": 650,
+    "baseMana": 180,
+    "baseStr": 25,
+    "baseAgi": 15,
+    "baseInt": 16,
+    "strGrowth": 3.2,
+    "agiGrowth": 1.8,
+    "intGrowth": 1.5,
+    "role": "Carry, Support, Durable, Disabler, Initiator",
+    "skills": [
+      {
+        "name": "Wraithfire Blast",
+        "desc": "Wraith King sears an enemy unit with spectral fire, dealing damage and stunning, then dealing dam...",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Bone Guard",
+        "desc": "Gains a Charge for every 2 creeps killed and 2 charges per hero killed. Activate to spend all cha...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Mortal Strike",
+        "desc": "Wraith King passively deals bonus damage on an attack with a cooldown.",
+        "cost": 0,
+        "cd": 0,
+        "level": 0
+      }
+    ],
+    "recruitCost": 250
+  },
+  "zeus": {
+    "id": "zeus",
+    "name": "Zeus",
+    "type": "intelligence",
+    "emoji": "❄️",
+    "image": "assets/heroes/zeus.png",
+    "baseDamage": 28,
+    "baseHp": 500,
+    "baseMana": 260,
+    "baseStr": 17,
+    "baseAgi": 16,
+    "baseInt": 25,
+    "strGrowth": 1.9,
+    "agiGrowth": 1.6,
+    "intGrowth": 3.4,
+    "role": "Nuker, Carry",
+    "skills": [
+      {
+        "name": "Arc Lightning",
+        "desc": "Hurls a bolt of lightning that leaps through nearby enemy units that deal damage.",
+        "cost": 80,
+        "cd": 8,
+        "level": 0
+      },
+      {
+        "name": "Lightning Bolt",
+        "desc": "Calls down a bolt of lightning to strike an enemy unit, causing damage and a mini-stun. When cast...",
+        "cost": 95,
+        "cd": 10,
+        "level": 0
+      },
+      {
+        "name": "Heavenly Jump",
+        "desc": "Zeus performs a Heavenly Jump, leaping forward and shocking the closest visible nearby enemy (pri...",
+        "cost": 150,
+        "cd": 24,
+        "level": 0
+      }
+    ],
+    "recruitCost": 150
+  }
+};

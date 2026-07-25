@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dota 2 Idle Arena</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation (Left) -->
+    <aside class="sidebar">
+      <div>
+        <div class="logo-container">
+          <h1 style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <svg viewBox="0 0 24 24" width="22" height="22" style="fill: var(--dota-red); filter: drop-shadow(0 0 5px rgba(227, 41, 41, 0.6)); display: inline-block; vertical-align: middle;">
+              <path d="M 2,2 C 2,2 14,4 14,4 L 11.5,15.5 L 2,12 Z"/>
+              <path d="M 16.5,2 L 22,2.5 L 22,8.5 L 16.5,6.5 Z"/>
+              <path d="M 14,17.5 L 20,20 L 18,22 L 12.5,19.5 Z"/>
+            </svg>
+            DOTA IDLE
+          </h1>
+        </div>
+        <nav>
+          <ul class="nav-menu">
+            <li class="nav-item active" data-tab="arena">
+              <!-- Crossed Swords SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              Combat Arena
+            </li>
+            <li class="nav-item" data-tab="heroes">
+              <!-- Hero Profile SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              Hero Lineup
+            </li>
+            <li class="nav-item" data-tab="secret-shop">
+              <!-- Bag/Shop SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+              </svg>
+              Secret Shop
+            </li>
+            <li class="nav-item" data-tab="pvp-arena">
+              <!-- Trophy SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5a2 2 0 10-2 2h2zm0 0h4m-4 0H8m12 3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              PvP Arena
+            </li>
+            <li class="nav-item" data-tab="rune-nexus">
+              <!-- Sparkle/Rune SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3l2.09 6.26L20 11l-5.91 1.74L12 19l-2.09-6.26L4 11l5.91-1.74L12 3z" />
+              </svg>
+              Rune Nexus
+            </li>
+            <li class="nav-item" data-tab="forge">
+              <!-- Anvil/Hammer SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+              Ancient Forge
+            </li>
+            <li class="nav-item" data-tab="wiki">
+              <!-- Book/Wiki SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              Wiki
+            </li>
+            <li class="nav-item" data-tab="settings">
+              <!-- Settings SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              Settings
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Gold Balance Card (Bottom Left) -->
+      <div class="sidebar-footer">
+        <div class="gold-balance-card">
+          <div class="gold-balance-header">GOLD BALANCE</div>
+          <div class="gold-balance-row">
+            <div class="gold-coins-icon">
+              <!-- Stack of Gold coins styled via CSS -->
+              <span class="gold-coin-disc top"></span>
+              <span class="gold-coin-disc mid"></span>
+              <span class="gold-coin-disc bot"></span>
+            </div>
+            <div class="gold-balance-numbers">
+              <span class="gold-value-main" id="gold-amount">0</span>
+              <span class="gold-rate-sub" id="gold-rate">+0.0/s</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Workspace (Center) -->
+    <main class="main-content">
+      
+      <!-- Top Stats Bar -->
+      <header class="top-stats-bar">
+        <div class="speed-control">
+          <!-- Speed is locked to 1x by default, but movespeed stats increase character attack speed/mobility -->
+          <span style="font-size: 0.8rem; color: var(--text-secondary); margin-right: 10px;">TACTICAL BATTLE SPEED: 1.0x</span>
+        </div>
+        
+        <!-- Dota Coins and Dota Plus Indicators -->
+        <div class="top-premium-stats">
+          <div class="premium-coins-badge" style="background: rgba(52, 152, 219, 0.08); border-color: rgba(52, 152, 219, 0.2); color: #3498db;" title="ESSENCE: usada na Forge para fazer Upgrade de Tier e Fusão de itens. Ganhe derrotando Bosses (queda garantida) e desmontando itens no Forge.">
+            🧪 Essence: <span id="essence-amount" style="font-weight: bold;">0</span>
+          </div>
+          <div class="premium-coins-badge" style="background: rgba(46, 204, 113, 0.08); border-color: rgba(46, 204, 113, 0.2); color: var(--xp-green);" title="SHARDS: moeda para Recrutar novos heróis no Hero Lineup. Ganhe derrotando inimigos Elite e Bosses, e como recompensa da Arena PvP.">
+            💎 Shards: <span id="shards-amount" style="font-weight: bold;">0</span>
+          </div>
+          <div class="premium-coins-badge" style="background: rgba(229, 193, 88, 0.08); border-color: var(--border-gold); color: var(--secondary-gold);" title="ANCESTRAL ESSENCE: usada na árvore de Ancestral Prestige (Secret Shop) para talentos permanentes. Ganhe fazendo Prestígio: resete seu estágio da campanha em troca de Essência Ancestral baseada no seu Estágio Máximo.">
+            ⚜️ Ancestral: <span id="ancestral-amount" style="font-weight: bold;">0</span>
+          </div>
+          <div class="premium-coins-badge" title="DOTA COINS: moeda premium para a Dota Coins Store (Secret Shop) — compre baús, Dota Plus e slots extras de time. Ganhe abrindo baús, eventos, ou via 'Card Top-up' na loja.">
+            🪙 Dota Coins: <span id="coins-amount" style="font-weight: bold; color: var(--rarity-arcana);">0</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Map Selector Row (Directly below speed bar) -->
+      <div class="map-selector" id="map-selector">
+        <!-- Loaded dynamically from JS -->
+      </div>
+
+      <!-- Workspace Body (Split view of Active tab and HUD) -->
+      <div class="workspace-split">
+        
+        <!-- Tab: Combat Arena -->
+        <section id="arena-tab" class="tab-pane active">
+          <div class="arena-grid">
+            
+            <!-- Graphic Battleground Arena -->
+            <div class="arena-canvas" id="arena-canvas">
+              <!-- Stage stats overlay -->
+              <div class="arena-stage-info">
+                <div style="font-size: 0.95rem; font-weight: bold;">
+                  Current Stage: <span id="arena-stage-num" style="color: var(--secondary-gold);">1</span>
+                  (<span id="arena-stage-name">Safe Lane</span>)
+                </div>
+                <div class="stage-farm-row" style="display: flex; align-items: center; gap: 6px; margin: 4px 0; font-size: 0.75rem; color: var(--text-secondary);">
+                  <button id="btn-open-stage-map" class="btn-clear-log" style="padding: 2px 8px;">🗺️ MAPA</button>
+                  <button id="btn-farm-stage-return" class="btn-clear-log" style="padding: 2px 8px; display: none;">VOLTAR AO PROGRESSO</button>
+                  <button id="btn-looping-stage" class="btn-clear-log" style="padding: 2px 8px; border-color: var(--text-dark); color: var(--text-dark); transition: all 0.2s;" title="LOOPING STAGE: trava neste stage e repete infinitamente para farmar">🔄 LOOPING</button>
+                </div>
+                <div class="stage-progress-row" style="display: flex; align-items: center; gap: 8px; margin: 4px 0;">
+                  <div class="bar-container stage-progress-container" style="flex-grow: 1; height: 10px; border-radius: 5px;">
+                    <div class="bar-fill hp" id="stage-progress-fill" style="width: 0%; background: linear-gradient(90deg, var(--dota-red), #ff6b6b); border-radius: 5px;"></div>
+                  </div>
+                  <span id="stage-progress-text" style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-secondary); white-space: nowrap; font-weight: 600;">Onda 1 / 10</span>
+                </div>
+                <div class="stage-stats-row">
+                  <span>Max Stage: <span id="max-stage-val" style="color: var(--xp-green);">1</span></span>
+                  <span>Rec. Power: <span id="rec-power-val" style="color: var(--dota-red);">100</span></span>
+                  <span>Team Power: <span id="team-power-val" style="color: var(--secondary-gold);">100</span></span>
+                </div>
+              </div>
+
+              <!-- Animated Battlefield -->
+              <div class="battlefield" id="battlefield">
+                <!-- Dynamically populated Sven, CM, Drow and Enemy units -->
+              </div>
+
+              <!-- PvP Lock overlay: shown while the team is locked into a PvP Arena match -->
+              <div class="pvp-lock-overlay" id="pvp-lock-overlay" style="display: none;">
+                <div class="pvp-lock-overlay-content">
+                  <div style="font-size: 2rem;">⚔️</div>
+                  <div style="font-weight: 800; font-size: 1.1rem; color: var(--secondary-gold);">Time em Batalha PvP</div>
+                  <div style="font-size: 0.8rem; color: var(--text-secondary);">Seu time está travado na PvP Arena. O combate PvE está pausado até o fim da sessão.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Battle Feed logs -->
+            <div class="combat-log-container">
+              <div class="combat-log-header">
+                <span class="combat-log-title">
+                  <span class="feed-logo-icon"></span>
+                  BATTLE FEED
+                </span>
+                <button class="btn-clear-log" id="btn-clear-log">
+                  CLEAR LOG
+                  <svg xmlns="http://www.w3.org/2000/svg" style="width: 14px; height: 14px; margin-left: 4px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                  </svg>
+                </button>
+              </div>
+              <div class="combat-log-body" id="combat-log-body">
+                <!-- Log messages loaded here -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab: Heroes Lineup -->
+        <section id="heroes-tab" class="tab-pane">
+          <div class="heroes-tab-container" style="display: grid; grid-template-columns: 1fr 340px; gap: 15px; height: 100%; overflow: hidden; width: 100%;">
+            
+            <!-- Left Column: Formation & Roster -->
+            <div class="heroes-left-col" style="display: flex; flex-direction: column; gap: 15px; height: 100%; overflow: hidden;">
+              
+              <!-- Current Formation Panel -->
+              <div class="my-team-container" style="background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 12px; padding: 15px; display: flex; flex-direction: column; gap: 10px; flex-shrink: 0;">
+                <div class="my-team-header" style="display: flex; justify-content: space-between; align-items: center;">
+                  <h3 class="hud-section-title" style="margin: 0; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px;">CURRENT FORMATION</h3>
+                  <span style="font-size: 0.75rem; color: var(--text-secondary); font-weight: 600;">Total Power: <span id="team-power-lineup-display" style="color: var(--primary-gold); font-family: 'JetBrains Mono', monospace; font-weight: 700;">0</span></span>
+                </div>
+                
+                <div class="my-team-slots" id="my-team-slots" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 0;">
+                  <!-- Dynamically populated slots -->
+                </div>
+                
+                <div style="display: flex; gap: 8px; justify-content: flex-start; margin-top: 5px;">
+                  <button class="btn-sub-nav" id="btn-team-auto-form" style="font-size: 0.7rem; padding: 6px 12px; font-weight: 700;">AUTO FORM</button>
+                  <button class="btn-sub-nav" id="btn-team-reset" style="font-size: 0.7rem; padding: 6px 12px; font-weight: 700;">RESET FORMATION</button>
+                  <button class="btn-sub-nav" id="btn-team-save" style="font-size: 0.7rem; padding: 6px 12px; font-weight: 700;">SAVE LOADOUT</button>
+                  <button class="btn-modal-close" id="btn-team-deploy" style="font-size: 0.75rem; padding: 6px 16px; font-weight: 800; background: var(--dota-red); color: white; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 3px 8px rgba(227,41,41,0.3);">DEPLOY PARTY</button>
+                </div>
+              </div>
+              
+              <!-- Hero Roster Grid Panel -->
+              <div class="hero-roster-container" style="background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 12px; padding: 15px; display: flex; flex-direction: column; gap: 12px; flex: 1; overflow: hidden;">
+                <div class="hero-select-toolbar" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-shrink: 0; margin-bottom: 0;">
+                  <h3 class="hud-section-title" style="margin: 0; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px;">HERO ROSTER</h3>
+                  <div class="hero-select-search-wrap">
+                    <input type="text" id="hero-search-input" class="hero-select-search" placeholder="Search hero..." style="width: 160px; padding: 5px 10px; font-size: 0.75rem;">
+                  </div>
+                </div>
+                
+                <div class="hero-select-filters" id="hero-select-filters" style="display: flex; gap: 6px; flex-wrap: wrap; flex-shrink: 0; border-bottom: 1px solid rgba(255,255,255,0.04); padding-bottom: 8px;">
+                  <button class="btn-hero-filter active" data-filter="all" style="font-size: 0.7rem; padding: 4px 8px;">ALL</button>
+                  <button class="btn-hero-filter" data-filter="strength" style="font-size: 0.7rem; padding: 4px 8px;">💪 STRENGTH</button>
+                  <button class="btn-hero-filter" data-filter="agility" style="font-size: 0.7rem; padding: 4px 8px;">⚡ AGILITY</button>
+                  <button class="btn-hero-filter" data-filter="intelligence" style="font-size: 0.7rem; padding: 4px 8px;">🧠 INTELLIGENCE</button>
+                  <button class="btn-hero-filter" data-filter="universal" style="font-size: 0.7rem; padding: 4px 8px;">🌌 UNIVERSAL</button>
+                </div>
+                
+                <div class="hero-select-grid" id="hero-select-grid" style="flex: 1; overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; padding-right: 5px;">
+                  <!-- Dynamic grid cards -->
+                </div>
+              </div>
+            </div>
+            
+            <!-- Right Column: Selected Hero Details -->
+            <div class="heroes-right-col" id="heroes-subview-details" style="background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 12px; padding: 15px; display: flex; flex-direction: column; gap: 12px; height: 100%; overflow-y: auto;">
+              <div class="hero-details-container" id="hero-details-container" style="display: flex; flex-direction: column; gap: 12px; height: 100%;">
+                <!-- Dynamically populated hero details -->
+              </div>
+            </div>
+            
+          </div>
+        </section>
+
+        <!-- Tab: Secret Shop (holds Shop, Forge, Market, Dota Shop, Compendium, Prestige sub-tabs) -->
+        <section id="secret-shop-tab" class="tab-pane">
+          <!-- Sub-tabs row inside page -->
+          <div class="shop-sub-nav">
+            <button class="btn-sub-nav active" data-sub="shop-items">Merchant Shop</button>
+            <button class="btn-sub-nav" data-sub="shop-market">Marketplace</button>
+            <button class="btn-sub-nav" data-sub="shop-compendium">Compendium</button>
+            <button class="btn-sub-nav" data-sub="shop-prestige">Ancestral Prestige</button>
+            <button class="btn-sub-nav" data-sub="shop-chests">Dota Coins Store</button>
+          </div>
+
+          <div class="shop-sub-panes">
+            
+            <!-- Sub-pane 1: Merchant Items -->
+            <div id="subpane-shop-items" class="sub-pane active">
+              <div class="shop-grid-container">
+                <div class="shop-panel">
+                  <h3 class="hud-section-title">Merchant Basic Items</h3>
+                  <div class="shop-items-grid" id="shop-items-grid"></div>
+                </div>
+                <div class="inventory-panel">
+                  <h3 class="hud-section-title" style="display: flex; justify-content: space-between;">
+                    <span>Stash Bag</span>
+                    <span id="inventory-count">0 / 24</span>
+                  </h3>
+                  <div class="inventory-grid" id="inventory-grid"></div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- Sub-pane 3: Marketplace -->
+            <div id="subpane-shop-market" class="sub-pane">
+              <div class="shop-grid-container">
+                <div class="shop-panel">
+                  <h3 class="hud-section-title" style="display: flex; justify-content: space-between;">
+                    <span>NPC Listings</span>
+                    <span id="market-refresh-timer">Refresh in: 5:00</span>
+                  </h3>
+                  <div class="shop-items-grid" id="market-buy-grid"></div>
+                </div>
+                <div class="inventory-panel">
+                  <h3 class="hud-section-title">Sell Items</h3>
+                  <div class="inventory-grid" id="market-inventory-grid" style="height: 120px; flex-grow: 0;"></div>
+                  <div style="flex-grow: 1; border-top: 1px solid var(--border-light); padding-top: 10px;">
+                    <h4 style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 8px;">Active Listings</h4>
+                    <div id="market-listings-list" style="display: flex; flex-direction: column; gap: 8px; overflow-y: auto; max-height: 160px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sub-pane 4: Compendium Collection -->
+            <div id="subpane-shop-compendium" class="sub-pane">
+              <div style="display: flex; flex-direction: column; gap: 15px; height: 100%; overflow-y: auto; padding: 10px;">
+                <h3 class="hud-section-title">Compendium Collections</h3>
+                <p style="font-size: 0.8rem; color: var(--text-secondary);">Unlock the first item of each type to earn permanent group passive buffs!</p>
+                <div class="compendium-grid" id="compendium-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                  <!-- Dynamic collection groups loaded here -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Sub-pane 5: Ancestral Prestige -->
+            <div id="subpane-shop-prestige" class="sub-pane">
+              <div class="shop-grid-container" style="grid-template-columns: 1.2fr 0.8fr;">
+                <div class="shop-panel" style="overflow-y: auto;">
+                  <h3 class="hud-section-title">Ancestral Talent Tree</h3>
+                  <div class="prestige-tree-container" id="prestige-tree" style="display: flex; flex-direction: column; gap: 12px; margin-top: 10px;">
+                    <!-- Loaded dynamically -->
+                  </div>
+                </div>
+                <div class="inventory-panel" style="display: flex; flex-direction: column; justify-content: space-between; padding: 15px;">
+                  <div>
+                    <h3 class="hud-section-title">Prestige renascimento</h3>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 15px;">Reset your campaign stage to 1 in exchange for Ancestral Essence. You will keep your heroes unlocked, their levels, items, and all compendium collections!</p>
+                    <div class="prestige-yield-card" style="background: rgba(229, 193, 88, 0.05); border: 1px solid var(--border-gold); padding: 15px; border-radius: 8px; text-align: center;">
+                      <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">ESTIMATED YIELD</div>
+                      <div style="font-size: 2.2rem; font-weight: 800; color: var(--secondary-gold); margin: 8px 0;" id="prestige-essence-yield">⚜️ 0</div>
+                      <div style="font-size: 0.7rem; color: var(--text-dark);">Based on Highest Stage reached (<span id="prestige-max-stage">0</span>)</div>
+                    </div>
+                  </div>
+                  <button class="btn-recruit" id="btn-trigger-prestige" style="width: 100%; padding: 12px; font-weight: bold; background: linear-gradient(135deg, var(--dota-crimson) 0%, var(--dota-red) 100%);">TRIGGER PRESTIGE</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sub-pane 6: Chest Gacha Shop -->
+            <div id="subpane-shop-chests" class="sub-pane">
+              <div class="shop-grid-container">
+                <div class="shop-panel">
+                  <h3 class="hud-section-title">Open Treasures</h3>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="shop-item-card" style="padding: 15px; min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
+                      <div style="font-size: 2.5rem;">📦</div>
+                      <h4 style="font-weight: bold; font-size: 0.95rem;">Common Chest</h4>
+                      <div style="color: #ff3366; font-size: 0.85rem; font-family: 'JetBrains Mono', monospace;">500 Coins</div>
+                      <button class="btn-recruit" id="btn-buy-common-chest" style="padding: 6px 12px; font-size: 0.8rem; width: 100%;">Unlock</button>
+                    </div>
+                    <div class="shop-item-card" style="padding: 15px; min-height: 200px; display: flex; flex-direction: column; justify-content: space-between; border-color: var(--rarity-immortal);">
+                      <div style="font-size: 2.5rem;">🏆</div>
+                      <h4 style="font-weight: bold; font-size: 0.95rem; color: var(--secondary-gold);">Immortal Treasure</h4>
+                      <div style="color: #ff3366; font-size: 0.85rem; font-family: 'JetBrains Mono', monospace;">2000 Coins</div>
+                      <button class="btn-recruit" id="btn-buy-immortal-chest" style="padding: 6px 12px; font-size: 0.8rem; width: 100%; background: linear-gradient(135deg, var(--rarity-legendary) 0%, var(--rarity-immortal) 100%);">Unlock</button>
+                    </div>
+                  </div>
+                  
+                  <div id="chest-gacha-spinner" style="display: none; border-top: 1px solid var(--border-light); padding-top: 15px; margin-top: 15px; text-align: center; flex-direction: column; align-items: center; gap: 5px;">
+                    <div style="font-size: 0.75rem; color: var(--secondary-gold); font-weight: bold;">ROLLING...</div>
+                    <div id="gacha-visual-roll" style="font-size: 2.2rem; transition: transform 0.1s;">📦</div>
+                    <div id="gacha-item-result" style="font-size: 0.85rem; font-weight: bold;">...</div>
+                  </div>
+                </div>
+
+                <div class="inventory-panel">
+                  <h3 class="hud-section-title">Coins Store & Cash</h3>
+                  <div style="display: flex; flex-direction: column; gap: 10px; overflow-y: auto;">
+                    <div class="shop-item-card" style="flex-direction: row; justify-content: space-between; padding: 10px; text-align: left; width: 100%;">
+                      <div>
+                        <h5 style="font-size: 0.85rem; font-weight: bold;">Card Top-up</h5>
+                        <span style="font-size: 0.7rem; color: var(--text-secondary);">Simulate cash deposit.</span>
+                      </div>
+                      <button class="btn-settings" id="btn-cash-topup" style="border-color: #ff3366; color: #ff3366; background: rgba(255, 51, 102, 0.05); padding: 5px 10px; font-size: 0.8rem;">+5k Coins</button>
+                    </div>
+
+                    <div class="shop-item-card" style="flex-direction: row; justify-content: space-between; padding: 10px; text-align: left; width: 100%;" id="shop-card-dota-plus">
+                      <div>
+                        <h5 style="font-size: 0.85rem; font-weight: bold; color: var(--secondary-gold);">Dota Plus Sub</h5>
+                        <span style="font-size: 0.7rem; color: var(--text-secondary);">Permanent boost: +20% Gold/XP. Unlocks exclusive heroes.</span>
+                      </div>
+                      <button class="btn-settings" id="btn-buy-dota-plus" style="border-color: var(--secondary-gold); color: var(--secondary-gold); padding: 5px 10px; font-size: 0.8rem;">10k Coins</button>
+                    </div>
+                    
+                    <div class="shop-item-card" style="flex-direction: row; justify-content: space-between; padding: 10px; text-align: left; width: 100%;" id="shop-card-team-slot">
+                      <div>
+                        <h5 style="font-size: 0.85rem; font-weight: bold;">Unlock Slots 4 & 5</h5>
+                        <span style="font-size: 0.7rem; color: var(--text-secondary);">Unlock extra battle heroes.</span>
+                      </div>
+                      <button class="btn-settings" id="btn-buy-team-slot" style="padding: 5px 10px; font-size: 0.8rem;">Unlock</button>
+                    </div>
+
+                    <div class="shop-item-card" style="flex-direction: row; justify-content: space-between; padding: 10px; text-align: left; width: 100%;" id="shop-card-backpack">
+                      <div>
+                        <h5 style="font-size: 0.85rem; font-weight: bold;">Extra Backpack (+24 Stash Slots)</h5>
+                        <span style="font-size: 0.7rem; color: var(--text-secondary);" id="backpack-count-label">Owned: 0 backpacks (24/24 slots)</span>
+                      </div>
+                      <button class="btn-settings" id="btn-buy-backpack" style="padding: 5px 10px; font-size: 0.8rem;">Buy</button>
+                    </div>
+
+                    <div class="shop-item-card" style="flex-direction: row; justify-content: space-between; padding: 10px; text-align: left; width: 100%;">
+                      <div>
+                        <h5 style="font-size: 0.85rem; font-weight: bold; color: #2ecc71;">Cash Out Dota Coins</h5>
+                        <span style="font-size: 0.7rem; color: var(--text-secondary);">Sacar via PIX ou Crypto (simulado).</span>
+                      </div>
+                      <button class="btn-settings" id="btn-open-cashout" style="border-color: #2ecc71; color: #2ecc71; padding: 5px 10px; font-size: 0.8rem;">Sacar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Tab: PvP Arena -->
+        <section id="pvp-arena-tab" class="tab-pane">
+          <div class="pvp-grid">
+            <div class="pvp-panel-left" id="pvp-lobby-panel" style="display: flex; flex-direction: column; gap: 15px; height: 100%;">
+              <h3 class="hud-section-title">PvP Arena Lobby</h3>
+              
+              <!-- State 1: Create Lobby Panel -->
+              <div class="pvp-status-card" id="pvp-create-lobby-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; height: 100%; min-height: 350px;">
+                <div style="font-size: 3rem; filter: drop-shadow(0 0 10px rgba(227, 41, 41, 0.4));">⚔️</div>
+                <h4 style="font-weight: bold; font-size: 1.1rem; color: var(--text-primary);">Saguão de Duelos</h4>
+                <p style="font-size: 0.8rem; color: var(--text-secondary); max-width: 280px; text-align: center; line-height: 1.5; margin-bottom: 10px;">
+                  Crie um saguão (lobby) para encontrar um oponente. Vocês poderão ver o Combat Power um do outro antes de confirmar e iniciar o duelo!
+                </p>
+                <button class="btn-modal-close" id="btn-create-lobby" style="background: linear-gradient(135deg, var(--primary-gold) 0%, var(--secondary-gold) 100%); color: var(--bg-darker); font-weight: bold; padding: 10px 30px; border-radius: 8px; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(210, 161, 56, 0.3);">
+                  Criar Lobby
+                </button>
+              </div>
+
+              <!-- State 2: Active Lobby Card -->
+              <div class="pvp-status-card" id="pvp-active-lobby-card" style="display: none; flex-direction: column; gap: 15px; padding: 15px; height: 100%; justify-content: space-between; min-height: 350px;">
+                
+                <div style="display: flex; align-items: stretch; gap: 10px; flex: 1;">
+                  <!-- Player Side -->
+                  <div style="flex: 1; background: rgba(0,0,0,0.25); border: 1px solid var(--border-light); border-radius: 8px; padding: 10px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                    <div style="font-size: 0.75rem; font-weight: bold; color: var(--text-secondary); text-transform: uppercase;">Você</div>
+                    <div style="font-size: 1rem; font-weight: bold; color: var(--text-primary);">YOU</div>
+                    <div style="font-size: 0.75rem; color: var(--xp-green); font-weight: bold; background: rgba(46,204,113,0.1); padding: 2px 8px; border-radius: 4px;" id="pvp-player-mmr-label">1000 MMR</div>
+                    
+                    <div style="border-top: 1px solid rgba(255,255,255,0.05); width: 100%; margin: 5px 0;"></div>
+                    <div style="font-size: 0.7rem; color: var(--text-secondary);">POWER</div>
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.15rem; font-weight: 700; color: var(--primary-gold);" id="pvp-lobby-player-power">0</div>
+                    
+                    <div style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                      <!-- Hidden team indicators -->
+                      <div class="pvp-hidden-slot" style="width: 32px; height: 32px; border: 1px dashed var(--text-dark); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--text-dark); font-size: 0.8rem; font-weight: bold;">?</div>
+                      <div class="pvp-hidden-slot" style="width: 32px; height: 32px; border: 1px dashed var(--text-dark); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--text-dark); font-size: 0.8rem; font-weight: bold;">?</div>
+                      <div class="pvp-hidden-slot" style="width: 32px; height: 32px; border: 1px dashed var(--text-dark); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--text-dark); font-size: 0.8rem; font-weight: bold;">?</div>
+                    </div>
+                    
+                    <div id="pvp-player-ready-status" style="font-size: 0.75rem; font-weight: bold; color: var(--dota-red);">Aguardando...</div>
+                  </div>
+
+                  <!-- Versus Divider -->
+                  <div style="display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 800; color: var(--dota-red); text-shadow: 0 0 8px rgba(227,41,41,0.4);">VS</div>
+
+                  <!-- Opponent Side -->
+                  <div style="flex: 1; background: rgba(0,0,0,0.25); border: 1px solid var(--border-light); border-radius: 8px; padding: 10px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                    <div style="font-size: 0.75rem; font-weight: bold; color: var(--text-secondary); text-transform: uppercase;">Oponente</div>
+                    <div style="font-size: 1rem; font-weight: bold; color: var(--text-primary);" id="pvp-lobby-opp-name">Awaiting...</div>
+                    <div style="font-size: 0.75rem; color: var(--primary-gold); font-weight: bold; background: rgba(210,161,56,0.1); padding: 2px 8px; border-radius: 4px;" id="pvp-lobby-opp-mmr">---</div>
+                    
+                    <div style="border-top: 1px solid rgba(255,255,255,0.05); width: 100%; margin: 5px 0;"></div>
+                    <div style="font-size: 0.7rem; color: var(--text-secondary);">POWER</div>
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.15rem; font-weight: 700; color: var(--primary-gold);" id="pvp-lobby-opp-power">0</div>
+                    
+                    <div style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                      <div class="pvp-hidden-slot" style="width: 32px; height: 32px; border: 1px dashed var(--text-dark); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--text-dark); font-size: 0.8rem; font-weight: bold;">?</div>
+                      <div class="pvp-hidden-slot" style="width: 32px; height: 32px; border: 1px dashed var(--text-dark); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--text-dark); font-size: 0.8rem; font-weight: bold;">?</div>
+                      <div class="pvp-hidden-slot" style="width: 32px; height: 32px; border: 1px dashed var(--text-dark); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--text-dark); font-size: 0.8rem; font-weight: bold;">?</div>
+                    </div>
+                    
+                    <div id="pvp-opp-ready-status" style="font-size: 0.75rem; font-weight: bold; color: var(--text-dark);">Aguardando...</div>
+                  </div>
+                </div>
+
+                <!-- Controls -->
+                <div style="display: flex; flex-direction: column; gap: 8px; width: 100%; margin-top: 10px;">
+                  <button class="btn-settings" id="btn-pvp-confirm-team" style="border-color: var(--secondary-gold); color: var(--secondary-gold); font-size: 0.8rem; padding: 10px 20px; font-weight: bold; width: 100%;">
+                    Confirmar Time
+                  </button>
+                  <button class="btn-modal-close" id="btn-pvp-start-duel" disabled style="background: var(--dota-red); border: none; color: white; font-size: 0.85rem; padding: 10px 20px; font-weight: bold; width: 100%; border-radius: 6px; cursor: not-allowed; opacity: 0.5;">
+                    Iniciar Duelo
+                  </button>
+                  <button class="btn-back-to-grid" id="btn-pvp-leave-lobby" style="font-size: 0.75rem; color: var(--text-secondary); background: transparent; border: none; cursor: pointer; align-self: center;">
+                    Sair do Lobby
+                  </button>
+                </div>
+              </div>
+
+              <!-- State 3: Duel Result Panel (The Reveal!) -->
+              <div class="pvp-status-card" id="pvp-duel-result-card" style="display: none; flex-direction: column; gap: 15px; padding: 15px; min-height: 350px; justify-content: space-between;">
+                <div style="text-align: center;">
+                  <div style="font-size: 1.5rem; font-weight: bold; text-transform: uppercase; color: var(--secondary-gold);" id="pvp-duel-result-title">DUELO CONCLUÍDO</div>
+                  <div style="font-size: 2rem; font-weight: 800; margin-top: 5px;" id="pvp-duel-outcome-text">VITÓRIA</div>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: stretch; gap: 10px; flex: 1; margin: 10px 0;">
+                  <!-- Player Revealed Team -->
+                  <div style="flex: 1; background: rgba(0,0,0,0.25); border: 1px solid var(--border-light); border-radius: 8px; padding: 8px; display: flex; flex-direction: column; align-items: center; gap: 5px;">
+                    <span style="font-size: 0.7rem; color: var(--text-secondary); font-weight: bold;">SEU TIME</span>
+                    <div id="pvp-player-revealed-avatars" style="display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; margin-top: 5px;"></div>
+                  </div>
+                  
+                  <div style="display: flex; align-items: center; font-size: 1rem; color: var(--text-dark);">vs</div>
+
+                  <!-- Opponent Revealed Team -->
+                  <div style="flex: 1; background: rgba(0,0,0,0.25); border: 1px solid var(--border-light); border-radius: 8px; padding: 8px; display: flex; flex-direction: column; align-items: center; gap: 5px;">
+                    <span style="font-size: 0.7rem; color: var(--text-secondary); font-weight: bold;" id="pvp-opp-revealed-title">TIME BOT</span>
+                    <div id="pvp-opp-revealed-avatars" style="display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; margin-top: 5px;"></div>
+                  </div>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-light); border-radius: 6px; padding: 8px; text-align: center; font-size: 0.8rem;" id="pvp-duel-rewards-desc">
+                  Recompensas ganhas!
+                </div>
+
+                <button class="btn-settings" id="btn-pvp-back-to-lobby" style="width: 100%; border-color: var(--primary-gold); color: var(--primary-gold); padding: 8px; font-weight: bold;">
+                  Voltar ao Saguão
+                </button>
+              </div>
+
+            </div>
+            
+            <div class="pvp-panel-right">
+              <div style="display: flex; flex-direction: column; overflow: hidden; height: 100%;">
+                <h3 class="hud-section-title">Global Leaderboard</h3>
+                <div class="pvp-leaderboard-container">
+                  <table class="pvp-leaderboard-table" id="pvp-leaderboard-table">
+                    <thead>
+                      <tr>
+                        <th>Rank</th>
+                        <th>Player Name</th>
+                        <th>MMR</th>
+                        <th>Division</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Dynamic bot rows -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+              <div style="display: flex; flex-direction: column; overflow: hidden; height: 100%;">
+                <h3 class="hud-section-title">Battle Feed Logs</h3>
+                <div class="pvp-feed-logs" id="pvp-feed-logs">
+                  <div class="pvp-feed-log-entry" style="color: var(--text-dark);">[System] PvP Arena initialized. Ready for matchmaking.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab: Rune Nexus (Ancient Rune Web talent constellation) -->
+        <section id="rune-nexus-tab" class="tab-pane">
+          <div class="rune-nexus-workspace">
+            <div class="rune-currency-bar">
+              <div class="rune-currency-chip gold">
+                <span class="rune-currency-icon">🪙</span>
+                <span id="rune-gold-display">0</span>
+                <span class="rune-currency-label">Gold</span>
+              </div>
+              <div class="rune-currency-chip fragments">
+                <span class="rune-currency-icon">🔷</span>
+                <span id="rune-fragments-display">0</span>
+                <span class="rune-currency-label">Rune Fragments</span>
+              </div>
+              <div class="rune-currency-chip sigils">
+                <span class="rune-currency-icon">⚜️</span>
+                <span id="rune-sigils-display">0</span>
+                <span class="rune-currency-label">Ancestral Sigils</span>
+              </div>
+              <div class="rune-invested-chip">
+                <span class="rune-currency-label">Níveis Investidos</span>
+                <span id="rune-invested-display">0</span>
+              </div>
+            </div>
+
+            <div class="rune-path-filter-row" id="rune-path-filter-row">
+              <!-- Path filter chips loaded dynamically -->
+            </div>
+
+            <div class="rune-constellation-container" id="rune-constellation-container">
+              <!-- SVG connections + nodes rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- Floating rune detail card -->
+          <div class="rune-detail-card" id="rune-detail-card" style="display: none;">
+            <!-- Rendered dynamically on node click -->
+          </div>
+        </section>
+
+        <!-- Tab: Settings -->
+        <section id="settings-tab" class="tab-pane">
+          <div class="settings-container">
+            
+            <div class="settings-card">
+              <h2 style="font-size: 1.1rem; font-weight: 700; border-bottom: 1px solid var(--border-light); padding-bottom: 8px; margin-bottom: 15px;">Sound Settings</h2>
+              <div class="settings-row">
+                <div class="settings-info">
+                  <span class="settings-title">Sound Effects</span>
+                  <span class="settings-desc">Enable synthesizer retro-arcade audio.</span>
+                </div>
+                <div class="audio-slider-container">
+                  <button class="btn-settings" id="btn-audio-toggle">Mute</button>
+                  <input type="range" class="audio-slider" id="audio-volume" min="0" max="1" step="0.1" value="0.5">
+                </div>
+              </div>
+            </div>
+
+            <!-- Sandbox cheats -->
+            <div class="settings-card" style="border-color: rgba(46, 204, 113, 0.4);">
+              <h2 style="font-size: 1.1rem; font-weight: 700; border-bottom: 1px solid var(--border-light); padding-bottom: 8px; margin-bottom: 15px; color: var(--xp-green);">Sandbox Debug Cheats</h2>
+              <div class="settings-row" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; border-bottom: none;">
+                <button class="btn-settings" id="cheat-add-gold">Add 100k Gold</button>
+                <button class="btn-settings" id="cheat-add-coins">Add 10k Coins</button>
+                <button class="btn-settings" id="cheat-add-scrap">Add 500 Scrap</button>
+                <button class="btn-settings" id="cheat-level-up">Level +5 Party</button>
+                <button class="btn-settings" id="cheat-spawn-boss">Spawn Roshan</button>
+                <button class="btn-settings" id="cheat-spawn-items" style="color: var(--secondary-gold);">Fill Items</button>
+              </div>
+            </div>
+
+            <div class="settings-card">
+              <h2 style="font-size: 1.1rem; font-weight: 700; border-bottom: 1px solid var(--border-light); padding-bottom: 8px; margin-bottom: 15px;">Game Save & Progression</h2>
+              
+              <div class="settings-row">
+                <div class="settings-info">
+                  <span class="settings-title">Manual Save</span>
+                  <span class="settings-desc">Force save game state to LocalStorage.</span>
+                </div>
+                <button class="btn-settings" id="btn-manual-save">Save Now</button>
+              </div>
+
+              <div class="settings-row" style="flex-direction: column; align-items: stretch; gap: 10px;">
+                <div class="settings-info">
+                  <span class="settings-title">Export / Import Save Data</span>
+                  <span class="settings-desc">Backup or restore your save data.</span>
+                </div>
+                <textarea class="save-string-box" id="save-string-box" placeholder="Your save data will appear here..."></textarea>
+                <div style="display: flex; gap: 10px; margin-top: 5px;">
+                  <button class="btn-settings" id="btn-export-save" style="flex: 1;">Generate Code</button>
+                  <button class="btn-settings" id="btn-import-save" style="flex: 1;">Load From Code</button>
+                </div>
+              </div>
+
+              <div class="settings-row">
+                <div class="settings-info">
+                  <span class="settings-title">Full Reset</span>
+                  <span class="settings-desc" style="color: var(--dota-red);">WARNING: Wipe all progress.</span>
+                </div>
+                <button class="btn-settings danger" id="btn-reset-game">Reset Game</button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Tab: Ancient Forge -->
+        <section id="forge-tab" class="tab-pane" style="padding: 10px;">
+          <div class="forge-header-bar">
+            <div class="forge-level-chip">
+              <span class="forge-level-icon">⚒️</span>
+              <div class="forge-level-info">
+                <div class="forge-level-title">Forja Ancestral — Nível <span id="forge-level-val">1</span></div>
+                <div class="bar-container forge-xp-bar-container">
+                  <div class="bar-fill hp" id="forge-xp-bar-fill" style="width: 0%; background-color: var(--secondary-gold);"></div>
+                </div>
+                <div class="forge-xp-text" id="forge-xp-text">0 / 500 XP</div>
+              </div>
+            </div>
+            <div class="forge-materials-row" id="forge-materials-row">
+              <!-- Rendered dynamically: common/rare/epic material counts -->
+            </div>
+          </div>
+
+          <div class="forge-module-nav" id="forge-module-nav">
+            <!-- 8 module buttons rendered dynamically -->
+          </div>
+
+          <div class="forge-module-body" id="forge-module-body">
+            <!-- Active module panel rendered dynamically -->
+          </div>
+        </section>
+
+        <!-- Tab: Wiki -->
+        <section id="wiki-tab" class="tab-pane">
+          <div class="wiki-container">
+            <!-- Wiki Header Nav -->
+            <div class="wiki-nav-bar">
+              <button class="wiki-nav-btn active" data-wiki-sub="stages">Stages & Monsters</button>
+              <button class="wiki-nav-btn" data-wiki-sub="heroes">Heroes Encyclopedia</button>
+              <button class="wiki-nav-btn" data-wiki-sub="items">Items Compendium</button>
+            </div>
+            
+            <!-- Wiki Content Area -->
+            <div class="wiki-content-body">
+              
+              <!-- Sub-pane 1: Stages & Monsters -->
+              <div id="wikipane-stages" class="wiki-sub-pane active">
+                <div class="wiki-section-intro">Explore DOTA's farming spots, neutral camps, bosses, and their drop rates.</div>
+                <div class="wiki-grid-stages" id="wiki-stages-list">
+                  <!-- Generated dynamically -->
+                </div>
+              </div>
+              
+              <!-- Sub-pane 2: Heroes -->
+              <div id="wikipane-heroes" class="wiki-sub-pane">
+                <div class="wiki-filter-bar">
+                  <span class="filter-label">Filter Attribute:</span>
+                  <div class="filter-group">
+                    <button class="btn-wiki-filter active" data-hero-attr="all">All</button>
+                    <button class="btn-wiki-filter" data-hero-attr="strength">💪 Strength</button>
+                    <button class="btn-wiki-filter" data-hero-attr="agility">⚡ Agility</button>
+                    <button class="btn-wiki-filter" data-hero-attr="intelligence">🧠 Intelligence</button>
+                    <button class="btn-wiki-filter" data-hero-attr="universal">🌌 Universal</button>
+                  </div>
+                </div>
+                <div class="wiki-grid-heroes" id="wiki-heroes-list">
+                  <!-- Generated dynamically -->
+                </div>
+              </div>
+              
+              <!-- Sub-pane 3: Items -->
+              <div id="wikipane-items" class="wiki-sub-pane">
+                <div class="wiki-filter-bar">
+                  <input type="text" id="wiki-item-search" class="wiki-search-input" placeholder="Search items by name...">
+                  <div class="filter-group">
+                    <button class="btn-wiki-item-filter active" data-item-rarity="all">All Rarities</button>
+                    <button class="btn-wiki-item-filter" data-item-rarity="common">Common</button>
+                    <button class="btn-wiki-item-filter" data-item-rarity="rare">Rare</button>
+                    <button class="btn-wiki-item-filter" data-item-rarity="epic">Epic</button>
+                    <button class="btn-wiki-item-filter" data-item-rarity="legendary">Legendary</button>
+                  </div>
+                </div>
+                <div class="wiki-grid-items" id="wiki-items-list">
+                  <!-- Generated dynamically -->
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Tip bar (At the very bottom of main pane) -->
+      <footer class="tip-footer-bar">
+        <div class="tip-content">
+          <span class="tip-icon">💡</span>
+          <span class="tip-text" id="tip-text-content">TIP: Upgrade your heroes in the Hero Lineup to increase your DPS!</span>
+        </div>
+        <div class="version-label">v1.2.0 <span class="info-circle-icon">ⓘ</span></div>
+      </footer>
+    </main>
+
+    <!-- Active HUD Sidebar (Right) -->
+    <aside class="combat-hud-panel" id="combat-hud-panel">
+
+      <!-- Section: Team Synergies -->
+      <div class="hud-section">
+        <div class="hud-section-title" style="display: flex; justify-content: space-between; align-items: center;">
+          <span>TEAM SYNERGIES</span>
+          <span style="font-size: 0.7rem; color: var(--secondary-gold); cursor: pointer; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;" onclick="openSynergiesModal()">View Details &gt;</span>
+        </div>
+        <div id="synergy-panel" class="synergy-panel" onclick="openSynergiesModal()" style="cursor: pointer;">
+          <div style="font-size: 0.7rem; color: var(--text-dark); text-align: center; padding: 6px 0;">Organize um time para ver sinergias ativas.</div>
+        </div>
+      </div>
+
+      <!-- Section: Farming Camp -->
+      <div class="hud-section">
+        <div class="hud-section-title">FARMING CAMP</div>
+        <div class="farming-camp-card">
+          <!-- Thumbnail landscape of Safe lane path -->
+          <div class="camp-thumbnail" style="background-image: url('dota_safe_lane.jpg');"></div>
+          <div class="camp-card-details">
+            <div class="camp-name" id="hud-map-name">Safe Lane</div>
+            <div class="camp-level-desc" id="hud-map-creeps">Creeps level 1</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section: Tactical Maneuvers (Aggro, Stack, Pull, Wards) -->
+      <div class="hud-section">
+        <div class="hud-section-title">TACTICAL MANEUVERS</div>
+        <div class="tactical-maneuvers-card">
+          <div class="maneuver-row">
+            <button class="btn-maneuver" id="btn-maneuver-stack" title="Stack Camp: Spawn stronger neutrals with bonus loot">
+              🌾 Stack Camp <span id="maneuver-stack-cooldown" style="color: var(--secondary-gold); font-size: 0.7rem; font-family: 'JetBrains Mono', monospace;"></span>
+            </button>
+            <button class="btn-maneuver" id="btn-maneuver-pull" title="Pull Lane: Resets stage timer and heals party">
+              🚜 Pull Lane <span id="maneuver-pull-cooldown" style="color: var(--secondary-gold); font-size: 0.7rem; font-family: 'JetBrains Mono', monospace;"></span>
+            </button>
+          </div>
+          <div class="maneuver-row" style="margin-top: 6px;">
+            <button class="btn-maneuver ward" id="btn-maneuver-obs" title="Observer Ward: +25% item drop rate for 3m">
+              👁️ Obs Ward <span id="maneuver-obs-cooldown" style="color: var(--mana-blue); font-size: 0.7rem; font-family: 'JetBrains Mono', monospace;"></span>
+            </button>
+            <button class="btn-maneuver ward" id="btn-maneuver-sentry" title="Sentry Ward: +25% shard drop rate for 3m">
+              👁️ Sentry Ward <span id="maneuver-sentry-cooldown" style="color: var(--mana-blue); font-size: 0.7rem; font-family: 'JetBrains Mono', monospace;"></span>
+            </button>
+          </div>
+          <div class="wards-status-row" id="wards-status-row" style="display: none; font-size: 0.65rem; color: var(--text-secondary); margin-top: 6px; justify-content: space-between; font-family: 'JetBrains Mono', monospace;">
+            <span id="ward-obs-status">👁️ OBS: --</span>
+            <span id="ward-sentry-status">👁️ SEN: --</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Section: Your Hero Party -->
+      <div class="hud-section">
+        <div class="hud-section-title" style="display: flex; justify-content: space-between; align-items: center;">
+          <span>YOUR HERO PARTY</span>
+          <span style="font-size: 0.7rem; color: var(--secondary-gold); cursor: pointer; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;" onclick="switchMainTab('heroes')">ALTERAR &gt;</span>
+        </div>
+        <div class="hud-party-list" id="hud-party-list">
+          <!-- Dynamically populated hero party cards -->
+        </div>
+      </div>
+
+      <!-- Section: Party Damage Metrics -->
+      <div class="hud-section">
+        <div class="hud-section-title">PARTY DAMAGE METRICS</div>
+        <div class="metrics-grid">
+          <div class="metric-box">
+            <span class="metric-title">TOTAL DPS</span>
+            <span class="metric-value" id="hud-dps-value">0</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-title">GOLD MULTIPLIER</span>
+            <span class="metric-value" id="hud-gold-mult">1.0x</span>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Interactive Floating Tooltip -->
+  <div class="tooltip" id="tooltip"></div>
+
+  <!-- Welcome Back Modal -->
+  <div class="modal-overlay" id="welcome-modal">
+    <div class="modal-content">
+      <h2 class="modal-title">Welcome Back, Hero!</h2>
+      <p style="font-size: 0.85rem; color: var(--text-secondary);">Your heroes continued training and farming while you were offline.</p>
+      <div class="modal-body">
+        <div class="modal-stat-row">
+          <span class="modal-stat-label">Offline Time</span>
+          <span class="modal-stat-value" id="offline-time-val">00h 00m 00s</span>
+        </div>
+        <div class="modal-stat-row">
+          <span class="modal-stat-label">Gold Earned</span>
+          <span class="modal-stat-value" id="offline-gold-val">🪙 0</span>
+        </div>
+        <div class="modal-stat-row">
+          <span class="modal-stat-label">XP Earned (per hero)</span>
+          <span class="modal-stat-value" id="offline-xp-val">⭐ 0</span>
+        </div>
+        <div class="modal-stat-row">
+          <span class="modal-stat-label">Items Found</span>
+          <span class="modal-stat-value" id="offline-items-val">None</span>
+        </div>
+      </div>
+      <button class="btn-modal-close" id="btn-close-modal">Claim Loot</button>
+    </div>
+  </div>
+
+  <!-- Stage Map Modal (Rank tabs + 30-stage grid, TBH-style) -->
+  <div class="modal-overlay" id="stage-map-modal">
+    <div class="modal-content modal-content-wide">
+      <h2 class="modal-title">Mapa de Estágios</h2>
+      <div class="stage-map-rank-tabs" id="stage-map-rank-tabs">
+        <!-- Rank tab buttons rendered dynamically -->
+      </div>
+      <div class="stage-map-grid" id="stage-map-grid">
+        <!-- Stage nodes rendered dynamically -->
+      </div>
+      <button class="btn-modal-close" id="btn-close-stage-map">Fechar</button>
+    </div>
+  </div>
+
+  <!-- Cash Out Dota Coins Modal (simulated PIX/Crypto — no real payment processing) -->
+  <div class="modal-overlay" id="cashout-modal">
+    <div class="modal-content">
+      <h2 class="modal-title">Sacar Dota Coins</h2>
+      <p style="font-size: 0.75rem; color: var(--text-secondary);">⚠️ Simula&ccedil;&atilde;o apenas — nenhum valor real &eacute; processado. Sem gateway de pagamento real.</p>
+      <div class="modal-body">
+        <div class="modal-stat-row">
+          <span class="modal-stat-label">Saldo dispon&iacute;vel</span>
+          <span class="modal-stat-value" id="cashout-balance-val">🪙 0</span>
+        </div>
+        <div class="modal-stat-row" style="flex-direction: column; align-items: stretch; gap: 6px;">
+          <span class="modal-stat-label">M&eacute;todo</span>
+          <div style="display: flex; gap: 8px;">
+            <button class="btn-sub-nav active" id="cashout-method-pix" style="flex:1;">PIX</button>
+            <button class="btn-sub-nav" id="cashout-method-crypto" style="flex:1;">Crypto</button>
+          </div>
+        </div>
+        <div class="modal-stat-row" style="flex-direction: column; align-items: stretch; gap: 6px;">
+          <span class="modal-stat-label">Quantidade de Coins a sacar</span>
+          <input type="number" id="cashout-amount-input" min="1000" step="500" value="1000" style="background: rgba(18,22,28,0.6); border: 1px solid var(--border-light); border-radius: 6px; padding: 8px; color: var(--text-primary); font-family: 'JetBrains Mono', monospace;">
+        </div>
+        <div class="modal-stat-row">
+          <span class="modal-stat-label">Taxa de convers&atilde;o</span>
+          <span class="modal-stat-value">1.000 Coins = R$ 5,00</span>
+        </div>
+        <div class="modal-stat-row">
+          <span class="modal-stat-label">Voc&ecirc; recebe (estimado)</span>
+          <span class="modal-stat-value" id="cashout-brl-val" style="color: #2ecc71;">R$ 0,00</span>
+        </div>
+      </div>
+      <button class="btn-modal-close" id="btn-confirm-cashout" style="background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);">Confirmar Saque (Simulado)</button>
+      <button class="btn-back-to-grid" id="btn-cancel-cashout" style="align-self: center;">Cancelar</button>
+    </div>
+  </div>
+  <!-- Modal: Team Synergies -->
+  <div class="modal-overlay" id="synergies-modal" style="display: none;">
+    <div class="modal-content" style="max-width: 480px; width: 90%; background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-lg); display: flex; flex-direction: column; gap: 15px;">
+      <h2 class="modal-title" style="font-size: 1.15rem; font-weight: 700; color: var(--secondary-gold); border-bottom: 1px solid var(--border-light); padding-bottom: 10px; margin-bottom: 5px; text-align: center;">Sinergias de Time</h2>
+      <div class="modal-body" id="synergies-modal-list" style="display: flex; flex-direction: column; gap: 10px; max-height: 380px; overflow-y: auto; padding-right: 5px;">
+        <!-- Dynamically populated synergies -->
+      </div>
+      <button class="btn-modal-close" onclick="document.getElementById('synergies-modal').style.display='none'" style="align-self: center; margin-top: 10px; padding: 8px 24px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-light); color: var(--text-primary); border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: background 0.2s;">Fechar</button>
+    </div>
+  </div>
+  <!-- Game Logic Script -->
+  <script src="heroes_db.js"></script>
+  <script src="items_db.js"></script>
+  <script src="runes_db.js"></script>
+  <script src="forge_db.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

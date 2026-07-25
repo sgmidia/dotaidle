@@ -1,0 +1,4911 @@
+// Dota 2 Items Database
+const ITEMS_DATA = {
+  "abyssal_blade": {
+    "id": "abyssal_blade",
+    "name": "Abyssal Blade",
+    "emoji": "🔮",
+    "image": "assets/items/abyssal_blade.png",
+    "slotType": "artifact",
+    "rarity": "epic",
+    "cost": 6250,
+    "stats": {
+      "damage": 35,
+      "str": 26,
+      "hp": 20,
+      "stunChance": 0.1
+    },
+    "desc": "Dota 2 item: Abyssal Blade."
+  },
+  "aegis_of_the_immortal": {
+    "id": "aegis_of_the_immortal",
+    "name": "Aegis of the Immortal",
+    "emoji": "🔮",
+    "image": "assets/items/aegis.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Aegis of the Immortal."
+  },
+  "aeon_disk": {
+    "id": "aeon_disk",
+    "name": "Aeon Disk",
+    "emoji": "🔮",
+    "image": "assets/items/aeon_disk.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 3000,
+    "stats": {
+      "hp": 250
+    },
+    "desc": "Dota 2 item: Aeon Disk."
+  },
+  "aether_lens": {
+    "id": "aether_lens",
+    "name": "Aether Lens",
+    "emoji": "🔮",
+    "image": "assets/items/aether_lens.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 2275,
+    "stats": {},
+    "desc": "Dota 2 item: Aether Lens."
+  },
+  "aghanims_blessing_roshan": {
+    "id": "aghanims_blessing_roshan",
+    "name": "Aghanim's Blessing - Roshan",
+    "emoji": "🔮",
+    "image": "assets/items/ultimate_scepter_roshan.png",
+    "slotType": "artifact",
+    "rarity": "rare",
+    "cost": 5800,
+    "stats": {},
+    "desc": "Dota 2 item: Aghanim's Blessing - Roshan."
+  },
+  "aghanims_blessing": {
+    "id": "aghanims_blessing",
+    "name": "Aghanim's Blessing",
+    "emoji": "🔮",
+    "image": "assets/items/ultimate_scepter_2.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 5800,
+    "stats": {},
+    "desc": "Dota 2 item: Aghanim's Blessing."
+  },
+  "aghanims_scepter": {
+    "id": "aghanims_scepter",
+    "name": "Aghanim's Scepter",
+    "emoji": "🔮",
+    "image": "assets/items/ultimate_scepter.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 4200,
+    "stats": {
+      "hp": 175
+    },
+    "desc": "Dota 2 item: Aghanim's Scepter."
+  },
+  "aghanims_shard_consumable": {
+    "id": "aghanims_shard_consumable",
+    "name": "Aghanim's Shard - Consumable",
+    "emoji": "🔮",
+    "image": "assets/items/aghanims_shard_roshan.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 1400,
+    "stats": {},
+    "desc": "Dota 2 item: Aghanim's Shard - Consumable."
+  },
+  "aghanims_shard": {
+    "id": "aghanims_shard",
+    "name": "Aghanim's Shard",
+    "emoji": "🔮",
+    "image": "assets/items/aghanims_shard.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 1400,
+    "stats": {},
+    "desc": "Dota 2 item: Aghanim's Shard."
+  },
+  "alert": {
+    "id": "alert",
+    "name": "Alert",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_alert.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "attackSpeed": 7
+    },
+    "desc": "Dota 2 item: Alert."
+  },
+  "ancient_guardian": {
+    "id": "ancient_guardian",
+    "name": "Ancient Guardian",
+    "emoji": "🔮",
+    "image": "assets/items/ancient_guardian.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "damage": 50
+    },
+    "desc": "Dota 2 item: Ancient Guardian."
+  },
+  "animal_courier": {
+    "id": "animal_courier",
+    "name": "Animal Courier",
+    "emoji": "🔮",
+    "image": "assets/items/courier.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 50,
+    "stats": {},
+    "desc": "Dota 2 item: Animal Courier."
+  },
+  "apex": {
+    "id": "apex",
+    "name": "Apex",
+    "emoji": "🔮",
+    "image": "assets/items/apex.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Apex."
+  },
+  "arcane_blink": {
+    "id": "arcane_blink",
+    "name": "Arcane Blink",
+    "emoji": "🔮",
+    "image": "assets/items/arcane_blink.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 6800,
+    "stats": {
+      "int": 25
+    },
+    "desc": "Dota 2 item: Arcane Blink."
+  },
+  "arcane_boots": {
+    "id": "arcane_boots",
+    "name": "Arcane Boots",
+    "emoji": "🔮",
+    "image": "assets/items/arcane_boots.png",
+    "slotType": "accessory",
+    "rarity": "rare",
+    "cost": 1500,
+    "stats": {},
+    "desc": "Dota 2 item: Arcane Boots."
+  },
+  "arcane_ring": {
+    "id": "arcane_ring",
+    "name": "Arcane Ring",
+    "emoji": "🔮",
+    "image": "assets/items/arcane_ring.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Arcane Ring."
+  },
+  "arcanists_armor": {
+    "id": "arcanists_armor",
+    "name": "Arcanist's Armor",
+    "emoji": "🔮",
+    "image": "assets/items/force_field.png",
+    "slotType": "armor",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Arcanist's Armor."
+  },
+  "armlet_of_mordiggian": {
+    "id": "armlet_of_mordiggian",
+    "name": "Armlet of Mordiggian",
+    "emoji": "🔮",
+    "image": "assets/items/armlet.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 2500,
+    "stats": {
+      "damage": 15,
+      "attackSpeed": 25,
+      "armor": 6,
+      "hp": 5
+    },
+    "desc": "Dota 2 item: Armlet of Mordiggian."
+  },
+  "ascetics_cap": {
+    "id": "ascetics_cap",
+    "name": "Ascetic's Cap",
+    "emoji": "🔮",
+    "image": "assets/items/ascetic_cap.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Ascetic's Cap."
+  },
+  "ash_legion_shield": {
+    "id": "ash_legion_shield",
+    "name": "Ash Legion Shield",
+    "emoji": "🔮",
+    "image": "assets/items/ash_legion_shield.png",
+    "slotType": "armor",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Ash Legion Shield."
+  },
+  "assault_cuirass": {
+    "id": "assault_cuirass",
+    "name": "Assault Cuirass",
+    "emoji": "🔮",
+    "image": "assets/items/assault.png",
+    "slotType": "artifact",
+    "rarity": "epic",
+    "cost": 5125,
+    "stats": {
+      "attackSpeed": 30,
+      "armor": 10
+    },
+    "desc": "Dota 2 item: Assault Cuirass."
+  },
+  "audacious": {
+    "id": "audacious",
+    "name": "Audacious",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_audacious.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "attackSpeed": 100,
+      "damage": 10
+    },
+    "desc": "Dota 2 item: Audacious."
+  },
+  "avianas_feather": {
+    "id": "avianas_feather",
+    "name": "Aviana's Feather",
+    "emoji": "🔮",
+    "image": "assets/items/avianas_feather.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "evasion": 0.25
+    },
+    "desc": "Dota 2 item: Aviana's Feather."
+  },
+  "bag_of_gold": {
+    "id": "bag_of_gold",
+    "name": "Bag of Gold",
+    "emoji": "🔮",
+    "image": "assets/items/furion_gold_bag.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Bag of Gold."
+  },
+  "ballista": {
+    "id": "ballista",
+    "name": "Ballista",
+    "emoji": "🔮",
+    "image": "assets/items/ballista.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Ballista."
+  },
+  "band_of_elvenskin": {
+    "id": "band_of_elvenskin",
+    "name": "Band of Elvenskin",
+    "emoji": "🔮",
+    "image": "assets/items/boots_of_elves.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 450,
+    "stats": {
+      "agi": 6
+    },
+    "desc": "Dota 2 item: Band of Elvenskin."
+  },
+  "battle_fury": {
+    "id": "battle_fury",
+    "name": "Battle Fury",
+    "emoji": "🔮",
+    "image": "assets/items/bfury.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 3900,
+    "stats": {
+      "damage": 50
+    },
+    "desc": "Dota 2 item: Battle Fury."
+  },
+  "beloved_memory": {
+    "id": "beloved_memory",
+    "name": "Beloved Memory",
+    "emoji": "🔮",
+    "image": "assets/items/ofrenda.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Beloved Memory."
+  },
+  "belt_of_strength": {
+    "id": "belt_of_strength",
+    "name": "Belt of Strength",
+    "emoji": "🔮",
+    "image": "assets/items/belt_of_strength.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 450,
+    "stats": {
+      "str": 6
+    },
+    "desc": "Dota 2 item: Belt of Strength."
+  },
+  "black_grimoirenwarlock": {
+    "id": "black_grimoirenwarlock",
+    "name": "Black Grimoire\\n(Warlock)",
+    "emoji": "🔮",
+    "image": "assets/items/black_grimoire.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Black Grimoire\\n(Warlock)."
+  },
+  "black_king_bar_bkb": {
+    "id": "black_king_bar_bkb",
+    "name": "Black King Bar (BKB)",
+    "emoji": "🔮",
+    "image": "",
+    "slotType": "artifact",
+    "rarity": "common",
+    "cost": 200,
+    "stats": {},
+    "desc": "Dota 2 item: Black King Bar (BKB)."
+  },
+  "black_king_bar": {
+    "id": "black_king_bar",
+    "name": "Black King Bar",
+    "emoji": "🔮",
+    "image": "assets/items/black_king_bar.png",
+    "slotType": "artifact",
+    "rarity": "epic",
+    "cost": 4050,
+    "stats": {
+      "str": 10,
+      "damage": 24
+    },
+    "desc": "Dota 2 item: Black King Bar."
+  },
+  "blade_mail": {
+    "id": "blade_mail",
+    "name": "Blade Mail",
+    "emoji": "🔮",
+    "image": "assets/items/blade_mail.png",
+    "slotType": "armor",
+    "rarity": "epic",
+    "cost": 2400,
+    "stats": {
+      "damage": 15,
+      "armor": 7
+    },
+    "desc": "Dota 2 item: Blade Mail."
+  },
+  "blade_of_alacrity": {
+    "id": "blade_of_alacrity",
+    "name": "Blade of Alacrity",
+    "emoji": "🔮",
+    "image": "assets/items/blade_of_alacrity.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1000,
+    "stats": {
+      "agi": 10
+    },
+    "desc": "Dota 2 item: Blade of Alacrity."
+  },
+  "blades_of_attack": {
+    "id": "blades_of_attack",
+    "name": "Blades of Attack",
+    "emoji": "🔮",
+    "image": "assets/items/blades_of_attack.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 450,
+    "stats": {
+      "damage": 9
+    },
+    "desc": "Dota 2 item: Blades of Attack."
+  },
+  "blast_rig": {
+    "id": "blast_rig",
+    "name": "Blast Rig",
+    "emoji": "🔮",
+    "image": "assets/items/black_powder_bag.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "armor": 7
+    },
+    "desc": "Dota 2 item: Blast Rig."
+  },
+  "blink_dagger": {
+    "id": "blink_dagger",
+    "name": "Blink Dagger",
+    "emoji": "🔮",
+    "image": "",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 200,
+    "stats": {},
+    "desc": "Dota 2 item: Blink Dagger."
+  },
+  "blitz_knuckles": {
+    "id": "blitz_knuckles",
+    "name": "Blitz Knuckles",
+    "emoji": "🔮",
+    "image": "assets/items/blitz_knuckles.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1000,
+    "stats": {
+      "attackSpeed": 35
+    },
+    "desc": "Dota 2 item: Blitz Knuckles."
+  },
+  "block_of_cheese": {
+    "id": "block_of_cheese",
+    "name": "Block of Cheese",
+    "emoji": "🔮",
+    "image": "assets/items/royale_with_cheese.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 2,
+    "stats": {},
+    "desc": "Dota 2 item: Block of Cheese."
+  },
+  "blood_grenade": {
+    "id": "blood_grenade",
+    "name": "Blood Grenade",
+    "emoji": "🔮",
+    "image": "assets/items/blood_grenade.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 50,
+    "stats": {
+      "hp": 50
+    },
+    "desc": "Dota 2 item: Blood Grenade."
+  },
+  "bloodstone": {
+    "id": "bloodstone",
+    "name": "Bloodstone",
+    "emoji": "🔮",
+    "image": "assets/items/bloodstone.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 4700,
+    "stats": {
+      "hp": 0,
+      "int": 15
+    },
+    "desc": "Dota 2 item: Bloodstone."
+  },
+  "bloodthorn": {
+    "id": "bloodthorn",
+    "name": "Bloodthorn",
+    "emoji": "🔮",
+    "image": "assets/items/bloodthorn.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 6400,
+    "stats": {
+      "int": 25,
+      "attackSpeed": 70,
+      "hpRegen": 4,
+      "hp": 0,
+      "damage": 20
+    },
+    "desc": "Dota 2 item: Bloodthorn."
+  },
+  "book_of_shadows": {
+    "id": "book_of_shadows",
+    "name": "Book of Shadows",
+    "emoji": "🔮",
+    "image": "assets/items/book_of_shadows.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Book of Shadows."
+  },
+  "book_of_the_dead": {
+    "id": "book_of_the_dead",
+    "name": "Book of the Dead",
+    "emoji": "🔮",
+    "image": "assets/items/demonicon.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Book of the Dead."
+  },
+  "boots_of_bearing": {
+    "id": "boots_of_bearing",
+    "name": "Boots of Bearing",
+    "emoji": "🔮",
+    "image": "assets/items/boots_of_bearing.png",
+    "slotType": "accessory",
+    "rarity": "rare",
+    "cost": 4225,
+    "stats": {
+      "str": 8,
+      "int": 0,
+      "hp": 18
+    },
+    "desc": "Dota 2 item: Boots of Bearing."
+  },
+  "boots_of_speed": {
+    "id": "boots_of_speed",
+    "name": "Boots of Speed",
+    "emoji": "🔮",
+    "image": "assets/items/boots.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 500,
+    "stats": {},
+    "desc": "Dota 2 item: Boots of Speed."
+  },
+  "boots_of_travel_2": {
+    "id": "boots_of_travel_2",
+    "name": "Boots of Travel 2",
+    "emoji": "🔮",
+    "image": "assets/items/travel_boots_2.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 4500,
+    "stats": {},
+    "desc": "Dota 2 item: Boots of Travel 2."
+  },
+  "boots_of_travel": {
+    "id": "boots_of_travel",
+    "name": "Boots of Travel",
+    "emoji": "🔮",
+    "image": "assets/items/travel_boots.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 2500,
+    "stats": {},
+    "desc": "Dota 2 item: Boots of Travel."
+  },
+  "bottle": {
+    "id": "bottle",
+    "name": "Bottle",
+    "emoji": "🔮",
+    "image": "assets/items/bottle.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 675,
+    "stats": {},
+    "desc": "Dota 2 item: Bottle."
+  },
+  "boundless": {
+    "id": "boundless",
+    "name": "Boundless",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_boundless.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Boundless."
+  },
+  "bracer": {
+    "id": "bracer",
+    "name": "Bracer",
+    "emoji": "🔮",
+    "image": "assets/items/bracer.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 505,
+    "stats": {
+      "str": 5,
+      "agi": 2,
+      "int": 2,
+      "hp": 50
+    },
+    "desc": "Dota 2 item: Bracer."
+  },
+  "brawny": {
+    "id": "brawny",
+    "name": "Brawny",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_brawny.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hp": 0
+    },
+    "desc": "Dota 2 item: Brawny."
+  },
+  "brigands_blade": {
+    "id": "brigands_blade",
+    "name": "Brigand's Blade",
+    "emoji": "🔮",
+    "image": "assets/items/misericorde.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Brigand's Blade."
+  },
+  "broadsword": {
+    "id": "broadsword",
+    "name": "Broadsword",
+    "emoji": "🔮",
+    "image": "assets/items/broadsword.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1000,
+    "stats": {
+      "damage": 15
+    },
+    "desc": "Dota 2 item: Broadsword."
+  },
+  "broom_handle": {
+    "id": "broom_handle",
+    "name": "Broom Handle",
+    "emoji": "🔮",
+    "image": "assets/items/broom_handle.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "damage": 8,
+      "armor": 4
+    },
+    "desc": "Dota 2 item: Broom Handle."
+  },
+  "buckler": {
+    "id": "buckler",
+    "name": "Buckler",
+    "emoji": "🔮",
+    "image": "assets/items/buckler.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 425,
+    "stats": {
+      "armor": 1
+    },
+    "desc": "Dota 2 item: Buckler."
+  },
+  "bullwhip": {
+    "id": "bullwhip",
+    "name": "Bullwhip",
+    "emoji": "🔮",
+    "image": "assets/items/bullwhip.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Bullwhip."
+  },
+  "butterfly": {
+    "id": "butterfly",
+    "name": "Butterfly",
+    "emoji": "🔮",
+    "image": "assets/items/butterfly.png",
+    "slotType": "artifact",
+    "rarity": "epic",
+    "cost": 5450,
+    "stats": {
+      "agi": 35,
+      "evasion": 0.35,
+      "attackSpeed": 20,
+      "damage": 25
+    },
+    "desc": "Dota 2 item: Butterfly."
+  },
+  "ceremonial_robe": {
+    "id": "ceremonial_robe",
+    "name": "Ceremonial Robe",
+    "emoji": "🔮",
+    "image": "assets/items/ceremonial_robe.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Ceremonial Robe."
+  },
+  "chainmail": {
+    "id": "chainmail",
+    "name": "Chainmail",
+    "emoji": "🔮",
+    "image": "assets/items/chainmail.png",
+    "slotType": "armor",
+    "rarity": "common",
+    "cost": 500,
+    "stats": {
+      "armor": 4
+    },
+    "desc": "Dota 2 item: Chainmail."
+  },
+  "chasm_stone": {
+    "id": "chasm_stone",
+    "name": "Chasm Stone",
+    "emoji": "🔮",
+    "image": "assets/items/chasm_stone.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 800,
+    "stats": {
+      "hp": 0
+    },
+    "desc": "Dota 2 item: Chasm Stone."
+  },
+  "cheese": {
+    "id": "cheese",
+    "name": "Cheese",
+    "emoji": "🔮",
+    "image": "assets/items/cheese.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1000,
+    "stats": {},
+    "desc": "Dota 2 item: Cheese."
+  },
+  "chipped_vest": {
+    "id": "chipped_vest",
+    "name": "Chipped Vest",
+    "emoji": "🔮",
+    "image": "assets/items/chipped_vest.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Chipped Vest."
+  },
+  "circlet": {
+    "id": "circlet",
+    "name": "Circlet",
+    "emoji": "🔮",
+    "image": "assets/items/circlet.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 155,
+    "stats": {},
+    "desc": "Dota 2 item: Circlet."
+  },
+  "clarity": {
+    "id": "clarity",
+    "name": "Clarity",
+    "emoji": "🔮",
+    "image": "assets/items/clarity.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 60,
+    "stats": {},
+    "desc": "Dota 2 item: Clarity."
+  },
+  "claymore": {
+    "id": "claymore",
+    "name": "Claymore",
+    "emoji": "🔮",
+    "image": "assets/items/claymore.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1350,
+    "stats": {
+      "damage": 20
+    },
+    "desc": "Dota 2 item: Claymore."
+  },
+  "cloak_of_flames": {
+    "id": "cloak_of_flames",
+    "name": "Cloak of Flames",
+    "emoji": "🔮",
+    "image": "assets/items/cloak_of_flames.png",
+    "slotType": "armor",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Cloak of Flames."
+  },
+  "cloak": {
+    "id": "cloak",
+    "name": "Cloak",
+    "emoji": "🔮",
+    "image": "assets/items/cloak.png",
+    "slotType": "armor",
+    "rarity": "common",
+    "cost": 900,
+    "stats": {},
+    "desc": "Dota 2 item: Cloak."
+  },
+  "clumsy_net": {
+    "id": "clumsy_net",
+    "name": "Clumsy Net",
+    "emoji": "🔮",
+    "image": "assets/items/clumsy_net.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Clumsy Net."
+  },
+  "conjurers_catalyst": {
+    "id": "conjurers_catalyst",
+    "name": "Conjurer's Catalyst",
+    "emoji": "🔮",
+    "image": "assets/items/conjurers_catalyst.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Conjurer's Catalyst."
+  },
+  "consecrated_wraps": {
+    "id": "consecrated_wraps",
+    "name": "Consecrated Wraps",
+    "emoji": "🔮",
+    "image": "assets/items/consecrated_wraps.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 2600,
+    "stats": {
+      "hp": 250
+    },
+    "desc": "Dota 2 item: Consecrated Wraps."
+  },
+  "cornucopia": {
+    "id": "cornucopia",
+    "name": "Cornucopia",
+    "emoji": "🔮",
+    "image": "assets/items/cornucopia.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1200,
+    "stats": {
+      "hp": 5,
+      "hpRegen": 2,
+      "damage": 7
+    },
+    "desc": "Dota 2 item: Cornucopia."
+  },
+  "craggy_coat": {
+    "id": "craggy_coat",
+    "name": "Craggy Coat",
+    "emoji": "🔮",
+    "image": "assets/items/craggy_coat.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Craggy Coat."
+  },
+  "crellas_crozier": {
+    "id": "crellas_crozier",
+    "name": "Crella's Crozier",
+    "emoji": "🔮",
+    "image": "assets/items/crellas_crozier.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 4800,
+    "stats": {
+      "hp": 450
+    },
+    "desc": "Dota 2 item: Crella's Crozier."
+  },
+  "crimson_guard": {
+    "id": "crimson_guard",
+    "name": "Crimson Guard",
+    "emoji": "🔮",
+    "image": "assets/items/crimson_guard.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 3725,
+    "stats": {
+      "hp": 12,
+      "armor": 6
+    },
+    "desc": "Dota 2 item: Crimson Guard."
+  },
+  "crippling_crossbow": {
+    "id": "crippling_crossbow",
+    "name": "Crippling Crossbow",
+    "emoji": "🔮",
+    "image": "assets/items/crippling_crossbow.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Crippling Crossbow."
+  },
+  "crown": {
+    "id": "crown",
+    "name": "Crown",
+    "emoji": "🔮",
+    "image": "assets/items/crown.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 450,
+    "stats": {},
+    "desc": "Dota 2 item: Crown."
+  },
+  "crude": {
+    "id": "crude",
+    "name": "Crude",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_crude.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hp": 10
+    },
+    "desc": "Dota 2 item: Crude."
+  },
+  "crystalys": {
+    "id": "crystalys",
+    "name": "Crystalys",
+    "emoji": "🔮",
+    "image": "assets/items/lesser_crit.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 2000,
+    "stats": {
+      "damage": 32
+    },
+    "desc": "Dota 2 item: Crystalys."
+  },
+  "daedalus": {
+    "id": "daedalus",
+    "name": "Daedalus",
+    "emoji": "🔮",
+    "image": "assets/items/greater_crit.png",
+    "slotType": "artifact",
+    "rarity": "epic",
+    "cost": 5100,
+    "stats": {
+      "damage": 88
+    },
+    "desc": "Dota 2 item: Daedalus."
+  },
+  "dagger_of_ristul": {
+    "id": "dagger_of_ristul",
+    "name": "Dagger of Ristul",
+    "emoji": "🔮",
+    "image": "assets/items/dagger_of_ristul.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "attackSpeed": 0
+    },
+    "desc": "Dota 2 item: Dagger of Ristul."
+  },
+  "dagon": {
+    "id": "dagon",
+    "name": "Dagon",
+    "emoji": "🔮",
+    "image": "assets/items/dagon_5.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 7650,
+    "stats": {
+      "hp": 200
+    },
+    "desc": "Dota 2 item: Dagon."
+  },
+  "dandelion_amulet": {
+    "id": "dandelion_amulet",
+    "name": "Dandelion Amulet",
+    "emoji": "🔮",
+    "image": "assets/items/dandelion_amulet.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Dandelion Amulet."
+  },
+  "defiant_shell": {
+    "id": "defiant_shell",
+    "name": "Defiant Shell",
+    "emoji": "🔮",
+    "image": "assets/items/defiant_shell.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Defiant Shell."
+  },
+  "demon_edge": {
+    "id": "demon_edge",
+    "name": "Demon Edge",
+    "emoji": "🔮",
+    "image": "assets/items/demon_edge.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 2200,
+    "stats": {
+      "damage": 40
+    },
+    "desc": "Dota 2 item: Demon Edge."
+  },
+  "desolator": {
+    "id": "desolator",
+    "name": "Desolator",
+    "emoji": "🔮",
+    "image": "assets/items/desolator.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 3500,
+    "stats": {
+      "damage": 55
+    },
+    "desc": "Dota 2 item: Desolator."
+  },
+  "dezun_bloodrite": {
+    "id": "dezun_bloodrite",
+    "name": "Dezun Bloodrite",
+    "emoji": "🔮",
+    "image": "assets/items/dezun_bloodrite.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Dezun Bloodrite."
+  },
+  "diadem": {
+    "id": "diadem",
+    "name": "Diadem",
+    "emoji": "🔮",
+    "image": "assets/items/diadem.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1000,
+    "stats": {},
+    "desc": "Dota 2 item: Diadem."
+  },
+  "diffusal_blade": {
+    "id": "diffusal_blade",
+    "name": "Diffusal Blade",
+    "emoji": "🔮",
+    "image": "assets/items/diffusal_blade_2.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 3850,
+    "stats": {
+      "agi": 25,
+      "int": 10
+    },
+    "desc": "Dota 2 item: Diffusal Blade."
+  },
+  "disgraced_regalia": {
+    "id": "disgraced_regalia",
+    "name": "Disgraced Regalia",
+    "emoji": "🔮",
+    "image": "assets/items/divine_regalia_broken.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Disgraced Regalia."
+  },
+  "disperser": {
+    "id": "disperser",
+    "name": "Disperser",
+    "emoji": "🔮",
+    "image": "assets/items/disperser.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 6100,
+    "stats": {
+      "agi": 40,
+      "int": 10
+    },
+    "desc": "Dota 2 item: Disperser."
+  },
+  "divine_rapier": {
+    "id": "divine_rapier",
+    "name": "Divine Rapier",
+    "emoji": "🔮",
+    "image": "assets/items/rapier.png",
+    "slotType": "artifact",
+    "rarity": "epic",
+    "cost": 5600,
+    "stats": {
+      "damage": 100
+    },
+    "desc": "Dota 2 item: Divine Rapier."
+  },
+  "divine_regalia": {
+    "id": "divine_regalia",
+    "name": "Divine Regalia",
+    "emoji": "🔮",
+    "image": "assets/items/divine_regalia.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Divine Regalia."
+  },
+  "dominant": {
+    "id": "dominant",
+    "name": "Dominant",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_dominant.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "attackSpeed": 25,
+      "hp": 205
+    },
+    "desc": "Dota 2 item: Dominant."
+  },
+  "dormant_curio": {
+    "id": "dormant_curio",
+    "name": "Dormant Curio",
+    "emoji": "🔮",
+    "image": "assets/items/dormant_curio.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Dormant Curio."
+  },
+  "doubloon": {
+    "id": "doubloon",
+    "name": "Doubloon",
+    "emoji": "🔮",
+    "image": "assets/items/doubloon.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Doubloon."
+  },
+  "dragon_lance": {
+    "id": "dragon_lance",
+    "name": "Dragon Lance",
+    "emoji": "🔮",
+    "image": "assets/items/dragon_lance.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1900,
+    "stats": {
+      "agi": 15,
+      "str": 10
+    },
+    "desc": "Dota 2 item: Dragon Lance."
+  },
+  "dragon_scale": {
+    "id": "dragon_scale",
+    "name": "Dragon Scale",
+    "emoji": "🔮",
+    "image": "assets/items/dragon_scale.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Dragon Scale."
+  },
+  "drum_of_endurance": {
+    "id": "drum_of_endurance",
+    "name": "Drum of Endurance",
+    "emoji": "🔮",
+    "image": "assets/items/ancient_janggo.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 1625,
+    "stats": {
+      "str": 8,
+      "int": 0
+    },
+    "desc": "Dota 2 item: Drum of Endurance."
+  },
+  "duelist_gloves": {
+    "id": "duelist_gloves",
+    "name": "Duelist Gloves",
+    "emoji": "🔮",
+    "image": "assets/items/duelist_gloves.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Duelist Gloves."
+  },
+  "dust_of_appearance": {
+    "id": "dust_of_appearance",
+    "name": "Dust of Appearance",
+    "emoji": "🔮",
+    "image": "assets/items/dust.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 80,
+    "stats": {},
+    "desc": "Dota 2 item: Dust of Appearance."
+  },
+  "eaglesong": {
+    "id": "eaglesong",
+    "name": "Eaglesong",
+    "emoji": "🔮",
+    "image": "assets/items/eagle.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 2800,
+    "stats": {
+      "agi": 25
+    },
+    "desc": "Dota 2 item: Eaglesong."
+  },
+  "echo_sabre": {
+    "id": "echo_sabre",
+    "name": "Echo Sabre",
+    "emoji": "🔮",
+    "image": "assets/items/echo_sabre.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 2700,
+    "stats": {
+      "damage": 20,
+      "str": 15
+    },
+    "desc": "Dota 2 item: Echo Sabre."
+  },
+  "eldwurms_edda": {
+    "id": "eldwurms_edda",
+    "name": "Eldwurm's Edda",
+    "emoji": "🔮",
+    "image": "assets/items/eldwurms_edda.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Eldwurm's Edda."
+  },
+  "elixir": {
+    "id": "elixir",
+    "name": "Elixir",
+    "emoji": "🔮",
+    "image": "assets/items/elixer.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Elixir."
+  },
+  "elven_tunic": {
+    "id": "elven_tunic",
+    "name": "Elven Tunic",
+    "emoji": "🔮",
+    "image": "assets/items/elven_tunic.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "attackSpeed": 26,
+      "evasion": 0.16
+    },
+    "desc": "Dota 2 item: Elven Tunic."
+  },
+  "enchanted_mango": {
+    "id": "enchanted_mango",
+    "name": "Enchanted Mango",
+    "emoji": "🔮",
+    "image": "assets/items/enchanted_mango.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 65,
+    "stats": {},
+    "desc": "Dota 2 item: Enchanted Mango."
+  },
+  "enchanted_quiver": {
+    "id": "enchanted_quiver",
+    "name": "Enchanted Quiver",
+    "emoji": "🔮",
+    "image": "assets/items/enchanted_quiver.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Enchanted Quiver."
+  },
+  "enchanters_bauble": {
+    "id": "enchanters_bauble",
+    "name": "Enchanter's Bauble",
+    "emoji": "🔮",
+    "image": "assets/items/enchanters_bauble.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Enchanter's Bauble."
+  },
+  "energy_booster": {
+    "id": "energy_booster",
+    "name": "Energy Booster",
+    "emoji": "🔮",
+    "image": "assets/items/energy_booster.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 800,
+    "stats": {},
+    "desc": "Dota 2 item: Energy Booster."
+  },
+  "essence_distiller": {
+    "id": "essence_distiller",
+    "name": "Essence Distiller",
+    "emoji": "🔮",
+    "image": "assets/items/essence_distiller.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 1775,
+    "stats": {
+      "armor": 6
+    },
+    "desc": "Dota 2 item: Essence Distiller."
+  },
+  "essence_ring": {
+    "id": "essence_ring",
+    "name": "Essence Ring",
+    "emoji": "🔮",
+    "image": "assets/items/essence_ring.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Essence Ring."
+  },
+  "eternal_shroud": {
+    "id": "eternal_shroud",
+    "name": "Eternal Shroud",
+    "emoji": "🔮",
+    "image": "assets/items/eternal_shroud.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 3900,
+    "stats": {
+      "str": 10,
+      "hp": 250
+    },
+    "desc": "Dota 2 item: Eternal Shroud."
+  },
+  "ethereal_blade": {
+    "id": "ethereal_blade",
+    "name": "Ethereal Blade",
+    "emoji": "🔮",
+    "image": "assets/items/ethereal_blade.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 5200,
+    "stats": {},
+    "desc": "Dota 2 item: Ethereal Blade."
+  },
+  "euls_scepter_of_divinity": {
+    "id": "euls_scepter_of_divinity",
+    "name": "Eul's Scepter of Divinity",
+    "emoji": "🔮",
+    "image": "assets/items/cyclone.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 2600,
+    "stats": {
+      "int": 10
+    },
+    "desc": "Dota 2 item: Eul's Scepter of Divinity."
+  },
+  "evolved": {
+    "id": "evolved",
+    "name": "Evolved",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_evolved.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Evolved."
+  },
+  "ex_machina": {
+    "id": "ex_machina",
+    "name": "Ex Machina",
+    "emoji": "🔮",
+    "image": "assets/items/ex_machina.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Ex Machina."
+  },
+  "eye_of_skadi": {
+    "id": "eye_of_skadi",
+    "name": "Eye of Skadi",
+    "emoji": "🔮",
+    "image": "assets/items/skadi.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 5900,
+    "stats": {
+      "hp": 0
+    },
+    "desc": "Dota 2 item: Eye of Skadi."
+  },
+  "eye_of_the_vizier": {
+    "id": "eye_of_the_vizier",
+    "name": "Eye of the Vizier",
+    "emoji": "🔮",
+    "image": "assets/items/eye_of_the_vizier.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hpRegen": 1
+    },
+    "desc": "Dota 2 item: Eye of the Vizier."
+  },
+  "faded_broach": {
+    "id": "faded_broach",
+    "name": "Faded Broach",
+    "emoji": "🔮",
+    "image": "assets/items/faded_broach.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Faded Broach."
+  },
+  "fae_grenade": {
+    "id": "fae_grenade",
+    "name": "Fae Grenade",
+    "emoji": "🔮",
+    "image": "assets/items/paintball.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Fae Grenade."
+  },
+  "faerie_fire": {
+    "id": "faerie_fire",
+    "name": "Faerie Fire",
+    "emoji": "🔮",
+    "image": "assets/items/faerie_fire.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 65,
+    "stats": {
+      "damage": 2
+    },
+    "desc": "Dota 2 item: Faerie Fire."
+  },
+  "fairys_trinket": {
+    "id": "fairys_trinket",
+    "name": "Fairy's Trinket",
+    "emoji": "🔮",
+    "image": "assets/items/mysterious_hat.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hp": 50
+    },
+    "desc": "Dota 2 item: Fairy's Trinket."
+  },
+  "falcon_blade": {
+    "id": "falcon_blade",
+    "name": "Falcon Blade",
+    "emoji": "🔮",
+    "image": "assets/items/falcon_blade.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 1125,
+    "stats": {
+      "hp": 200,
+      "damage": 14
+    },
+    "desc": "Dota 2 item: Falcon Blade."
+  },
+  "fallen_sky": {
+    "id": "fallen_sky",
+    "name": "Fallen Sky",
+    "emoji": "🔮",
+    "image": "assets/items/fallen_sky.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Fallen Sky."
+  },
+  "feverish": {
+    "id": "feverish",
+    "name": "Feverish",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_feverish.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Feverish."
+  },
+  "fierce": {
+    "id": "fierce",
+    "name": "Fierce",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_fierce.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "damage": 15
+    },
+    "desc": "Dota 2 item: Fierce."
+  },
+  "flayers_bota": {
+    "id": "flayers_bota",
+    "name": "Flayer's Bota",
+    "emoji": "🔮",
+    "image": "assets/items/flayers_bota.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Flayer's Bota."
+  },
+  "fleetfooted": {
+    "id": "fleetfooted",
+    "name": "Fleetfooted",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_fleetfooted.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Fleetfooted."
+  },
+  "flicker": {
+    "id": "flicker",
+    "name": "Flicker",
+    "emoji": "🔮",
+    "image": "assets/items/flicker.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Flicker."
+  },
+  "fluffy_hat": {
+    "id": "fluffy_hat",
+    "name": "Fluffy Hat",
+    "emoji": "🔮",
+    "image": "assets/items/fluffy_hat.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 250,
+    "stats": {
+      "hp": 125
+    },
+    "desc": "Dota 2 item: Fluffy Hat."
+  },
+  "flying_courier": {
+    "id": "flying_courier",
+    "name": "Flying Courier",
+    "emoji": "🔮",
+    "image": "assets/items/flying_courier.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 100,
+    "stats": {},
+    "desc": "Dota 2 item: Flying Courier."
+  },
+  "foragers_kit": {
+    "id": "foragers_kit",
+    "name": "Forager's Kit",
+    "emoji": "🔮",
+    "image": "assets/items/foragers_kit.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Forager's Kit."
+  },
+  "force_boots": {
+    "id": "force_boots",
+    "name": "Force Boots",
+    "emoji": "🔮",
+    "image": "assets/items/force_boots.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hp": 30
+    },
+    "desc": "Dota 2 item: Force Boots."
+  },
+  "force_staff": {
+    "id": "force_staff",
+    "name": "Force Staff",
+    "emoji": "🔮",
+    "image": "assets/items/force_staff.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 2200,
+    "stats": {
+      "int": 10,
+      "hp": 175
+    },
+    "desc": "Dota 2 item: Force Staff."
+  },
+  "forebearers_fortune": {
+    "id": "forebearers_fortune",
+    "name": "Forebearer's Fortune",
+    "emoji": "🔮",
+    "image": "assets/items/ofrenda_pledge.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Forebearer's Fortune."
+  },
+  "fusion_rune": {
+    "id": "fusion_rune",
+    "name": "Fusion Rune",
+    "emoji": "🔮",
+    "image": "assets/items/fusion_rune.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Fusion Rune."
+  },
+  "gale_guard": {
+    "id": "gale_guard",
+    "name": "Gale Guard",
+    "emoji": "🔮",
+    "image": "assets/items/gale_guard.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Gale Guard."
+  },
+  "gauntlets_of_strength": {
+    "id": "gauntlets_of_strength",
+    "name": "Gauntlets of Strength",
+    "emoji": "🔮",
+    "image": "assets/items/gauntlets.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 140,
+    "stats": {
+      "str": 3
+    },
+    "desc": "Dota 2 item: Gauntlets of Strength."
+  },
+  "gem_of_true_sight": {
+    "id": "gem_of_true_sight",
+    "name": "Gem of True Sight",
+    "emoji": "🔮",
+    "image": "assets/items/gem.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 900,
+    "stats": {},
+    "desc": "Dota 2 item: Gem of True Sight."
+  },
+  "ghost_scepter": {
+    "id": "ghost_scepter",
+    "name": "Ghost Scepter",
+    "emoji": "🔮",
+    "image": "assets/items/ghost.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1500,
+    "stats": {},
+    "desc": "Dota 2 item: Ghost Scepter."
+  },
+  "giants_maul": {
+    "id": "giants_maul",
+    "name": "Giant's Maul",
+    "emoji": "🔮",
+    "image": "assets/items/giant_maul.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Giant's Maul."
+  },
+  "giants_ring": {
+    "id": "giants_ring",
+    "name": "Giant's Ring",
+    "emoji": "🔮",
+    "image": "assets/items/giants_ring.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Giant's Ring."
+  },
+  "gleipnir": {
+    "id": "gleipnir",
+    "name": "Gleipnir",
+    "emoji": "🔮",
+    "image": "assets/items/gungir.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 4650,
+    "stats": {
+      "hp": 450,
+      "int": 12
+    },
+    "desc": "Dota 2 item: Gleipnir."
+  },
+  "glimmer_cape": {
+    "id": "glimmer_cape",
+    "name": "Glimmer Cape",
+    "emoji": "🔮",
+    "image": "assets/items/glimmer_cape.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 2150,
+    "stats": {},
+    "desc": "Dota 2 item: Glimmer Cape."
+  },
+  "gloves_of_haste": {
+    "id": "gloves_of_haste",
+    "name": "Gloves of Haste",
+    "emoji": "🔮",
+    "image": "assets/items/gloves.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 450,
+    "stats": {
+      "attackSpeed": 20
+    },
+    "desc": "Dota 2 item: Gloves of Haste."
+  },
+  "gossamer_cape": {
+    "id": "gossamer_cape",
+    "name": "Gossamer Cape",
+    "emoji": "🔮",
+    "image": "assets/items/gossamer_cape.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Gossamer Cape."
+  },
+  "great_healing_lotus": {
+    "id": "great_healing_lotus",
+    "name": "Great Healing Lotus",
+    "emoji": "🔮",
+    "image": "assets/items/great_famango.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Great Healing Lotus."
+  },
+  "greater_faerie_fire": {
+    "id": "greater_faerie_fire",
+    "name": "Greater Faerie Fire",
+    "emoji": "🔮",
+    "image": "assets/items/greater_faerie_fire.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "damage": 20
+    },
+    "desc": "Dota 2 item: Greater Faerie Fire."
+  },
+  "greater_healing_lotus": {
+    "id": "greater_healing_lotus",
+    "name": "Greater Healing Lotus",
+    "emoji": "🔮",
+    "image": "assets/items/greater_famango.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Greater Healing Lotus."
+  },
+  "greedy": {
+    "id": "greedy",
+    "name": "Greedy",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_greedy.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Greedy."
+  },
+  "gris_gris": {
+    "id": "gris_gris",
+    "name": "Gris-Gris",
+    "emoji": "🔮",
+    "image": "assets/items/grisgris.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Gris-Gris."
+  },
+  "grove_bow": {
+    "id": "grove_bow",
+    "name": "Grove Bow",
+    "emoji": "🔮",
+    "image": "assets/items/grove_bow.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Grove Bow."
+  },
+  "guardian_greaves": {
+    "id": "guardian_greaves",
+    "name": "Guardian Greaves",
+    "emoji": "🔮",
+    "image": "assets/items/guardian_greaves.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 4450,
+    "stats": {
+      "armor": 5
+    },
+    "desc": "Dota 2 item: Guardian Greaves."
+  },
+  "gunpowder_gauntlet": {
+    "id": "gunpowder_gauntlet",
+    "name": "Gunpowder Gauntlet",
+    "emoji": "🔮",
+    "image": "assets/items/gunpowder_gauntlets.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Gunpowder Gauntlet."
+  },
+  "hand_of_midas": {
+    "id": "hand_of_midas",
+    "name": "Hand of Midas",
+    "emoji": "🔮",
+    "image": "assets/items/hand_of_midas.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 2200,
+    "stats": {
+      "attackSpeed": 35
+    },
+    "desc": "Dota 2 item: Hand of Midas."
+  },
+  "harmonizer": {
+    "id": "harmonizer",
+    "name": "Harmonizer",
+    "emoji": "🔮",
+    "image": "assets/items/harmonizer.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Harmonizer."
+  },
+  "harpoon": {
+    "id": "harpoon",
+    "name": "Harpoon",
+    "emoji": "🔮",
+    "image": "assets/items/harpoon.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 4700,
+    "stats": {
+      "damage": 25,
+      "str": 25,
+      "agi": 10,
+      "int": 10
+    },
+    "desc": "Dota 2 item: Harpoon."
+  },
+  "havoc_hammer": {
+    "id": "havoc_hammer",
+    "name": "Havoc Hammer",
+    "emoji": "🔮",
+    "image": "assets/items/havoc_hammer.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "damage": 16,
+      "str": 14
+    },
+    "desc": "Dota 2 item: Havoc Hammer."
+  },
+  "headdress": {
+    "id": "headdress",
+    "name": "Headdress",
+    "emoji": "🔮",
+    "image": "assets/items/headdress.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 425,
+    "stats": {},
+    "desc": "Dota 2 item: Headdress."
+  },
+  "healing_lotus": {
+    "id": "healing_lotus",
+    "name": "Healing Lotus",
+    "emoji": "🔮",
+    "image": "assets/items/famango.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Healing Lotus."
+  },
+  "healing_salve": {
+    "id": "healing_salve",
+    "name": "Healing Salve",
+    "emoji": "🔮",
+    "image": "assets/items/flask.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 100,
+    "stats": {},
+    "desc": "Dota 2 item: Healing Salve."
+  },
+  "heart_of_tarrasque": {
+    "id": "heart_of_tarrasque",
+    "name": "Heart of Tarrasque",
+    "emoji": "🔮",
+    "image": "assets/items/heart.png",
+    "slotType": "artifact",
+    "rarity": "epic",
+    "cost": 5100,
+    "stats": {
+      "str": 40,
+      "hp": 1
+    },
+    "desc": "Dota 2 item: Heart of Tarrasque."
+  },
+  "heavens_halberd": {
+    "id": "heavens_halberd",
+    "name": "Heaven's Halberd",
+    "emoji": "🔮",
+    "image": "assets/items/heavens_halberd.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 3400,
+    "stats": {
+      "armor": 9,
+      "hp": 6,
+      "evasion": 0.25
+    },
+    "desc": "Dota 2 item: Heaven's Halberd."
+  },
+  "helm_of_iron_will": {
+    "id": "helm_of_iron_will",
+    "name": "Helm of Iron Will",
+    "emoji": "🔮",
+    "image": "assets/items/helm_of_iron_will.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 975,
+    "stats": {
+      "armor": 4,
+      "hp": 4
+    },
+    "desc": "Dota 2 item: Helm of Iron Will."
+  },
+  "helm_of_the_dominator": {
+    "id": "helm_of_the_dominator",
+    "name": "Helm of the Dominator",
+    "emoji": "🔮",
+    "image": "assets/items/helm_of_the_dominator.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 2550,
+    "stats": {
+      "armor": 6,
+      "hp": 6
+    },
+    "desc": "Dota 2 item: Helm of the Dominator."
+  },
+  "helm_of_the_overlord": {
+    "id": "helm_of_the_overlord",
+    "name": "Helm of the Overlord",
+    "emoji": "🔮",
+    "image": "assets/items/helm_of_the_overlord.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 5650,
+    "stats": {
+      "armor": 7,
+      "hp": 7
+    },
+    "desc": "Dota 2 item: Helm of the Overlord."
+  },
+  "helm_of_the_undying": {
+    "id": "helm_of_the_undying",
+    "name": "Helm of the Undying",
+    "emoji": "🔮",
+    "image": "assets/items/helm_of_the_undying.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Helm of the Undying."
+  },
+  "holy_locket": {
+    "id": "holy_locket",
+    "name": "Holy Locket",
+    "emoji": "🔮",
+    "image": "assets/items/holy_locket.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 2250,
+    "stats": {},
+    "desc": "Dota 2 item: Holy Locket."
+  },
+  "hood_of_defiance": {
+    "id": "hood_of_defiance",
+    "name": "Hood of Defiance",
+    "emoji": "🔮",
+    "image": "assets/items/hood_of_defiance.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Hood of Defiance."
+  },
+  "hulking": {
+    "id": "hulking",
+    "name": "Hulking",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_hulking.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hp": 5
+    },
+    "desc": "Dota 2 item: Hulking."
+  },
+  "hurricane_pike": {
+    "id": "hurricane_pike",
+    "name": "Hurricane Pike",
+    "emoji": "🔮",
+    "image": "assets/items/hurricane_pike.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 4450,
+    "stats": {
+      "int": 15,
+      "hp": 200,
+      "agi": 20,
+      "str": 15
+    },
+    "desc": "Dota 2 item: Hurricane Pike."
+  },
+  "hydras_breath": {
+    "id": "hydras_breath",
+    "name": "Hydra's Breath",
+    "emoji": "🔮",
+    "image": "assets/items/hydras_breath.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 5900,
+    "stats": {
+      "str": 15,
+      "agi": 30,
+      "damage": 25
+    },
+    "desc": "Dota 2 item: Hydra's Breath."
+  },
+  "hyperstone": {
+    "id": "hyperstone",
+    "name": "Hyperstone",
+    "emoji": "🔮",
+    "image": "assets/items/hyperstone.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 2000,
+    "stats": {
+      "attackSpeed": 60
+    },
+    "desc": "Dota 2 item: Hyperstone."
+  },
+  "idol_of_screeauk": {
+    "id": "idol_of_screeauk",
+    "name": "Idol of Scree'auk",
+    "emoji": "🔮",
+    "image": "assets/items/idol_of_screeauk.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Idol of Scree'auk."
+  },
+  "illusionists_cape": {
+    "id": "illusionists_cape",
+    "name": "Illusionist's Cape",
+    "emoji": "🔮",
+    "image": "assets/items/illusionsts_cape.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "agi": 14,
+      "str": 14
+    },
+    "desc": "Dota 2 item: Illusionist's Cape."
+  },
+  "imp_claw": {
+    "id": "imp_claw",
+    "name": "Imp Claw",
+    "emoji": "🔮",
+    "image": "assets/items/imp_claw.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Imp Claw."
+  },
+  "infused_raindrops": {
+    "id": "infused_raindrops",
+    "name": "Infused Raindrops",
+    "emoji": "🔮",
+    "image": "assets/items/infused_raindrop.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 225,
+    "stats": {},
+    "desc": "Dota 2 item: Infused Raindrops."
+  },
+  "iron_branch": {
+    "id": "iron_branch",
+    "name": "Iron Branch",
+    "emoji": "🔮",
+    "image": "assets/items/branches.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 55,
+    "stats": {},
+    "desc": "Dota 2 item: Iron Branch."
+  },
+  "iron_talon": {
+    "id": "iron_talon",
+    "name": "Iron Talon",
+    "emoji": "🔮",
+    "image": "assets/items/iron_talon.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Iron Talon."
+  },
+  "ironwood_nut": {
+    "id": "ironwood_nut",
+    "name": "Ironwood Nut",
+    "emoji": "🔮",
+    "image": "assets/items/foragers_stats.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Ironwood Nut."
+  },
+  "ironwood_tree": {
+    "id": "ironwood_tree",
+    "name": "Ironwood Tree",
+    "emoji": "🔮",
+    "image": "assets/items/ironwood_tree.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Ironwood Tree."
+  },
+  "javelin": {
+    "id": "javelin",
+    "name": "Javelin",
+    "emoji": "🔮",
+    "image": "assets/items/javelin.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 900,
+    "stats": {},
+    "desc": "Dota 2 item: Javelin."
+  },
+  "jidi_pollen_bag": {
+    "id": "jidi_pollen_bag",
+    "name": "Jidi Pollen Bag",
+    "emoji": "🔮",
+    "image": "assets/items/jidi_pollen_bag.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Jidi Pollen Bag."
+  },
+  "kaya_and_sange": {
+    "id": "kaya_and_sange",
+    "name": "Kaya and Sange",
+    "emoji": "🔮",
+    "image": "assets/items/kaya_and_sange.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 4200,
+    "stats": {
+      "str": 16,
+      "int": 16,
+      "hpRegen": 40,
+      "hp": 20
+    },
+    "desc": "Dota 2 item: Kaya and Sange."
+  },
+  "kaya": {
+    "id": "kaya",
+    "name": "Kaya",
+    "emoji": "🔮",
+    "image": "assets/items/kaya.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 2100,
+    "stats": {
+      "int": 16,
+      "hpRegen": 30
+    },
+    "desc": "Dota 2 item: Kaya."
+  },
+  "keen_optic": {
+    "id": "keen_optic",
+    "name": "Keen Optic",
+    "emoji": "🔮",
+    "image": "assets/items/keen_optic.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Keen Optic."
+  },
+  "keen_eyed": {
+    "id": "keen_eyed",
+    "name": "Keen-eyed",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_keen_eyed.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hpRegen": 1
+    },
+    "desc": "Dota 2 item: Keen-eyed."
+  },
+  "khanda": {
+    "id": "khanda",
+    "name": "Khanda",
+    "emoji": "🔮",
+    "image": "assets/items/angels_demise.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 5600,
+    "stats": {
+      "hp": 7,
+      "hpRegen": 3
+    },
+    "desc": "Dota 2 item: Khanda."
+  },
+  "kobold_cup": {
+    "id": "kobold_cup",
+    "name": "Kobold Cup",
+    "emoji": "🔮",
+    "image": "assets/items/kobold_cup.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Kobold Cup."
+  },
+  "lance_of_pursuit": {
+    "id": "lance_of_pursuit",
+    "name": "Lance of Pursuit",
+    "emoji": "🔮",
+    "image": "assets/items/lance_of_pursuit.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Lance of Pursuit."
+  },
+  "leviathans_fish": {
+    "id": "leviathans_fish",
+    "name": "Leviathan's Fish",
+    "emoji": "🔮",
+    "image": "assets/items/tidehunter_fish.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Leviathan's Fish."
+  },
+  "light_collector": {
+    "id": "light_collector",
+    "name": "Light Collector",
+    "emoji": "🔮",
+    "image": "assets/items/light_collector.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Light Collector."
+  },
+  "linkens_sphere": {
+    "id": "linkens_sphere",
+    "name": "Linken's Sphere",
+    "emoji": "🔮",
+    "image": "assets/items/sphere.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 4800,
+    "stats": {},
+    "desc": "Dota 2 item: Linken's Sphere."
+  },
+  "lotus_orb": {
+    "id": "lotus_orb",
+    "name": "Lotus Orb",
+    "emoji": "🔮",
+    "image": "assets/items/lotus_orb.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 3850,
+    "stats": {
+      "armor": 10
+    },
+    "desc": "Dota 2 item: Lotus Orb."
+  },
+  "madstone_bundle": {
+    "id": "madstone_bundle",
+    "name": "Madstone Bundle",
+    "emoji": "🔮",
+    "image": "assets/items/madstone_bundle.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Madstone Bundle."
+  },
+  "maelstrom": {
+    "id": "maelstrom",
+    "name": "Maelstrom",
+    "emoji": "🔮",
+    "image": "assets/items/maelstrom.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 2950,
+    "stats": {
+      "damage": 25,
+      "attackSpeed": 25
+    },
+    "desc": "Dota 2 item: Maelstrom."
+  },
+  "mage_slayer": {
+    "id": "mage_slayer",
+    "name": "Mage Slayer",
+    "emoji": "🔮",
+    "image": "assets/items/mage_slayer.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 3100,
+    "stats": {
+      "hp": 6,
+      "damage": 15
+    },
+    "desc": "Dota 2 item: Mage Slayer."
+  },
+  "magic_lamp": {
+    "id": "magic_lamp",
+    "name": "Magic Lamp",
+    "emoji": "🔮",
+    "image": "assets/items/panic_button.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Magic Lamp."
+  },
+  "magic_stick": {
+    "id": "magic_stick",
+    "name": "Magic Stick",
+    "emoji": "🔮",
+    "image": "assets/items/magic_stick.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 200,
+    "stats": {},
+    "desc": "Dota 2 item: Magic Stick."
+  },
+  "magic_wand": {
+    "id": "magic_wand",
+    "name": "Magic Wand",
+    "emoji": "🔮",
+    "image": "assets/items/magic_wand.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 460,
+    "stats": {},
+    "desc": "Dota 2 item: Magic Wand."
+  },
+  "magnifying_monocle": {
+    "id": "magnifying_monocle",
+    "name": "Magnifying Monocle",
+    "emoji": "🔮",
+    "image": "assets/items/magnifying_monocle.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Magnifying Monocle."
+  },
+  "mana_draught": {
+    "id": "mana_draught",
+    "name": "Mana Draught",
+    "emoji": "🔮",
+    "image": "assets/items/mana_draught.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Mana Draught."
+  },
+  "mango_tree": {
+    "id": "mango_tree",
+    "name": "Mango Tree",
+    "emoji": "🔮",
+    "image": "assets/items/mango_tree.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 200,
+    "stats": {},
+    "desc": "Dota 2 item: Mango Tree."
+  },
+  "manic": {
+    "id": "manic",
+    "name": "Manic",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_manic.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Manic."
+  },
+  "manta_style": {
+    "id": "manta_style",
+    "name": "Manta Style",
+    "emoji": "🔮",
+    "image": "",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 200,
+    "stats": {},
+    "desc": "Dota 2 item: Manta Style."
+  },
+  "mantle_of_intelligence": {
+    "id": "mantle_of_intelligence",
+    "name": "Mantle of Intelligence",
+    "emoji": "🔮",
+    "image": "assets/items/mantle.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 140,
+    "stats": {
+      "int": 3
+    },
+    "desc": "Dota 2 item: Mantle of Intelligence."
+  },
+  "martyrs_plate": {
+    "id": "martyrs_plate",
+    "name": "Martyr's Plate",
+    "emoji": "🔮",
+    "image": "assets/items/martyrs_plate.png",
+    "slotType": "armor",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hp": 7
+    },
+    "desc": "Dota 2 item: Martyr's Plate."
+  },
+  "mask_of_madness": {
+    "id": "mask_of_madness",
+    "name": "Mask of Madness",
+    "emoji": "🔮",
+    "image": "assets/items/mask_of_madness.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1900,
+    "stats": {
+      "damage": 20
+    },
+    "desc": "Dota 2 item: Mask of Madness."
+  },
+  "medallion_of_courage": {
+    "id": "medallion_of_courage",
+    "name": "Medallion of Courage",
+    "emoji": "🔮",
+    "image": "assets/items/medallion_of_courage.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Medallion of Courage."
+  },
+  "mekansm": {
+    "id": "mekansm",
+    "name": "Mekansm",
+    "emoji": "🔮",
+    "image": "assets/items/mekansm.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 1775,
+    "stats": {
+      "armor": 5
+    },
+    "desc": "Dota 2 item: Mekansm."
+  },
+  "mercy_grace": {
+    "id": "mercy_grace",
+    "name": "Mercy & Grace",
+    "emoji": "🔮",
+    "image": "assets/items/muertas_gun.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Mercy & Grace."
+  },
+  "metamorphic_mandible": {
+    "id": "metamorphic_mandible",
+    "name": "Metamorphic Mandible",
+    "emoji": "🔮",
+    "image": "assets/items/metamorphic_mandible.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Metamorphic Mandible."
+  },
+  "meteor_hammer": {
+    "id": "meteor_hammer",
+    "name": "Meteor Hammer",
+    "emoji": "🔮",
+    "image": "assets/items/meteor_hammer.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 2850,
+    "stats": {
+      "str": 6,
+      "agi": 6,
+      "int": 24,
+      "hpRegen": 35
+    },
+    "desc": "Dota 2 item: Meteor Hammer."
+  },
+  "mind_breaker": {
+    "id": "mind_breaker",
+    "name": "Mind Breaker",
+    "emoji": "🔮",
+    "image": "assets/items/mind_breaker.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Mind Breaker."
+  },
+  "minotaur_horn": {
+    "id": "minotaur_horn",
+    "name": "Minotaur Horn",
+    "emoji": "🔮",
+    "image": "assets/items/minotaur_horn.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Minotaur Horn."
+  },
+  "mirror_shield": {
+    "id": "mirror_shield",
+    "name": "Mirror Shield",
+    "emoji": "🔮",
+    "image": "assets/items/mirror_shield.png",
+    "slotType": "armor",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Mirror Shield."
+  },
+  "mithril_hammer": {
+    "id": "mithril_hammer",
+    "name": "Mithril Hammer",
+    "emoji": "🔮",
+    "image": "assets/items/mithril_hammer.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1600,
+    "stats": {
+      "damage": 24
+    },
+    "desc": "Dota 2 item: Mithril Hammer."
+  },
+  "mjollnir": {
+    "id": "mjollnir",
+    "name": "Mjollnir",
+    "emoji": "🔮",
+    "image": "assets/items/mjollnir.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 5500,
+    "stats": {
+      "damage": 25,
+      "attackSpeed": 90
+    },
+    "desc": "Dota 2 item: Mjollnir."
+  },
+  "monkey_king_bar": {
+    "id": "monkey_king_bar",
+    "name": "Monkey King Bar",
+    "emoji": "🔮",
+    "image": "assets/items/monkey_king_bar.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 5000,
+    "stats": {
+      "damage": 50,
+      "attackSpeed": 50
+    },
+    "desc": "Dota 2 item: Monkey King Bar."
+  },
+  "moon_shard": {
+    "id": "moon_shard",
+    "name": "Moon Shard",
+    "emoji": "🔮",
+    "image": "assets/items/moon_shard.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 4000,
+    "stats": {
+      "attackSpeed": 140
+    },
+    "desc": "Dota 2 item: Moon Shard."
+  },
+  "morbid_mask": {
+    "id": "morbid_mask",
+    "name": "Morbid Mask",
+    "emoji": "🔮",
+    "image": "assets/items/lifesteal.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 900,
+    "stats": {},
+    "desc": "Dota 2 item: Morbid Mask."
+  },
+  "mystic_staff": {
+    "id": "mystic_staff",
+    "name": "Mystic Staff",
+    "emoji": "🔮",
+    "image": "assets/items/mystic_staff.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 2800,
+    "stats": {
+      "int": 25
+    },
+    "desc": "Dota 2 item: Mystic Staff."
+  },
+  "mystical": {
+    "id": "mystical",
+    "name": "Mystical",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_mystical.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Mystical."
+  },
+  "necronomicon": {
+    "id": "necronomicon",
+    "name": "Necronomicon",
+    "emoji": "🔮",
+    "image": "assets/items/necronomicon_3.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 4550,
+    "stats": {
+      "str": 6,
+      "hpRegen": 2
+    },
+    "desc": "Dota 2 item: Necronomicon."
+  },
+  "nemesis_curse": {
+    "id": "nemesis_curse",
+    "name": "Nemesis Curse",
+    "emoji": "🔮",
+    "image": "assets/items/nemesis_curse.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Nemesis Curse."
+  },
+  "nether_shawl": {
+    "id": "nether_shawl",
+    "name": "Nether Shawl",
+    "emoji": "🔮",
+    "image": "assets/items/nether_shawl.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Nether Shawl."
+  },
+  "nimble": {
+    "id": "nimble",
+    "name": "Nimble",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_nimble.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "damage": 10
+    },
+    "desc": "Dota 2 item: Nimble."
+  },
+  "ninja_gear": {
+    "id": "ninja_gear",
+    "name": "Ninja Gear",
+    "emoji": "🔮",
+    "image": "assets/items/ninja_gear.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Ninja Gear."
+  },
+  "null_talisman": {
+    "id": "null_talisman",
+    "name": "Null Talisman",
+    "emoji": "🔮",
+    "image": "assets/items/null_talisman.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 505,
+    "stats": {
+      "int": 5,
+      "str": 2,
+      "agi": 2
+    },
+    "desc": "Dota 2 item: Null Talisman."
+  },
+  "nullifier": {
+    "id": "nullifier",
+    "name": "Nullifier",
+    "emoji": "🔮",
+    "image": "assets/items/nullifier.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 4350,
+    "stats": {
+      "damage": 75,
+      "armor": 10,
+      "hp": 0
+    },
+    "desc": "Dota 2 item: Nullifier."
+  },
+  "oblivion_staff": {
+    "id": "oblivion_staff",
+    "name": "Oblivion Staff",
+    "emoji": "🔮",
+    "image": "assets/items/oblivion_staff.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1625,
+    "stats": {
+      "int": 10,
+      "attackSpeed": 35
+    },
+    "desc": "Dota 2 item: Oblivion Staff."
+  },
+  "observer_and_sentry_wards": {
+    "id": "observer_and_sentry_wards",
+    "name": "Observer and Sentry Wards",
+    "emoji": "🔮",
+    "image": "assets/items/ward_dispenser.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 50,
+    "stats": {},
+    "desc": "Dota 2 item: Observer and Sentry Wards."
+  },
+  "observer_ward": {
+    "id": "observer_ward",
+    "name": "Observer Ward",
+    "emoji": "🔮",
+    "image": "assets/items/ward_observer.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Observer Ward."
+  },
+  "occult_bracelet": {
+    "id": "occult_bracelet",
+    "name": "Occult Bracelet",
+    "emoji": "🔮",
+    "image": "assets/items/occult_bracelet.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Occult Bracelet."
+  },
+  "ocean_heart": {
+    "id": "ocean_heart",
+    "name": "Ocean Heart",
+    "emoji": "🔮",
+    "image": "assets/items/ocean_heart.png",
+    "slotType": "artifact",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Ocean Heart."
+  },
+  "octarine_core": {
+    "id": "octarine_core",
+    "name": "Octarine Core",
+    "emoji": "🔮",
+    "image": "assets/items/octarine_core.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 4900,
+    "stats": {
+      "hp": 450,
+      "hpRegen": 6
+    },
+    "desc": "Dota 2 item: Octarine Core."
+  },
+  "ogre_axe": {
+    "id": "ogre_axe",
+    "name": "Ogre Axe",
+    "emoji": "🔮",
+    "image": "assets/items/ogre_axe.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1000,
+    "stats": {
+      "str": 10
+    },
+    "desc": "Dota 2 item: Ogre Axe."
+  },
+  "ogre_seal_totem": {
+    "id": "ogre_seal_totem",
+    "name": "Ogre Seal Totem",
+    "emoji": "🔮",
+    "image": "assets/items/ogre_seal_totem.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Ogre Seal Totem."
+  },
+  "orb_of_blight": {
+    "id": "orb_of_blight",
+    "name": "Orb of Blight",
+    "emoji": "🔮",
+    "image": "assets/items/blight_stone.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 300,
+    "stats": {},
+    "desc": "Dota 2 item: Orb of Blight."
+  },
+  "orb_of_corrosion": {
+    "id": "orb_of_corrosion",
+    "name": "Orb of Corrosion",
+    "emoji": "🔮",
+    "image": "assets/items/orb_of_corrosion.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 1050,
+    "stats": {
+      "agi": 7
+    },
+    "desc": "Dota 2 item: Orb of Corrosion."
+  },
+  "orb_of_destruction": {
+    "id": "orb_of_destruction",
+    "name": "Orb of Destruction",
+    "emoji": "🔮",
+    "image": "assets/items/orb_of_destruction.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Orb of Destruction."
+  },
+  "orb_of_frost": {
+    "id": "orb_of_frost",
+    "name": "Orb of Frost",
+    "emoji": "🔮",
+    "image": "assets/items/orb_of_frost.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 300,
+    "stats": {},
+    "desc": "Dota 2 item: Orb of Frost."
+  },
+  "orb_of_venom": {
+    "id": "orb_of_venom",
+    "name": "Orb of Venom",
+    "emoji": "🔮",
+    "image": "assets/items/orb_of_venom.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 350,
+    "stats": {},
+    "desc": "Dota 2 item: Orb of Venom."
+  },
+  "orchid_malevolence": {
+    "id": "orchid_malevolence",
+    "name": "Orchid Malevolence",
+    "emoji": "🔮",
+    "image": "assets/items/orchid.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 3275,
+    "stats": {
+      "attackSpeed": 35,
+      "damage": 20,
+      "int": 12
+    },
+    "desc": "Dota 2 item: Orchid Malevolence."
+  },
+  "outworld_staff": {
+    "id": "outworld_staff",
+    "name": "Outworld Staff",
+    "emoji": "🔮",
+    "image": "assets/items/outworld_staff.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Outworld Staff."
+  },
+  "overwhelming_blink": {
+    "id": "overwhelming_blink",
+    "name": "Overwhelming Blink",
+    "emoji": "🔮",
+    "image": "assets/items/overwhelming_blink.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 6800,
+    "stats": {
+      "str": 25
+    },
+    "desc": "Dota 2 item: Overwhelming Blink."
+  },
+  "paladin_sword": {
+    "id": "paladin_sword",
+    "name": "Paladin Sword",
+    "emoji": "🔮",
+    "image": "assets/items/paladin_sword.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "damage": 16
+    },
+    "desc": "Dota 2 item: Paladin Sword."
+  },
+  "parasma": {
+    "id": "parasma",
+    "name": "Parasma",
+    "emoji": "🔮",
+    "image": "assets/items/devastator.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 5975,
+    "stats": {
+      "int": 40,
+      "attackSpeed": 40,
+      "armor": 7
+    },
+    "desc": "Dota 2 item: Parasma."
+  },
+  "partisans_brand": {
+    "id": "partisans_brand",
+    "name": "Partisan's Brand",
+    "emoji": "🔮",
+    "image": "assets/items/partisans_brand.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Partisan's Brand."
+  },
+  "pavise": {
+    "id": "pavise",
+    "name": "Pavise",
+    "emoji": "🔮",
+    "image": "assets/items/pavise.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 1350,
+    "stats": {
+      "armor": 3,
+      "hp": 175
+    },
+    "desc": "Dota 2 item: Pavise."
+  },
+  "penta_edged_sword": {
+    "id": "penta_edged_sword",
+    "name": "Penta-Edged Sword",
+    "emoji": "🔮",
+    "image": "assets/items/penta_edged_sword.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "damage": 45
+    },
+    "desc": "Dota 2 item: Penta-Edged Sword."
+  },
+  "perseverance": {
+    "id": "perseverance",
+    "name": "Perseverance",
+    "emoji": "🔮",
+    "image": "assets/items/pers.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1400,
+    "stats": {},
+    "desc": "Dota 2 item: Perseverance."
+  },
+  "phase_boots": {
+    "id": "phase_boots",
+    "name": "Phase Boots",
+    "emoji": "🔮",
+    "image": "assets/items/phase_boots.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 1450,
+    "stats": {
+      "damage": 12,
+      "armor": 4
+    },
+    "desc": "Dota 2 item: Phase Boots."
+  },
+  "philosophers_stone": {
+    "id": "philosophers_stone",
+    "name": "Philosopher's Stone",
+    "emoji": "🔮",
+    "image": "assets/items/philosophers_stone.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Philosopher's Stone."
+  },
+  "phoenix_ash": {
+    "id": "phoenix_ash",
+    "name": "Phoenix Ash",
+    "emoji": "🔮",
+    "image": "assets/items/phoenix_ash.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Phoenix Ash."
+  },
+  "phylactery": {
+    "id": "phylactery",
+    "name": "Phylactery",
+    "emoji": "🔮",
+    "image": "assets/items/phylactery.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 2600,
+    "stats": {},
+    "desc": "Dota 2 item: Phylactery."
+  },
+  "pig_pole": {
+    "id": "pig_pole",
+    "name": "Pig Pole",
+    "emoji": "🔮",
+    "image": "assets/items/unstable_wand.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Pig Pole."
+  },
+  "pipe_of_insight": {
+    "id": "pipe_of_insight",
+    "name": "Pipe of Insight",
+    "emoji": "🔮",
+    "image": "assets/items/pipe.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 3725,
+    "stats": {
+      "hp": 14
+    },
+    "desc": "Dota 2 item: Pipe of Insight."
+  },
+  "pirate_hat": {
+    "id": "pirate_hat",
+    "name": "Pirate Hat",
+    "emoji": "🔮",
+    "image": "assets/items/pirate_hat.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Pirate Hat."
+  },
+  "platemail": {
+    "id": "platemail",
+    "name": "Platemail",
+    "emoji": "🔮",
+    "image": "assets/items/platemail.png",
+    "slotType": "armor",
+    "rarity": "common",
+    "cost": 1400,
+    "stats": {
+      "armor": 10
+    },
+    "desc": "Dota 2 item: Platemail."
+  },
+  "pocket_roshan": {
+    "id": "pocket_roshan",
+    "name": "Pocket Roshan",
+    "emoji": "🔮",
+    "image": "assets/items/pocket_roshan.png",
+    "slotType": "artifact",
+    "rarity": "rare",
+    "cost": 1000,
+    "stats": {},
+    "desc": "Dota 2 item: Pocket Roshan."
+  },
+  "pocket_tower": {
+    "id": "pocket_tower",
+    "name": "Pocket Tower",
+    "emoji": "🔮",
+    "image": "assets/items/pocket_tower.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 200,
+    "stats": {},
+    "desc": "Dota 2 item: Pocket Tower."
+  },
+  "point_booster": {
+    "id": "point_booster",
+    "name": "Point Booster",
+    "emoji": "🔮",
+    "image": "assets/items/point_booster.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1200,
+    "stats": {
+      "hp": 175
+    },
+    "desc": "Dota 2 item: Point Booster."
+  },
+  "pollywog_charm": {
+    "id": "pollywog_charm",
+    "name": "Pollywog Charm",
+    "emoji": "🔮",
+    "image": "assets/items/polliwog_charm.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Pollywog Charm."
+  },
+  "poor_mans_shield": {
+    "id": "poor_mans_shield",
+    "name": "Poor Man's Shield",
+    "emoji": "🔮",
+    "image": "assets/items/poor_mans_shield.png",
+    "slotType": "armor",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Poor Man's Shield."
+  },
+  "possessed_mask": {
+    "id": "possessed_mask",
+    "name": "Possessed Mask",
+    "emoji": "🔮",
+    "image": "assets/items/possessed_mask.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Possessed Mask."
+  },
+  "power_treads": {
+    "id": "power_treads",
+    "name": "Power Treads",
+    "emoji": "🔮",
+    "image": "",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 200,
+    "stats": {},
+    "desc": "Dota 2 item: Power Treads."
+  },
+  "princes_knife": {
+    "id": "princes_knife",
+    "name": "Prince's Knife",
+    "emoji": "🔮",
+    "image": "assets/items/princes_knife.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Prince's Knife."
+  },
+  "prophets_pendulum": {
+    "id": "prophets_pendulum",
+    "name": "Prophet's Pendulum",
+    "emoji": "🔮",
+    "image": "assets/items/prophets_pendulum.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Prophet's Pendulum."
+  },
+  "psychic_headband": {
+    "id": "psychic_headband",
+    "name": "Psychic Headband",
+    "emoji": "🔮",
+    "image": "assets/items/psychic_headband.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Psychic Headband."
+  },
+  "pupils_gift": {
+    "id": "pupils_gift",
+    "name": "Pupil's Gift",
+    "emoji": "🔮",
+    "image": "assets/items/pupils_gift.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Pupil's Gift."
+  },
+  "pyrrhic_cloak": {
+    "id": "pyrrhic_cloak",
+    "name": "Pyrrhic Cloak",
+    "emoji": "🔮",
+    "image": "assets/items/pyrrhic_cloak.png",
+    "slotType": "armor",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Pyrrhic Cloak."
+  },
+  "quarterstaff": {
+    "id": "quarterstaff",
+    "name": "Quarterstaff",
+    "emoji": "🔮",
+    "image": "assets/items/quarterstaff.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 875,
+    "stats": {
+      "attackSpeed": 10,
+      "damage": 10
+    },
+    "desc": "Dota 2 item: Quarterstaff."
+  },
+  "quelling_blade": {
+    "id": "quelling_blade",
+    "name": "Quelling Blade",
+    "emoji": "🔮",
+    "image": "assets/items/quelling_blade.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 100,
+    "stats": {},
+    "desc": "Dota 2 item: Quelling Blade."
+  },
+  "quickened": {
+    "id": "quickened",
+    "name": "Quickened",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_quickened.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "evasion": 0.0
+    },
+    "desc": "Dota 2 item: Quickened."
+  },
+  "quickening_charm": {
+    "id": "quickening_charm",
+    "name": "Quickening Charm",
+    "emoji": "🔮",
+    "image": "assets/items/quickening_charm.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hp": 10
+    },
+    "desc": "Dota 2 item: Quickening Charm."
+  },
+  "quicksilver_amulet": {
+    "id": "quicksilver_amulet",
+    "name": "Quicksilver Amulet",
+    "emoji": "🔮",
+    "image": "assets/items/quicksilver_amulet.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "attackSpeed": 18
+    },
+    "desc": "Dota 2 item: Quicksilver Amulet."
+  },
+  "radiance": {
+    "id": "radiance",
+    "name": "Radiance",
+    "emoji": "🔮",
+    "image": "",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 200,
+    "stats": {},
+    "desc": "Dota 2 item: Radiance."
+  },
+  "rattlecage": {
+    "id": "rattlecage",
+    "name": "Rattlecage",
+    "emoji": "🔮",
+    "image": "assets/items/rattlecage.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Rattlecage."
+  },
+  "reaver": {
+    "id": "reaver",
+    "name": "Reaver",
+    "emoji": "🔮",
+    "image": "assets/items/reaver.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 2800,
+    "stats": {
+      "str": 25
+    },
+    "desc": "Dota 2 item: Reaver."
+  },
+  "refresher_orb": {
+    "id": "refresher_orb",
+    "name": "Refresher Orb",
+    "emoji": "🔮",
+    "image": "assets/items/refresher.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 5000,
+    "stats": {
+      "hp": 14,
+      "damage": 0
+    },
+    "desc": "Dota 2 item: Refresher Orb."
+  },
+  "refresher_shard": {
+    "id": "refresher_shard",
+    "name": "Refresher Shard",
+    "emoji": "🔮",
+    "image": "assets/items/refresher_shard.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1000,
+    "stats": {
+      "hp": 12,
+      "damage": 20
+    },
+    "desc": "Dota 2 item: Refresher Shard."
+  },
+  "repair_kit": {
+    "id": "repair_kit",
+    "name": "Repair Kit",
+    "emoji": "🔮",
+    "image": "assets/items/repair_kit.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hp": 25
+    },
+    "desc": "Dota 2 item: Repair Kit."
+  },
+  "restorative": {
+    "id": "restorative",
+    "name": "Restorative",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_restorative.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hp": 8
+    },
+    "desc": "Dota 2 item: Restorative."
+  },
+  "revenants_brooch": {
+    "id": "revenants_brooch",
+    "name": "Revenant's Brooch",
+    "emoji": "🔮",
+    "image": "assets/items/revenants_brooch.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 3300,
+    "stats": {
+      "damage": 35
+    },
+    "desc": "Dota 2 item: Revenant's Brooch."
+  },
+  "riftshadow_prism": {
+    "id": "riftshadow_prism",
+    "name": "Riftshadow Prism",
+    "emoji": "🔮",
+    "image": "assets/items/riftshadow_prism.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Riftshadow Prism."
+  },
+  "ring_of_aquila": {
+    "id": "ring_of_aquila",
+    "name": "Ring of Aquila",
+    "emoji": "🔮",
+    "image": "assets/items/ring_of_aquila.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 200,
+    "stats": {
+      "damage": 3,
+      "str": 3,
+      "agi": 9,
+      "int": 3
+    },
+    "desc": "Dota 2 item: Ring of Aquila."
+  },
+  "ring_of_basilius": {
+    "id": "ring_of_basilius",
+    "name": "Ring of Basilius",
+    "emoji": "🔮",
+    "image": "assets/items/ring_of_basilius.png",
+    "slotType": "accessory",
+    "rarity": "rare",
+    "cost": 425,
+    "stats": {},
+    "desc": "Dota 2 item: Ring of Basilius."
+  },
+  "ring_of_health": {
+    "id": "ring_of_health",
+    "name": "Ring of Health",
+    "emoji": "🔮",
+    "image": "assets/items/ring_of_health.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 700,
+    "stats": {},
+    "desc": "Dota 2 item: Ring of Health."
+  },
+  "ring_of_protection": {
+    "id": "ring_of_protection",
+    "name": "Ring of Protection",
+    "emoji": "🔮",
+    "image": "assets/items/ring_of_protection.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 175,
+    "stats": {
+      "armor": 2
+    },
+    "desc": "Dota 2 item: Ring of Protection."
+  },
+  "ring_of_regen": {
+    "id": "ring_of_regen",
+    "name": "Ring of Regen",
+    "emoji": "🔮",
+    "image": "assets/items/ring_of_regen.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 175,
+    "stats": {},
+    "desc": "Dota 2 item: Ring of Regen."
+  },
+  "ring_of_tarrasque": {
+    "id": "ring_of_tarrasque",
+    "name": "Ring of Tarrasque",
+    "emoji": "🔮",
+    "image": "assets/items/ring_of_tarrasque.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 1700,
+    "stats": {
+      "hp": 12
+    },
+    "desc": "Dota 2 item: Ring of Tarrasque."
+  },
+  "rippers_lash": {
+    "id": "rippers_lash",
+    "name": "Ripper's Lash",
+    "emoji": "🔮",
+    "image": "assets/items/rippers_lash.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Ripper's Lash."
+  },
+  "river_vial_blood": {
+    "id": "river_vial_blood",
+    "name": "River Vial: Blood",
+    "emoji": "🔮",
+    "image": "assets/items/river_painter7.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: River Vial: Blood."
+  },
+  "river_vial_chrome": {
+    "id": "river_vial_chrome",
+    "name": "River Vial: Chrome",
+    "emoji": "🔮",
+    "image": "assets/items/river_painter.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: River Vial: Chrome."
+  },
+  "river_vial_dry": {
+    "id": "river_vial_dry",
+    "name": "River Vial: Dry",
+    "emoji": "🔮",
+    "image": "assets/items/river_painter2.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: River Vial: Dry."
+  },
+  "river_vial_electrified": {
+    "id": "river_vial_electrified",
+    "name": "River Vial: Electrified",
+    "emoji": "🔮",
+    "image": "assets/items/river_painter5.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: River Vial: Electrified."
+  },
+  "river_vial_oil": {
+    "id": "river_vial_oil",
+    "name": "River Vial: Oil",
+    "emoji": "🔮",
+    "image": "assets/items/river_painter4.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: River Vial: Oil."
+  },
+  "river_vial_potion": {
+    "id": "river_vial_potion",
+    "name": "River Vial: Potion",
+    "emoji": "🔮",
+    "image": "assets/items/river_painter6.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: River Vial: Potion."
+  },
+  "river_vial_slime": {
+    "id": "river_vial_slime",
+    "name": "River Vial: Slime",
+    "emoji": "🔮",
+    "image": "assets/items/river_painter3.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: River Vial: Slime."
+  },
+  "robe_of_the_magi": {
+    "id": "robe_of_the_magi",
+    "name": "Robe of the Magi",
+    "emoji": "🔮",
+    "image": "assets/items/robe.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 450,
+    "stats": {
+      "int": 6
+    },
+    "desc": "Dota 2 item: Robe of the Magi."
+  },
+  "rod_of_atos": {
+    "id": "rod_of_atos",
+    "name": "Rod of Atos",
+    "emoji": "🔮",
+    "image": "assets/items/rod_of_atos.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 2250,
+    "stats": {
+      "int": 12,
+      "hp": 275
+    },
+    "desc": "Dota 2 item: Rod of Atos."
+  },
+  "roshans_banner": {
+    "id": "roshans_banner",
+    "name": "Roshan's Banner",
+    "emoji": "🔮",
+    "image": "assets/items/roshans_banner.png",
+    "slotType": "artifact",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Roshan's Banner."
+  },
+  "royal_jelly": {
+    "id": "royal_jelly",
+    "name": "Royal Jelly",
+    "emoji": "🔮",
+    "image": "assets/items/royal_jelly.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hp": 50
+    },
+    "desc": "Dota 2 item: Royal Jelly."
+  },
+  "sacred_relic": {
+    "id": "sacred_relic",
+    "name": "Sacred Relic",
+    "emoji": "🔮",
+    "image": "assets/items/relic.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 3400,
+    "stats": {
+      "damage": 55
+    },
+    "desc": "Dota 2 item: Sacred Relic."
+  },
+  "safety_bubble": {
+    "id": "safety_bubble",
+    "name": "Safety Bubble",
+    "emoji": "🔮",
+    "image": "assets/items/safety_bubble.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Safety Bubble."
+  },
+  "sages_mask": {
+    "id": "sages_mask",
+    "name": "Sage's Mask",
+    "emoji": "🔮",
+    "image": "assets/items/sobi_mask.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 175,
+    "stats": {},
+    "desc": "Dota 2 item: Sage's Mask."
+  },
+  "sange_and_yasha": {
+    "id": "sange_and_yasha",
+    "name": "Sange and Yasha",
+    "emoji": "🔮",
+    "image": "assets/items/sange_and_yasha.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 4200,
+    "stats": {
+      "str": 16,
+      "agi": 16,
+      "attackSpeed": 20,
+      "hp": 20
+    },
+    "desc": "Dota 2 item: Sange and Yasha."
+  },
+  "sange": {
+    "id": "sange",
+    "name": "Sange",
+    "emoji": "🔮",
+    "image": "assets/items/sange.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 2100,
+    "stats": {
+      "str": 16,
+      "hp": 16
+    },
+    "desc": "Dota 2 item: Sange."
+  },
+  "satanic": {
+    "id": "satanic",
+    "name": "Satanic",
+    "emoji": "🔮",
+    "image": "assets/items/satanic.png",
+    "slotType": "artifact",
+    "rarity": "common",
+    "cost": 5050,
+    "stats": {
+      "str": 25,
+      "damage": 25
+    },
+    "desc": "Dota 2 item: Satanic."
+  },
+  "scrying_shovel": {
+    "id": "scrying_shovel",
+    "name": "Scrying Shovel",
+    "emoji": "🔮",
+    "image": "assets/items/ofrenda_shovel.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Scrying Shovel."
+  },
+  "scythe_of_vyse": {
+    "id": "scythe_of_vyse",
+    "name": "Scythe of Vyse",
+    "emoji": "🔮",
+    "image": "assets/items/sheepstick.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 5200,
+    "stats": {
+      "int": 30
+    },
+    "desc": "Dota 2 item: Scythe of Vyse."
+  },
+  "searing_signet": {
+    "id": "searing_signet",
+    "name": "Searing Signet",
+    "emoji": "🔮",
+    "image": "assets/items/searing_signet.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Searing Signet."
+  },
+  "seeds_of_serenity": {
+    "id": "seeds_of_serenity",
+    "name": "Seeds of Serenity",
+    "emoji": "🔮",
+    "image": "assets/items/seeds_of_serenity.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Seeds of Serenity."
+  },
+  "seer_stone": {
+    "id": "seer_stone",
+    "name": "Seer Stone",
+    "emoji": "🔮",
+    "image": "assets/items/seer_stone.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hpRegen": 10
+    },
+    "desc": "Dota 2 item: Seer Stone."
+  },
+  "sentry_ward": {
+    "id": "sentry_ward",
+    "name": "Sentry Ward",
+    "emoji": "🔮",
+    "image": "assets/items/ward_sentry.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 50,
+    "stats": {},
+    "desc": "Dota 2 item: Sentry Ward."
+  },
+  "serrated_shiv": {
+    "id": "serrated_shiv",
+    "name": "Serrated Shiv",
+    "emoji": "🔮",
+    "image": "assets/items/serrated_shiv.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Serrated Shiv."
+  },
+  "shadow_amulet": {
+    "id": "shadow_amulet",
+    "name": "Shadow Amulet",
+    "emoji": "🔮",
+    "image": "assets/items/shadow_amulet.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 900,
+    "stats": {},
+    "desc": "Dota 2 item: Shadow Amulet."
+  },
+  "shadow_blade": {
+    "id": "shadow_blade",
+    "name": "Shadow Blade",
+    "emoji": "🔮",
+    "image": "assets/items/invis_sword.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 3250,
+    "stats": {
+      "damage": 25,
+      "attackSpeed": 35
+    },
+    "desc": "Dota 2 item: Shadow Blade."
+  },
+  "shawl": {
+    "id": "shawl",
+    "name": "Shawl",
+    "emoji": "🔮",
+    "image": "assets/items/shawl.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 450,
+    "stats": {},
+    "desc": "Dota 2 item: Shawl."
+  },
+  "shivas_guard": {
+    "id": "shivas_guard",
+    "name": "Shiva's Guard",
+    "emoji": "🔮",
+    "image": "assets/items/shivas_guard.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 4500,
+    "stats": {
+      "hp": 0,
+      "armor": 17
+    },
+    "desc": "Dota 2 item: Shiva's Guard."
+  },
+  "silver_edge": {
+    "id": "silver_edge",
+    "name": "Silver Edge",
+    "emoji": "🔮",
+    "image": "assets/items/silver_edge.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 5700,
+    "stats": {
+      "damage": 70,
+      "attackSpeed": 35
+    },
+    "desc": "Dota 2 item: Silver Edge."
+  },
+  "sisters_shroud": {
+    "id": "sisters_shroud",
+    "name": "Sister's Shroud",
+    "emoji": "🔮",
+    "image": "assets/items/sisters_shroud.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Sister's Shroud."
+  },
+  "skull_basher": {
+    "id": "skull_basher",
+    "name": "Skull Basher",
+    "emoji": "🔮",
+    "image": "assets/items/basher.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 2875,
+    "stats": {
+      "damage": 30,
+      "str": 10,
+      "stunChance": 0.1
+    },
+    "desc": "Dota 2 item: Skull Basher."
+  },
+  "slippers_of_agility": {
+    "id": "slippers_of_agility",
+    "name": "Slippers of Agility",
+    "emoji": "🔮",
+    "image": "assets/items/slippers.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 140,
+    "stats": {
+      "agi": 3
+    },
+    "desc": "Dota 2 item: Slippers of Agility."
+  },
+  "smoke_of_deceit": {
+    "id": "smoke_of_deceit",
+    "name": "Smoke of Deceit",
+    "emoji": "🔮",
+    "image": "assets/items/smoke_of_deceit.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 50,
+    "stats": {},
+    "desc": "Dota 2 item: Smoke of Deceit."
+  },
+  "solar_crest": {
+    "id": "solar_crest",
+    "name": "Solar Crest",
+    "emoji": "🔮",
+    "image": "assets/items/solar_crest.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 2575,
+    "stats": {
+      "armor": 7,
+      "hp": 200
+    },
+    "desc": "Dota 2 item: Solar Crest."
+  },
+  "soul_booster": {
+    "id": "soul_booster",
+    "name": "Soul Booster",
+    "emoji": "🔮",
+    "image": "assets/items/soul_booster.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 3000,
+    "stats": {
+      "hp": 425
+    },
+    "desc": "Dota 2 item: Soul Booster."
+  },
+  "soul_ring": {
+    "id": "soul_ring",
+    "name": "Soul Ring",
+    "emoji": "🔮",
+    "image": "assets/items/soul_ring.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 805,
+    "stats": {
+      "str": 6,
+      "armor": 2
+    },
+    "desc": "Dota 2 item: Soul Ring."
+  },
+  "spark_of_courage": {
+    "id": "spark_of_courage",
+    "name": "Spark of Courage",
+    "emoji": "🔮",
+    "image": "assets/items/spark_of_courage.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Spark of Courage."
+  },
+  "specialists_array": {
+    "id": "specialists_array",
+    "name": "Specialist's Array",
+    "emoji": "🔮",
+    "image": "assets/items/specialists_array.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 2550,
+    "stats": {
+      "agi": 12,
+      "damage": 20
+    },
+    "desc": "Dota 2 item: Specialist's Array."
+  },
+  "spell_prism": {
+    "id": "spell_prism",
+    "name": "Spell Prism",
+    "emoji": "🔮",
+    "image": "assets/items/spell_prism.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hpRegen": 2
+    },
+    "desc": "Dota 2 item: Spell Prism."
+  },
+  "spellslinger": {
+    "id": "spellslinger",
+    "name": "Spellslinger",
+    "emoji": "🔮",
+    "image": "assets/items/spellslinger.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Spellslinger."
+  },
+  "spider_legs": {
+    "id": "spider_legs",
+    "name": "Spider Legs",
+    "emoji": "🔮",
+    "image": "assets/items/spider_legs.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Spider Legs."
+  },
+  "spirit_vessel": {
+    "id": "spirit_vessel",
+    "name": "Spirit Vessel",
+    "emoji": "🔮",
+    "image": "assets/items/spirit_vessel.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 2725,
+    "stats": {
+      "armor": 2,
+      "hp": 0
+    },
+    "desc": "Dota 2 item: Spirit Vessel."
+  },
+  "splintmail": {
+    "id": "splintmail",
+    "name": "Splintmail",
+    "emoji": "🔮",
+    "image": "assets/items/splintmail.png",
+    "slotType": "armor",
+    "rarity": "common",
+    "cost": 950,
+    "stats": {
+      "armor": 7
+    },
+    "desc": "Dota 2 item: Splintmail."
+  },
+  "staff_of_wizardry": {
+    "id": "staff_of_wizardry",
+    "name": "Staff of Wizardry",
+    "emoji": "🔮",
+    "image": "assets/items/staff_of_wizardry.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1000,
+    "stats": {
+      "int": 10
+    },
+    "desc": "Dota 2 item: Staff of Wizardry."
+  },
+  "stonefeather_satchel": {
+    "id": "stonefeather_satchel",
+    "name": "Stonefeather Satchel",
+    "emoji": "🔮",
+    "image": "assets/items/stonefeather_satchel.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Stonefeather Satchel."
+  },
+  "stormcrafter": {
+    "id": "stormcrafter",
+    "name": "Stormcrafter",
+    "emoji": "🔮",
+    "image": "assets/items/stormcrafter.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Stormcrafter."
+  },
+  "stout_shield": {
+    "id": "stout_shield",
+    "name": "Stout Shield",
+    "emoji": "🔮",
+    "image": "assets/items/stout_shield.png",
+    "slotType": "armor",
+    "rarity": "common",
+    "cost": 100,
+    "stats": {},
+    "desc": "Dota 2 item: Stout Shield."
+  },
+  "stygian_desolator": {
+    "id": "stygian_desolator",
+    "name": "Stygian Desolator",
+    "emoji": "🔮",
+    "image": "assets/items/desolator_2.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Stygian Desolator."
+  },
+  "swift_blink": {
+    "id": "swift_blink",
+    "name": "Swift Blink",
+    "emoji": "🔮",
+    "image": "assets/items/swift_blink.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 6800,
+    "stats": {
+      "agi": 25
+    },
+    "desc": "Dota 2 item: Swift Blink."
+  },
+  "talisman_of_evasion": {
+    "id": "talisman_of_evasion",
+    "name": "Talisman of Evasion",
+    "emoji": "🔮",
+    "image": "assets/items/talisman_of_evasion.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1300,
+    "stats": {
+      "evasion": 0.15
+    },
+    "desc": "Dota 2 item: Talisman of Evasion."
+  },
+  "tango_shared": {
+    "id": "tango_shared",
+    "name": "Tango (Shared)",
+    "emoji": "🔮",
+    "image": "assets/items/tango_single.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 30,
+    "stats": {},
+    "desc": "Dota 2 item: Tango (Shared)."
+  },
+  "tango": {
+    "id": "tango",
+    "name": "Tango",
+    "emoji": "🔮",
+    "image": "assets/items/tango.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 90,
+    "stats": {},
+    "desc": "Dota 2 item: Tango."
+  },
+  "telescope": {
+    "id": "telescope",
+    "name": "Telescope",
+    "emoji": "🔮",
+    "image": "assets/items/spy_gadget.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Telescope."
+  },
+  "the_leveller": {
+    "id": "the_leveller",
+    "name": "The Leveller",
+    "emoji": "🔮",
+    "image": "assets/items/the_leveller.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: The Leveller."
+  },
+  "thick": {
+    "id": "thick",
+    "name": "Thick",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_thick.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hp": 240,
+      "hpRegen": 3,
+      "armor": 7
+    },
+    "desc": "Dota 2 item: Thick."
+  },
+  "third_eye": {
+    "id": "third_eye",
+    "name": "Third Eye",
+    "emoji": "🔮",
+    "image": "assets/items/third_eye.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Third Eye."
+  },
+  "tiara_of_selemene": {
+    "id": "tiara_of_selemene",
+    "name": "Tiara of Selemene",
+    "emoji": "🔮",
+    "image": "assets/items/tiara_of_selemene.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1700,
+    "stats": {
+      "hpRegen": 6
+    },
+    "desc": "Dota 2 item: Tiara of Selemene."
+  },
+  "tier_1_token": {
+    "id": "tier_1_token",
+    "name": "Tier 1 Token",
+    "emoji": "🔮",
+    "image": "assets/items/tier1_token.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 200,
+    "stats": {},
+    "desc": "Dota 2 item: Tier 1 Token."
+  },
+  "tier_2_token": {
+    "id": "tier_2_token",
+    "name": "Tier 2 Token",
+    "emoji": "🔮",
+    "image": "assets/items/tier2_token.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 200,
+    "stats": {},
+    "desc": "Dota 2 item: Tier 2 Token."
+  },
+  "tier_3_token": {
+    "id": "tier_3_token",
+    "name": "Tier 3 Token",
+    "emoji": "🔮",
+    "image": "assets/items/tier3_token.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 200,
+    "stats": {},
+    "desc": "Dota 2 item: Tier 3 Token."
+  },
+  "tier_4_token": {
+    "id": "tier_4_token",
+    "name": "Tier 4 Token",
+    "emoji": "🔮",
+    "image": "assets/items/tier4_token.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 200,
+    "stats": {},
+    "desc": "Dota 2 item: Tier 4 Token."
+  },
+  "tier_5_token": {
+    "id": "tier_5_token",
+    "name": "Tier 5 Token",
+    "emoji": "🔮",
+    "image": "assets/items/tier5_token.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 200,
+    "stats": {},
+    "desc": "Dota 2 item: Tier 5 Token."
+  },
+  "timeless_relic": {
+    "id": "timeless_relic",
+    "name": "Timeless Relic",
+    "emoji": "🔮",
+    "image": "assets/items/timeless_relic.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Timeless Relic."
+  },
+  "timeless": {
+    "id": "timeless",
+    "name": "Timeless",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_timeless.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Timeless."
+  },
+  "titan_sliver": {
+    "id": "titan_sliver",
+    "name": "Titan Sliver",
+    "emoji": "🔮",
+    "image": "assets/items/titan_sliver.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "damage": 15
+    },
+    "desc": "Dota 2 item: Titan Sliver."
+  },
+  "titanic": {
+    "id": "titanic",
+    "name": "Titanic",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_titanic.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "damage": 8
+    },
+    "desc": "Dota 2 item: Titanic."
+  },
+  "tombstone": {
+    "id": "tombstone",
+    "name": "Tombstone",
+    "emoji": "🔮",
+    "image": "assets/items/mutation_tombstone.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Tombstone."
+  },
+  "tome_of_aghanim": {
+    "id": "tome_of_aghanim",
+    "name": "Tome of Aghanim",
+    "emoji": "🔮",
+    "image": "assets/items/tome_of_aghanim.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Tome of Aghanim."
+  },
+  "tome_of_knowledge": {
+    "id": "tome_of_knowledge",
+    "name": "Tome of Knowledge",
+    "emoji": "🔮",
+    "image": "assets/items/tome_of_knowledge.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 75,
+    "stats": {},
+    "desc": "Dota 2 item: Tome of Knowledge."
+  },
+  "tomokan_ringcap": {
+    "id": "tomokan_ringcap",
+    "name": "Tomo'kan Ringcap",
+    "emoji": "🔮",
+    "image": "assets/items/foragers_mana.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "int": 2
+    },
+    "desc": "Dota 2 item: Tomo'kan Ringcap."
+  },
+  "tough": {
+    "id": "tough",
+    "name": "Tough",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_tough.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "damage": 7,
+      "armor": 0
+    },
+    "desc": "Dota 2 item: Tough."
+  },
+  "town_portal_scroll": {
+    "id": "town_portal_scroll",
+    "name": "Town Portal Scroll",
+    "emoji": "🔮",
+    "image": "assets/items/tpscroll.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 100,
+    "stats": {},
+    "desc": "Dota 2 item: Town Portal Scroll."
+  },
+  "tranquil_boots": {
+    "id": "tranquil_boots",
+    "name": "Tranquil Boots",
+    "emoji": "🔮",
+    "image": "assets/items/tranquil_boots.png",
+    "slotType": "accessory",
+    "rarity": "rare",
+    "cost": 900,
+    "stats": {
+      "hp": 14
+    },
+    "desc": "Dota 2 item: Tranquil Boots."
+  },
+  "trickster_cloak": {
+    "id": "trickster_cloak",
+    "name": "Trickster Cloak",
+    "emoji": "🔮",
+    "image": "assets/items/trickster_cloak.png",
+    "slotType": "armor",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Trickster Cloak."
+  },
+  "trident": {
+    "id": "trident",
+    "name": "Trident",
+    "emoji": "🔮",
+    "image": "assets/items/trident.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 6301,
+    "stats": {
+      "str": 30,
+      "agi": 30,
+      "int": 30,
+      "attackSpeed": 30,
+      "hp": 30,
+      "hpRegen": 30,
+      "damage": 30
+    },
+    "desc": "Dota 2 item: Trident."
+  },
+  "trusty_shovel": {
+    "id": "trusty_shovel",
+    "name": "Trusty Shovel",
+    "emoji": "🔮",
+    "image": "assets/items/trusty_shovel.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Trusty Shovel."
+  },
+  "tumblers_toy": {
+    "id": "tumblers_toy",
+    "name": "Tumbler's Toy",
+    "emoji": "🔮",
+    "image": "assets/items/pogo_stick.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Tumbler's Toy."
+  },
+  "ultimate_orb": {
+    "id": "ultimate_orb",
+    "name": "Ultimate Orb",
+    "emoji": "🔮",
+    "image": "assets/items/ultimate_orb.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 2800,
+    "stats": {},
+    "desc": "Dota 2 item: Ultimate Orb."
+  },
+  "unleashed": {
+    "id": "unleashed",
+    "name": "Unleashed",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_curious.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Unleashed."
+  },
+  "unrelenting_eye": {
+    "id": "unrelenting_eye",
+    "name": "Unrelenting Eye",
+    "emoji": "🔮",
+    "image": "assets/items/unrelenting_eye.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Unrelenting Eye."
+  },
+  "unwavering_condition": {
+    "id": "unwavering_condition",
+    "name": "Unwavering Condition",
+    "emoji": "🔮",
+    "image": "assets/items/unwavering_condition.png",
+    "slotType": "accessory",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Unwavering Condition."
+  },
+  "urn_of_shadows": {
+    "id": "urn_of_shadows",
+    "name": "Urn of Shadows",
+    "emoji": "🔮",
+    "image": "assets/items/urn_of_shadows.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 825,
+    "stats": {
+      "armor": 2
+    },
+    "desc": "Dota 2 item: Urn of Shadows."
+  },
+  "vambrace": {
+    "id": "vambrace",
+    "name": "Vambrace",
+    "emoji": "🔮",
+    "image": "assets/items/vambrace.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Vambrace."
+  },
+  "vampire_fangs": {
+    "id": "vampire_fangs",
+    "name": "Vampire Fangs",
+    "emoji": "🔮",
+    "image": "assets/items/vampire_fangs.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Vampire Fangs."
+  },
+  "vampiric": {
+    "id": "vampiric",
+    "name": "Vampiric",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_vampiric.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Vampiric."
+  },
+  "vanguard": {
+    "id": "vanguard",
+    "name": "Vanguard",
+    "emoji": "🔮",
+    "image": "assets/items/vanguard.png",
+    "slotType": "weapon",
+    "rarity": "epic",
+    "cost": 1700,
+    "stats": {
+      "hp": 250
+    },
+    "desc": "Dota 2 item: Vanguard."
+  },
+  "vast": {
+    "id": "vast",
+    "name": "Vast",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_vast.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "damage": 6
+    },
+    "desc": "Dota 2 item: Vast."
+  },
+  "veil_of_discord": {
+    "id": "veil_of_discord",
+    "name": "Veil of Discord",
+    "emoji": "🔮",
+    "image": "assets/items/veil_of_discord.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 1700,
+    "stats": {
+      "hp": 175,
+      "int": 10
+    },
+    "desc": "Dota 2 item: Veil of Discord."
+  },
+  "vindicators_axe": {
+    "id": "vindicators_axe",
+    "name": "Vindicator's Axe",
+    "emoji": "🔮",
+    "image": "assets/items/vindicators_axe.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "attackSpeed": 35
+    },
+    "desc": "Dota 2 item: Vindicator's Axe."
+  },
+  "vital_toadstool": {
+    "id": "vital_toadstool",
+    "name": "Vital Toadstool",
+    "emoji": "🔮",
+    "image": "assets/items/foragers_health.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "damage": 2
+    },
+    "desc": "Dota 2 item: Vital Toadstool."
+  },
+  "vital": {
+    "id": "vital",
+    "name": "Vital",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_vital.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hp": 2
+    },
+    "desc": "Dota 2 item: Vital."
+  },
+  "vitality_booster": {
+    "id": "vitality_booster",
+    "name": "Vitality Booster",
+    "emoji": "🔮",
+    "image": "assets/items/vitality_booster.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 1000,
+    "stats": {
+      "hp": 250
+    },
+    "desc": "Dota 2 item: Vitality Booster."
+  },
+  "vladmirs_offering": {
+    "id": "vladmirs_offering",
+    "name": "Vladmir's Offering",
+    "emoji": "🔮",
+    "image": "assets/items/vladmir.png",
+    "slotType": "accessory",
+    "rarity": "rare",
+    "cost": 2200,
+    "stats": {
+      "armor": 1
+    },
+    "desc": "Dota 2 item: Vladmir's Offering."
+  },
+  "void_stone": {
+    "id": "void_stone",
+    "name": "Void Stone",
+    "emoji": "🔮",
+    "image": "assets/items/void_stone.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 700,
+    "stats": {},
+    "desc": "Dota 2 item: Void Stone."
+  },
+  "voodoo_mask": {
+    "id": "voodoo_mask",
+    "name": "Voodoo Mask",
+    "emoji": "🔮",
+    "image": "assets/items/voodoo_mask.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 650,
+    "stats": {},
+    "desc": "Dota 2 item: Voodoo Mask."
+  },
+  "weighted_dice": {
+    "id": "weighted_dice",
+    "name": "Weighted Dice",
+    "emoji": "🔮",
+    "image": "assets/items/weighted_dice.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Weighted Dice."
+  },
+  "whisper_of_the_dread": {
+    "id": "whisper_of_the_dread",
+    "name": "Whisper of the Dread",
+    "emoji": "🔮",
+    "image": "assets/items/whisper_of_the_dread.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Whisper of the Dread."
+  },
+  "wind_lace": {
+    "id": "wind_lace",
+    "name": "Wind Lace",
+    "emoji": "🔮",
+    "image": "assets/items/wind_lace.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 225,
+    "stats": {},
+    "desc": "Dota 2 item: Wind Lace."
+  },
+  "wind_waker": {
+    "id": "wind_waker",
+    "name": "Wind Waker",
+    "emoji": "🔮",
+    "image": "assets/items/wind_waker.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 6800,
+    "stats": {
+      "int": 35
+    },
+    "desc": "Dota 2 item: Wind Waker."
+  },
+  "wise": {
+    "id": "wise",
+    "name": "Wise",
+    "emoji": "🔮",
+    "image": "assets/items/enhancement_wise.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Wise."
+  },
+  "witch_blade": {
+    "id": "witch_blade",
+    "name": "Witch Blade",
+    "emoji": "🔮",
+    "image": "assets/items/witch_blade.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 2775,
+    "stats": {
+      "attackSpeed": 40,
+      "int": 12,
+      "armor": 5
+    },
+    "desc": "Dota 2 item: Witch Blade."
+  },
+  "witchbane": {
+    "id": "witchbane",
+    "name": "Witchbane",
+    "emoji": "🔮",
+    "image": "assets/items/heavy_blade.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {},
+    "desc": "Dota 2 item: Witchbane."
+  },
+  "witless_shako": {
+    "id": "witless_shako",
+    "name": "Witless Shako",
+    "emoji": "🔮",
+    "image": "assets/items/witless_shako.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hp": 1350
+    },
+    "desc": "Dota 2 item: Witless Shako."
+  },
+  "wizard_hat": {
+    "id": "wizard_hat",
+    "name": "Wizard Hat",
+    "emoji": "🔮",
+    "image": "assets/items/wizard_hat.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 250,
+    "stats": {},
+    "desc": "Dota 2 item: Wizard Hat."
+  },
+  "woodland_striders": {
+    "id": "woodland_striders",
+    "name": "Woodland Striders",
+    "emoji": "🔮",
+    "image": "assets/items/woodland_striders.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 0,
+    "stats": {
+      "hp": 60
+    },
+    "desc": "Dota 2 item: Woodland Striders."
+  },
+  "wraith_band": {
+    "id": "wraith_band",
+    "name": "Wraith Band",
+    "emoji": "🔮",
+    "image": "assets/items/wraith_band.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 505,
+    "stats": {
+      "agi": 5,
+      "str": 2,
+      "int": 2,
+      "attackSpeed": 6
+    },
+    "desc": "Dota 2 item: Wraith Band."
+  },
+  "wraith_pact": {
+    "id": "wraith_pact",
+    "name": "Wraith Pact",
+    "emoji": "🔮",
+    "image": "assets/items/wraith_pact.png",
+    "slotType": "weapon",
+    "rarity": "rare",
+    "cost": 3800,
+    "stats": {},
+    "desc": "Dota 2 item: Wraith Pact."
+  },
+  "yasha_and_kaya": {
+    "id": "yasha_and_kaya",
+    "name": "Yasha and Kaya",
+    "emoji": "🔮",
+    "image": "assets/items/yasha_and_kaya.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 4200,
+    "stats": {
+      "agi": 16,
+      "int": 16,
+      "attackSpeed": 20,
+      "hpRegen": 40
+    },
+    "desc": "Dota 2 item: Yasha and Kaya."
+  },
+  "yasha": {
+    "id": "yasha",
+    "name": "Yasha",
+    "emoji": "🔮",
+    "image": "assets/items/yasha.png",
+    "slotType": "weapon",
+    "rarity": "common",
+    "cost": 2100,
+    "stats": {
+      "agi": 16,
+      "attackSpeed": 15
+    },
+    "desc": "Dota 2 item: Yasha."
+  }
+};

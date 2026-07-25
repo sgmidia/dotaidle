@@ -1,0 +1,422 @@
+# Catálogo Completo de Itens (403) — extraído do vault de referência
+
+Lista de todos os itens reais de Dota 2 disponíveis, para uso como pool de nomes/temas ao gerar o dataset de itens do jogo (raridade/stats numéricos exatos ficam a critério da implementação — este documento cobre nome, categoria aproximada, e efeito temático).
+
+## Itens Ofensivos / Armas
+- **Abyssal Blade**: stun em ataque (bash) + dano bônus e força, arma de iniciação/carry
+- **Battle Fury**: dano em área (cleave) e regeneração, arma de farm
+- **Blade Mail**: reflete dano recebido de volta ao atacante
+- **Bloodthorn**: silêncio + dano mágico bônus, fura evasão
+- **Butterfly**: evasão alta + velocidade de ataque e dano
+- **Crystalys**: chance de crítico
+- **Daedalus**: chance de crítico maior
+- **Demon Edge**: bônus de dano bruto (componente)
+- **Desolator**: reduz armadura do alvo a cada ataque
+- **Divine Rapier**: dano massivo ou amplificação de magia, cai ao morrer (all-or-nothing)
+- **Eaglesong**: bônus de agilidade puro
+- **Echo Sabre**: ataque duplo corpo a corpo com lentidão
+- **Ethereal Blade**: torna alvo etéreo (imune a físico, vulnerável a mágico) e causa dano
+- **Eye of Skadi**: reduz velocidade de movimento/ataque do alvo atingido
+- **Gunpowder Gauntlet**: próximo ataque causa dano mágico bônus em área
+- **Harpoon**: puxa o alvo e ataca duas vezes
+- **Havoc Hammer**: puxa inimigos e causa dano/lentidão em área
+- **Heaven's Halberd**: desarma o alvo temporariamente
+- **Hurricane Pike**: empurra e permite ataques à distância sem restrição
+- **Hydra's Breath**: veneno em ataques e projéteis extras
+- **Javelin**: chance de dano bônus perfurando evasão (componente)
+- **Khanda**: próxima magia unit-target causa dano extra e lentidão
+- **Maelstrom**: chance de raio em cadeia ao atacar
+- **Mask of Madness**: velocidade de ataque e lifesteal, mas te silencia
+- **Meteor Hammer**: canalizado, meteoro que atordoa e queima área
+- **Mind Breaker**: próximo ataque silencia o alvo
+- **Mjollnir**: raio em cadeia e escudo estático em ataques
+- **Monkey King Bar**: fura evasão com dano mágico bônus
+- **Nemesis Curse**: aumenta dano recebido pelo alvo marcado
+- **Nullifier**: dispel e lentidão contínua no alvo
+- **Orb of Corrosion**: reduz armadura, lentidão e cura do alvo (componente)
+- **Orb of Destruction**: reduz armadura e velocidade do alvo (componente)
+- **Orb of Frost**: lentidão e redução de cura no ataque (componente)
+- **Orb of Venom**: veneno leve por ataque (componente)
+- **Orchid Malevolence**: silencia o alvo e causa dano bônus ao fim
+- **Parasma**: veneno de inteligência + redução de resistência mágica
+- **Radiance**: queima em área e chance de erro (blind) para inimigos próximos
+- **Revenant's Brooch**: crítico com dano mágico bônus + lifesteal de magia
+- **Sacred Relic**: bônus de dano bruto (componente)
+- **Satanic**: lifesteal massivo temporário + lifesteal passivo
+- **Serrated Shiv**: dano bônus baseado em vida atual do alvo
+- **Shadow Blade**: invisibilidade + dano bônus ao atacar de surpresa
+- **Silver Edge**: invisibilidade + dano bônus e desativa passivas do alvo
+- **Skull Basher**: chance de stun (bash) em ataques
+- **Stygian Desolator**: reduz armadura do alvo fortemente
+- **Vindicator's Axe**: bônus de dano se silenciado, armadura se atordoado
+- **Witch Blade**: próximo ataque envenena e retarda com true strike
+- **Witchbane**: dispel em área + dano baseado em mana máxima do alvo
+
+## Itens Defensivos / Armadura
+- **Aeon Disk**: dispel forte e zera dano ao cair abaixo de % de vida
+- **Arcanist's Armor**: reflexão de dano e escudo de armadura em área
+- **Ash Legion Shield**: barreira física em área para aliados
+- **Assault Cuirass**: aura de armadura e velocidade de ataque para aliados, reduz armadura inimiga
+- **Bracer**: bônus balanceado de atributos e vida (componente)
+- **Buckler**: aura de armadura para aliados (componente)
+- **Chainmail**: bônus de armadura puro (componente)
+- **Chipped Vest**: retorna dano ao ser atacado
+- **Cloak of Flames**: queima inimigos próximos (imolação)
+- **Craggy Coat**: armadura bônus temporária ao custo de velocidade
+- **Crimson Guard**: bloqueio de dano em área para aliados/estruturas
+- **Dandelion Amulet**: bloqueia dano mágico periodicamente
+- **Defiant Shell**: contra-ataca ao ser atacado
+- **Eternal Shroud**: converte dano mágico recebido em mana, ganha resistência mágica
+- **Gale Guard**: barreira de dano com resistência a lentidão
+- **Ghost Scepter**: imunidade a dano físico temporária (componente)
+- **Glimmer Cape**: invisibilidade + barreira mágica
+- **Guardian Greaves**: cura em área + aura de regeneração e dispel
+- **Heart of Tarrasque**: regeneração de vida baseada em vida perdida
+- **Helm of Iron Will**: armadura e regeneração (componente)
+- **Hood of Defiance**: barreira mágica ativável
+- **Infused Raindrops**: bloqueia dano mágico com cargas (componente)
+- **Linken's Sphere**: bloqueia magias direcionadas periodicamente
+- **Lotus Orb": ecoa magias direcionadas de volta ao lançador
+- **Martyr's Plate**: redireciona dano mágico de aliados para si
+- **Mekansm**: cura em área + aura de regeneração
+- **Mirror Shield**: reflete magias direcionadas
+- **Nether Shawl**: resistência mágica e amplificação de magia (com penalidade de armadura)
+- **Pavise**: barreira física em ataque no aliado
+- **Phylactery**: próxima magia causa dano/lentidão bônus, dá atributos
+- **Pipe of Insight**: barreira mágica em área + aura de resistência mágica
+- **Platemail**: bônus de armadura puro (componente)
+- **Poor Man's Shield**: chance de bloquear dano de ataques
+- **Pyrrhic Cloak**: reflete dano recebido ao alvo
+- **Repair Kit**: repara estruturas e dá armadura temporária
+- **Ring of Health**: regeneração de vida (componente)
+- **Ring of Protection**: bônus de armadura puro (componente)
+- **Ring of Tarrasque**: regeneração de vida forte (componente)
+- **Safety Bubble**: barreira fixa contra dano
+- **Shiva's Guard**: dano/lentidão em área + aura que reduz velocidade de ataque inimiga
+- **Solar Crest**: armadura/velocidade de ataque e barreira física para aliado
+- **Splintmail**: bônus de armadura puro (componente)
+- **Stout Shield**: chance de bloquear dano de ataques (componente)
+- **Sister's Shroud**: evasão massiva temporária abaixo de % de vida
+- **Vanguard**: chance de bloquear dano de ataques, vida bônus
+- **Wraith Pact**: aura de lifesteal/armadura/mana para o time, com penalidade
+
+## Botas
+- **Arcane Boots**: restaura mana em área + aura de regeneração de mana
+- **Boots of Bearing**: aura de velocidade/regen + ativa velocidade de ataque em área
+- **Boots of Speed**: bônus de velocidade de movimento puro (componente)
+- **Boots of Travel**: upgrade do pergaminho de teleporte, velocidade de movimento
+- **Boots of Travel 2**: versão avançada, teleporte em qualquer unidade aliada
+- **Force Boots**: empurrão em unidades + remove limite de velocidade
+- **Phase Boots**: fase através de unidades e velocidade bônus temporária
+- **Power Treads**: velocidade de movimento com atributo alternável (Tread Switching)
+- **Tranquil Boots**: regeneração de vida forte que se perde ao levar dano
+- **Woodland Striders**: cria caminho de árvores e permite atravessar florestas livremente
+
+## Itens de Utilidade / Suporte
+- **Aether Lens**: aumenta alcance de conjuração e regeneração de mana
+- **Aghanim's Blessing**: melhora ultimate e habilidades de qualquer herói
+- **Aghanim's Blessing - Roshan**: melhora ultimate e habilidades de qualquer herói (versão drop de Roshan)
+- **Aghanim's Scepter**: melhora ultimate e habilidades, dá atributos
+- **Aghanim's Shard**: melhora ou adiciona uma habilidade ao herói
+- **Ancient Guardian**: dano bônus perto de Ancients
+- **Arcane Blink**: teleporte curto que restaura vida e mana
+- **Arcane Ring**: restaura mana em área para aliados
+- **Bloodstone**: vida/mana altos + lifesteal de magia + aura que amplifica dano mágico recebido por inimigos
+- **Bottle**: restaura vida/mana e armazena runas
+- **Ceremonial Robe**: reduz resistência mágica e de status dos inimigos próximos
+- **Conjurer's Catalyst**: dano em área ao causar dano mágico alto
+- **Crella's Crozier**: forma fantasma + rouba velocidade de movimento de inimigos
+- **Dagon**: rajada de dano mágico direto
+- **Diffusal Blade**: queima mana no ataque e reduz velocidade do alvo
+- **Disperser**: dispel + lentidão/velocidade em área, queima mana
+- **Doubloon**: converte vida máxima em mana ou vice-versa
+- **Drum of Endurance**: aura de velocidade de ataque/movimento ativável
+- **Essence Distiller**: cura aliados ou gruda em inimigo causando dano e visão verdadeira
+- **Essence Ring**: aumenta vida máxima temporariamente
+- **Eul's Scepter of Divinity**: lança alvo ao ar, invulnerável temporariamente
+- **Ex Machina**: reseta cooldowns de todos os itens
+- **Faded Broach**: bônus de mana e velocidade (componente barato)
+- **Falcon Blade**: bônus balanceado de vida/mana/dano
+- **Force Staff**: empurra qualquer unidade para longe
+- **Fusion Rune**: concede bônus de todas as runas de poder
+- **Gem of True Sight**: visão verdadeira de invisíveis em área
+- **Gleipnir**: prende (root) todos os inimigos em área
+- **Harmonizer**: reduz custo de mana ou amplifica dano conforme cooldowns
+- **Hand of Midas**: transmuta criaturas em ouro extra
+- **Headdress**: aura de regeneração de vida (componente)
+- **Holy Locket**: amplifica curas e concede carga de cura/mana
+- **Iron Talon**: remove grande % de vida de criatura neutra (farm)
+- **Kobold Cup**: aumenta velocidade de movimento em área temporariamente
+- **Light Collector**: interage com magias inimigas recebidas
+- **Magic Lamp**: cura forte automática ao cair abaixo de % de vida
+- **Magic Stick**: carrega energia de magias inimigas para restaurar vida/mana
+- **Mage Slayer**: reduz dano de magia do alvo e causa dano físico ao atacar
+- **Mana Draught**: restaura mana ao longo do tempo
+- **Medallion of Courage**: altera armadura de aliado ou inimigo temporariamente
+- **Necronomicon**: invoca unidades guerreiras para lutar
+- **Null Talisman**: bônus básico de atributos/mana (componente barato)
+- **Octarine Core**: redução de cooldown + vida/mana altos
+- **Oblivion Staff**: bônus de inteligência e velocidade de ataque (componente)
+- **Phoenix Ash**: previne morte, cura e reseta cooldowns ao ser ativado
+- **Psychic Headband**: empurra inimigo para longe
+- **Quickening Charm**: reduz cooldown de feitiços e itens
+- **Quicksilver Amulet**: bônus de velocidade quando habilidade em cooldown
+- **Refresher Orb**: reseta cooldowns de todas as habilidades
+- **Rod of Atos**: prende (root) o alvo no lugar
+- **Scythe of Vyse**: transforma inimigo em criatura inofensiva (hex)
+- **Seer Stone**: revela área do mapa temporariamente
+- **Shadow Amulet**: concede invisibilidade a si ou aliado
+- **Soul Ring**: sacrifica vida por mana temporária
+- **Spell Prism**: redução de cooldown de feitiços e itens
+- **Spellslinger**: recupera parte do mana gasto em feitiços
+- **Spirit Vessel**: reduz cura de inimigos ou cura aliados, dano ao longo do tempo
+- **Stonefeather Satchel**: alterna entre bônus de velocidade ou resistência a empurrão
+- **Telescope**: reduz cooldown de scan, aumenta alcance de aliados
+- **Tome of Aghanim**: concede buff temporário de Aghanim's Scepter
+- **Trickster Cloak**: invisibilidade temporária ativável
+- **Urn of Shadows**: cura aliados ou dano contínuo em inimigos, ganha cargas com mortes
+- **Veil of Discord**: amplifica dano mágico recebido pelos inimigos em área
+- **Vladmir's Offering**: aura de lifesteal, dano, mana e armadura para o time
+- **Void Stone**: regeneração de mana (componente)
+- **Voodoo Mask**: lifesteal de magia (componente)
+- **Wind Waker**: lança alvo ao ar como o Eul's, mas com controle extra
+
+## Consumíveis
+- **Aghanim's Shard - Consumable**: melhora/adiciona habilidade ao herói
+- **Block of Cheese**: restaura grande quantidade de vida e mana instantaneamente
+- **Cheese**: restaura grande quantidade de vida e mana instantaneamente (drop de Roshan)
+- **Blood Grenade**: joga granada que causa dano e lentidão em área
+- **Clarity**: restaura regeneração de mana ao longo do tempo
+- **Dust of Appearance**: revela e retarda unidades invisíveis em área
+- **Enchanted Mango**: restaura mana instantaneamente
+- **Faerie Fire**: restaura pequena quantidade de vida instantaneamente
+- **Flying Courier**: transporte voador de itens entre base e linha
+- **Animal Courier**: transporte terrestre de itens entre base e linha
+- **Healing Lotus**: restaura vida e mana instantaneamente (potência básica)
+- **Great Healing Lotus**: restaura vida e mana instantaneamente (potência média)
+- **Greater Healing Lotus**: restaura vida e mana instantaneamente (potência alta)
+- **Greater Faerie Fire**: restaura vida instantaneamente (versão melhorada)
+- **Healing Salve**: regeneração de vida ao longo do tempo
+- **Iron Branch**: planta árvore, bônus mínimo de atributos
+- **Madstone Bundle**: bônus de atributo temporário (drop de Roshan/eventos)
+- **Moon Shard**: ganho permanente de velocidade de ataque (uso único)
+- **Observer Ward**: planta ward que dá visão terrestre em área
+- **Sentry Ward**: planta ward que dá visão verdadeira (detecta invisíveis) em área
+- **Observer and Sentry Wards**: dispenser combinado de ambos os tipos de ward
+- **Magic Wand**: carrega energia de magias inimigas para restaurar vida/mana (versão melhorada do Magic Stick)
+- **Refresher Shard**: reseta cooldowns (versão consumível)
+- **Roshan's Banner**: cria estandarte que imuniza criaturas de linha a dano
+- **Royal Jelly**: cura vida/mana em cargas
+- **Smoke of Deceit**: invisibilidade em grupo e bônus de velocidade
+- **Tango**: regeneração de vida ao consumir árvore, vem com múltiplas cargas
+- **Tango (Shared)**: regeneração de vida ao consumir árvore, versão compartilhável de carga única
+- **Tome of Knowledge**: concede experiência instantânea
+- **Town Portal Scroll**: teleporte para estrutura aliada após canalizar
+
+## Itens Neutros / Especiais (Roshan drops, Aghanim's, tokens, componentes puros)
+- **Aegis of the Immortal**: reviver após morte (drop do Roshan)
+- **Alert**: bônus de velocidade de ataque e visão noturna (item de encantamento)
+- **Apex**: bônus de atributo primário (neutro)
+- **Ascetic's Cap**: resistência a debuff ao ser afetado (neutro)
+- **Audacious**: velocidade de ataque e dano mágico, mas mais dano recebido (encantamento)
+- **Aviana's Feather**: voo quando abaixo de % de vida (neutro)
+- **Bag of Gold**: ouro temporário (drop)
+- **Ballista**: empurra inimigos e dano puro nos ataques (neutro)
+- **Band of Elvenskin**: bônus de agilidade puro (componente)
+- **Beloved Memory**: item de evento (Altar/Ofrenda)
+- **Belt of Strength**: bônus de força puro (componente)
+- **Black Grimoiren (Warlock)**: converte kills/assists em experiência
+- **Blade of Alacrity**: bônus de agilidade (componente)
+- **Blades of Attack**: bônus de dano (componente)
+- **Blast Rig**: explosão ao ser atacado de perto (neutro)
+- **Blitz Knuckles**: bônus de velocidade de ataque (componente)
+- **Boundless**: bônus de alcance de ataque/conjuração (encantamento)
+- **Brawny**: bônus de vida e regeneração (encantamento)
+- **Brigand's Blade**: dano bônus contra vida faltante do alvo (neutro)
+- **Broadsword**: bônus de dano puro (componente)
+- **Broom Handle**: bônus de alcance/dano/armadura (neutro)
+- **Bullwhip**: acelera aliado ou retarda inimigo (neutro)
+- **Chasm Stone**: bônus de área de efeito (componente)
+- **Circlet**: bônus de todos atributos (componente)
+- **Claymore**: bônus de dano (componente)
+- **Cloak**: bônus de resistência mágica (componente)
+- **Clumsy Net**: prende a si e ao inimigo (neutro)
+- **Consecrated Wraps**: acumula cargas de velocidade, converte em barreira (neutro)
+- **Cornucopia**: bônus de regeneração e dano (comum)
+- **Crown**: bônus de todos atributos (componente)
+- **Crude**: cura maior, mas ataque mais lento e menos inteligência (encantamento)
+- **Dagger of Ristul**: consome vida por dano temporário (neutro)
+- **Dezun Bloodrite**: área de efeito maior custando vida (neutro)
+- **Diadem**: bônus de todos atributos (componente)
+- **Disgraced Regalia**: item "falho" sem efeito (neutro cômico)
+- **Divine Regalia**: aumenta dano de saída, desativa-se ao morrer (neutro)
+- **Dominant**: velocidade de ataque, resistência mágica e vida (encantamento)
+- **Dormant Curio**: aumenta potência de itens neutros artefato (neutro)
+- **Dragon Scale**: queimadura ao ataque, afeta estruturas (neutro)
+- **Duelist Gloves**: velocidade de ataque perto de inimigos (neutro)
+- **Eldwurm's Edda**: aumenta inteligência base e nível de habilidade (Winter Wyvern)
+- **Elixir**: restaura vida/mana ao longo do tempo (neutro)
+- **Elven Tunic**: velocidade de ataque, evasão e movimento (neutro)
+- **Enchanted Quiver**: próximo ataque com dano mágico e alcance bônus (neutro)
+- **Enchanter's Bauble**: aumenta bônus de encantamento neutro
+- **Energy Booster**: bônus de mana (componente)
+- **Eye of the Vizier**: alcance de conjuração e regen de mana, menos mana máx (neutro)
+- **Fae Grenade**: marca inimigo causando dano ao longo do tempo (neutro)
+- **Fairy's Trinket**: vida e amplificação de magia (neutro)
+- **Fallen Sky**: transforma em meteoro, atordoa e queima área (neutro)
+- **Feverish**: redução de cooldown, mais custo de mana (encantamento)
+- **Fierce**: velocidade, visão e dano (encantamento)
+- **Flayer's Bota**: bônus de dano/velocidade de ataque ao matar inimigos (neutro)
+- **Fleetfooted**: bônus de velocidade de movimento puro (encantamento)
+- **Flicker**: dispel + blink curto aleatório (neutro)
+- **Fluffy Hat**: bônus de vida (loja secreta)
+- **Forager's Kit**: gera árvores que dão recursos ao forragear (neutro)
+- **Forebearer's Fortune**: item de evento (Ofrenda)
+- **Gauntlets of Strength**: bônus de força (componente)
+- **Giant's Maul**: crítico + lentidão no alvo atingido (neutro)
+- **Giant's Ring**: dano ao pisar sobre inimigos (neutro)
+- **Gloves of Haste**: bônus de velocidade de ataque (componente)
+- **Gossamer Cape**: esquiva automática de ataque (neutro)
+- **Greedy**: ouro por minuto e mana, mas menos dano (neutro)
+- **Gris-Gris**: reduz perda de ouro ao morrer (neutro)
+- **Grove Bow**: reduz resistência mágica do alvo atacado (neutro)
+- **Hulking**: vida e regen, mas menos velocidade de ataque (encantamento)
+- **Idol of Scree'auk**: resistência a lentidão, fase e evasão temporárias (neutro)
+- **Illusionist's Cape**: cria ilusão e amplifica dano de ilusões (neutro)
+- **Imp Claw**: próximo ataque crítico (neutro)
+- **Ironwood Nut**: atributo primário permanente (forager)
+- **Ironwood Tree**: planta árvore com bônus de atributos (neutro)
+- **Jidi Pollen Bag**: dano e redução de cura em área (neutro)
+- **Kaya**: amplificação de magia e regeneração de mana (componente)
+- **Kaya and Sange**: combo de resistência e amplificação de magia
+- **Keen Optic**: alcance de conjuração e regen de mana (neutro)
+- **Keen-eyed**: alcance de conjuração, menos mana máxima (encantamento)
+- **Leviathan's Fish**: item de pesca (neutro)
+- **Lance of Pursuit**: bônus de mana + lentidão ao atacar pelas costas (neutro)
+- **Magnifying Monocle**: alcance de ataque/conjuração, desativa com dano (neutro)
+- **Mango Tree**: planta árvore que gera mangas (consumível especial)
+- **Manic**: velocidade de conjuração, menos visão (encantamento)
+- **Mantle of Intelligence**: bônus de inteligência (componente)
+- **Mercy & Grace**: tiro fantasma com dano, lentidão e medo (neutro)
+- **Metamorphic Mandible**: forma de inseto com resistência mágica e velocidade (neutro)
+- **Minotaur Horn**: imunidade a dano mágico curta (neutro)
+- **Mystic Staff**: bônus de inteligência (loja secreta)
+- **Mystical**: regen de mana e resistência mágica (encantamento)
+- **Nimble**: velocidade e dano, menos regeneração (encantamento)
+- **Ninja Gear**: fumaça de disfarce só para si (neutro)
+- **Occult Bracelet**: acumula regen de mana ao ser atacado (neutro)
+- **Ocean Heart**: regen de vida/mana no rio (neutro)
+- **Ogre Seal Totem**: pulos com dano e lentidão em área (neutro)
+- **Paladin Sword**: dano e lifesteal (físico e mágico) (neutro)
+- **Partisan's Brand**: aumenta dano de magia contra heróis (neutro)
+- **Penta-Edged Sword**: chance de lentidão em ataques (neutro)
+- **Perseverance**: regeneração de vida/mana balanceada (comum)
+- **Philosopher's Stone**: ouro por minuto e mana, menos dano (neutro)
+- **Pig Pole**: transforma em critter com velocidade bônus (neutro)
+- **Pirate Hat**: rouba ouro de heróis inimigos que morrem por perto (neutro)
+- **Pocket Roshan**: invoca um mini-Roshan (drop)
+- **Pocket Tower**: invoca uma torre temporária (neutro)
+- **Point Booster**: bônus de vida/mana (loja secreta)
+- **Pollywog Charm**: regen de vida em aliado, bônus na água (neutro)
+- **Possessed Mask**: lifesteal fixo por ataque (neutro)
+- **Prince's Knife**: próximo ataque transforma alvo em sapo (hex curto) (neutro)
+- **Prophet's Pendulum**: atrasa parte do dano recebido (neutro)
+- **Pupil's Gift**: bônus de estatísticas secundárias (neutro)
+- **Quickened**: velocidade e mana, evasão no nível máximo (encantamento)
+- **Quelling Blade**: bônus de dano contra creeps (componente)
+- **Rattlecage**: dispara projéteis ao acumular dano recebido (neutro)
+- **Restorative**: mana, regeneração e amplificação de cura (encantamento)
+- **Riftshadow Prism**: cria ilusão de si mesmo consumindo vida (neutro)
+- **Ring of Aquila**: aura de mana/armadura e atributos (neutro)
+- **Ring of Basilius**: aura de regeneração de mana (componente)
+- **Ring of Regen**: regeneração de vida (componente)
+- **Ripper's Lash**: espinhos que causam dano bônus em área (neutro)
+- **River Vial: Blood**: item cosmético de pintura de rio (sem efeito de jogo)
+- **River Vial: Chrome**: item cosmético de pintura de rio (sem efeito de jogo)
+- **River Vial: Dry**: item cosmético de pintura de rio (sem efeito de jogo)
+- **River Vial: Electrified**: item cosmético de pintura de rio (sem efeito de jogo)
+- **River Vial: Oil**: item cosmético de pintura de rio (sem efeito de jogo)
+- **River Vial: Potion**: item cosmético de pintura de rio (sem efeito de jogo)
+- **River Vial: Slime**: item cosmético de pintura de rio (sem efeito de jogo)
+- **Tier 1 Token**: ficha de progressão de item neutro tier 1 (drop)
+- **Tier 2 Token**: ficha de progressão de item neutro tier 2 (drop)
+- **Tier 3 Token**: ficha de progressão de item neutro tier 3 (drop)
+- **Tier 4 Token**: ficha de progressão de item neutro tier 4 (drop)
+- **Tier 5 Token**: ficha de progressão de item neutro tier 5 (drop)
+- **Wraith Band**: bônus balanceado de agilidade, atributos e armadura (comum)
+- **Black King Bar (BKB)**: imunidade a magia (avatar) e resistência mágica, essencial contra controle
+- **Black King Bar**: versão de referência completa do BKB (imunidade a magia + força/dano)
+- **Blink Dagger**: teleporte curto instantâneo, item de iniciação essencial
+- **Manta Style**: cria ilusões que dispellam efeitos negativos e concedem atributos
+- **Mithril Hammer**: bônus de dano puro (componente)
+- **Ogre Axe**: bônus de força puro (componente)
+- **Quarterstaff**: bônus de velocidade de ataque e dano (componente)
+- **Reaver**: bônus de força puro (loja secreta)
+- **Shawl**: bônus de resistência mágica (componente)
+- **Orb of Blight**: reduz armadura do alvo levemente (componente)
+- **Hyperstone**: bônus de velocidade de ataque (loja secreta)
+- **Swift Blink**: teleporte curto + velocidade e agilidade bônus após uso
+- **Overwhelming Blink**: teleporte curto + dano e lentidão em área ao redor
+- **Dragon Lance**: bônus de agilidade/força e alcance de ataque (artefato)
+- **Lotus Orb**: ecoa magias direcionadas de volta ao lançador
+- **Crippling Crossbow**: ataque que causa dano e lentidão forte decrescente
+- **Outworld Staff**: torna-se invulnerável e intangível por curto período
+- **The Leveller**: dano bônus contra estruturas
+- **Evolved**: bônus de atributo primário (encantamento avançado)
+- **Armlet of Mordiggian**: ativa força/dano/armadura à custa de vida por segundo
+- **Helm of the Dominator**: domina criatura neutra para lutar ao seu lado
+- **Helm of the Overlord**: versão avançada, domina criaturas maiores e melhora habilidades
+- **Helm of the Undying**: sobrevive brevemente após dano letal
+- **Morbid Mask**: lifesteal físico (componente)
+- **Book of Shadows**: torna alvo intangível, silenciado e desarmado por curto tempo
+- **Book of the Dead**: invoca guerreiros e arqueiros demoníacos para lutar
+- **Robe of the Magi**: bônus de inteligência (componente)
+- **Sage's Mask**: regeneração de mana (componente)
+- **Sange**: força e resistência a lentidão (componente/artefato)
+- **Sange and Yasha**: combo de força/agilidade e resistências
+- **Scrying Shovel**: busca ofertas no mapa (evento)
+- **Searing Signet**: queima inimigos atingidos por magia forte (neutro)
+- **Seeds of Serenity**: regen de vida em área temporária (neutro)
+- **Slippers of Agility**: bônus de agilidade (componente)
+- **Soul Booster**: bônus de vida/mana (componente épico)
+- **Spark of Courage**: dano ou armadura conforme vida atual (neutro)
+- **Specialist's Array**: projéteis extras em ataques à distância (neutro)
+- **Spider Legs**: velocidade e pathing livre temporários (neutro)
+- **Staff of Wizardry**: bônus de inteligência (componente)
+- **Stormcrafter**: raios em múltiplos alvos próximos (neutro)
+- **Talisman of Evasion**: bônus de evasão (loja secreta)
+- **Third Eye**: visão verdadeira com cargas (neutro)
+- **Thick**: vida, mana e armadura (encantamento)
+- **Tiara of Selemene**: bônus de regeneração de mana (componente)
+- **Tier 1-5 Token**: fichas de progressão de itens neutros (drop por tier)
+- **Timeless**: duração de debuff e amplificação de magia (encantamento)
+- **Timeless Relic**: duração de debuff e amplificação de magia (neutro)
+- **Titan Sliver**: dano base e resistência a status (neutro)
+- **Titanic**: dano base e resistência, menos velocidade de ataque (encantamento)
+- **Tombstone**: item de evento sem efeito descrito
+- **Tomo'kan Ringcap**: restaura mana (forager)
+- **Tough**: dano e armadura, resistência a empurrão (encantamento)
+- **Trident**: combo de atributos totais e amplificações (artefato composto)
+- **Trusty Shovel**: escava itens/runas aleatórios (neutro)
+- **Tumbler's Toy**: pequeno salto para frente (neutro)
+- **Ultimate Orb**: bônus de todos atributos (loja secreta)
+- **Unleashed**: potência de artefato aumentada (encantamento)
+- **Unrelenting Eye**: resistência a lentidão reduzida por heróis próximos (neutro)
+- **Unwavering Condition**: vida máxima fixa e resistência mágica alta (neutro)
+- **Vambrace**: alterna atributo ativo entre força/agi/int (neutro)
+- **Vampire Fangs**: lifesteal físico e de magia (neutro)
+- **Vampiric**: lifesteal e visão noturna (encantamento)
+- **Vast**: alcance e dano, menos armadura (encantamento)
+- **Vital**: regeneração de vida simples (encantamento)
+- **Vital Toadstool**: regen de vida percentual temporária (forager)
+- **Vitality Booster**: bônus de vida (componente)
+- **Weighted Dice**: aumenta dano base máximo e recalcula rolls (neutro)
+- **Whisper of the Dread**: visão por dano de magia (neutro)
+- **Wind Lace**: bônus de velocidade de movimento (componente)
+- **Wise**: bônus de ouro por minuto e mana máxima (encantamento)
+- **Witless Shako**: vida máxima fixa alta, sem mana (neutro)
+- **Wizard Hat**: bônus de mana (item)
+- **Yasha**: agilidade e velocidade de ataque/movimento (componente/artefato)
+- **Yasha and Kaya**: combo de agilidade/inteligência e amplificações
+
+**Total processado: 403 itens**

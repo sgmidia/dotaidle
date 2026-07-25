@@ -2,6 +2,10 @@
 
 Cole o texto abaixo no v0. Os arquivos anexos (`01-` a `07-`) contêm os dados detalhados (heróis, itens, runas, forja) — referencie-os conforme o v0 for pedindo detalhes de cada sistema, ou anexe todos de uma vez se a ferramenta aceitar múltiplos arquivos.
 
+**Sobre `02-herois.md` vs `02b-herois-completo.md`**: o arquivo `02-herois.md` tem só ~8 heróis mas com fórmulas numéricas completas de habilidade (dano exato por nível) — use-o como referência de "como implementar a fórmula". O arquivo `02b-herois-completo.md` tem os **127 heróis reais de Dota 2** (roster completo) com atributo primário e habilidades temáticas corretas, mas sem números — use-o como fonte de nomes/temas/sabor para gerar o dataset completo, aplicando o mesmo padrão de fórmula do `02-herois.md` a cada um.
+
+**Sobre `03-itens-e-raridades.md` vs `03b-itens-completo.md`**: mesma lógica — `03-itens-e-raridades.md` tem o sistema de raridade/tier/pity com fórmulas; `03b-itens-completo.md` tem os **403 itens reais de Dota 2** categorizados (arma/armadura/botas/utilidade/consumível/especial) com efeito temático, para usar como pool de nomes e inspiração ao gerar os itens do jogo com stats/raridade seguindo o sistema numérico do `03-`.
+
 ---
 
 ## PROMPT
